@@ -71,7 +71,7 @@ modules contain a <code>/src/examples/</code> directory under which some example
 classes can be found. Specifically, there are some classes that are used for tests 
 under [gora-core/src/examples/](https://github.com/apache/gora/tree/master/gora-core/src/examples).
 
-### GoraCI Integration Testsing Suite
+### GoraCI Integration Testing Suite
 
 #### Background
 Since Gora 0.5, the GoraCI suite has been part of the mainstream Gora codebase.
@@ -274,12 +274,12 @@ referenced it.
 
 Below are some timing statistics for running Goraci on a 10 node cluster. 
 
-Store           | Task                   | Time    | Undef  | Unref | Ref        
-----------------+------------------------+---------+--------+-------+------------
-accumulo-1.4.0  | Generator 10 100000000 | 40m 16s |    N/A |   N/A |        N/A     
-accumulo-1.4.0  | Verify /tmp/goraci1 40 |  6m  7s |      0 |     0 | 1000000000  
-hbase-0.92.1    | Generator 10 100000000 |  2h 44m |    N/A |   N/A |        N/A     
-hbase-0.92.1    | Verify /tmp/goraci2 40 |  6m 34s |      0 |     0 | 1000000000
+    Store           | Task                   | Time    | Undef  | Unref | Ref        
+    ----------------+------------------------+---------+--------+-------+------------
+    accumulo-1.4.0  | Generator 10 100000000 | 40m 16s |    N/A |   N/A |        N/A     
+    accumulo-1.4.0  | Verify /tmp/goraci1 40 |  6m  7s |      0 |     0 | 1000000000  
+    hbase-0.92.1    | Generator 10 100000000 |  2h 44m |    N/A |   N/A |        N/A     
+    hbase-0.92.1    | Verify /tmp/goraci2 40 |  6m 34s |      0 |     0 | 1000000000
 
 HBase and Accumulo are configured differently out-of-the-box.  We used the Accumulo 
 3G, native configuration examples in the [conf/examples](https://github.com/apache/gora/tree/master/gora-goraci/src/main/resources) directory.

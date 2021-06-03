@@ -13,9 +13,9 @@ Title: Welcome to Apache Gora&trade;
          document stores, distributed in-memory key/value stores, in-memory data grids, in-memory caches,
         distributed multi-model stores, and hybrid in-memory architectures.</p>
        <p>Gora also enables analysis of data with extensive Apache Hadoop MapReduce&trade;,
-        Apache Spark&trade;, Apache Flink&trade; and Apache Pig&trade; support. Gora uses the [Apache Software License v2.0](https://www.apache.org/licenses/LICENSE-2.0.html). 
+        Apache Spark&trade;, Apache Flink&trade; and Apache Pig&trade; support. Gora uses the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License v2.0</a>. 
         Gora graduated from the Apache Incubator in January 2012 to become a top-level Apache project.
-        You can find the Gora DOAP [here](./current/doap_Gora.rdf).
+        You can find the Gora DOAP <a href="./current/doap_Gora.rdf">here</a>.
       </p>
       <p>
         <a href="/downloads.html" class="btn btn-primary btn-large">Download</a>

@@ -318,7 +318,7 @@ families, so the configuration should be list unique column families for each ma
 array type, and no qualifier should be given. The exact data model is discussed further 
 at the [gora-hbase](/current/gora-hbase.html) documentation. 
 
-## Basic API </title>
+## Basic API
 
 ### Parsing the logs
 Now that we have the basic setup, we can see Gora API in action. As you can notice below the API 
