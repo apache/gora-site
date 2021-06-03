@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Quick Start" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Quick Start</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Quick Start">
+
+    <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h1>
+<p>This is a quick start guide to help you setup the project.</p>
+<div id="toc"><ul><li><a class="toc-href" href="#download" title="Download">Download</a></li><li><a class="toc-href" href="#setting-up-your-project" title="Setting up your project">Setting up your project</a></li><li><a class="toc-href" href="#compiling-and-installing-the-project" title="Compiling and Installing the project">Compiling and Installing the project</a></li><li><a class="toc-href" href="#using-ivy-to-manage-gora" title="Using ivy to manage Gora">Using ivy to manage Gora</a></li><li><a class="toc-href" href="#using-maven-to-manage-gora" title="Using Maven to manage Gora">Using Maven to manage Gora</a></li><li><a class="toc-href" href="#specifying-gora-snapshot-dependencies" title="Specifying Gora SNAPSHOT dependencies">Specifying Gora SNAPSHOT dependencies</a></li><li><a class="toc-href" href="#managing-gora-jars-manually" title="Managing Gora Jars Manually">Managing Gora Jars Manually</a></li><li><a class="toc-href" href="#whats-next" next?'="" s="" title="What">What's Next?</a></li></ul></div>
+<h2 id="download">Download<a class="headerlink" href="#download" title="Permalink">&para;</a></h2>
+<p>First you need to check out the most stable Gora release through the official
+Apache Gora <a href="../downloads.html">release page</a>.<br/>
+For those who would like to use a development version Gora or simply wish to
+work with the bleeding edge, instructions for how to check out the source
+code using svn or git can be found on the <a href="../version_control.html">version control</a> documentation.</p>
+<h2 id="setting-up-your-project">Setting up your project<a class="headerlink" href="#setting-up-your-project" title="Permalink">&para;</a></h2>
+<p>More recently Gora began using Maven to manage it's dependencies and build lifecycle.
+Stable Gora releases are available on the central maven repository or ivy repositories
+and Gora-SNAPSHOT OSGi bundle artifacts are now pushed to<br/>
+<a href="https://repository.apache.org/index.html#nexus-search;quick~gora">Apache Nexus</a>.</p>
+<h2 id="compiling-and-installing-the-project">Compiling and Installing the project<a class="headerlink" href="#compiling-and-installing-the-project" title="Permalink">&para;</a></h2>
+<p>If you have the source code for Gora, you can install the project using</p>
+<pre><code>$ cd gora 
+$ mvn clean install
+</code></pre>
+<p>You can also install individual modules by cd'ing to the module directory and running</p>
+<pre><code>$ mvn clean install
+</code></pre>
+<p>If you want to use Gora as a dependency, you can manage it in a few ways.</p>
+<h2 id="using-ivy-to-manage-gora">Using ivy to manage Gora<a class="headerlink" href="#using-ivy-to-manage-gora" title="Permalink">&para;</a></h2>
+<p>If your project already uses ivy, then you can include gora dependencies
+to your ivy by adding the following lines to your ivy.xml file:</p>
+<pre><code>  &lt;dependency org="org.apache.gora" name="gora-core" rev="${version}" conf="*-&gt;compile" changing="true"&gt;
+  &lt;dependency org="org.apache.gora" name="gora-dynamodb" rev="${version}" conf="*-&gt;compile" changing="true"&gt;
+  &lt;dependency org="org.apache.gora" name="gora-hbase" rev="${version}" conf="*-&gt;compile" changing="true"&gt;      
+  ...etc
+</code></pre>
+<p>Note: The ${version} variable should be replaced by the most stable Gora release.</p>
+<p>Only add the modules that you will use, and set the conf to point to the
+configurations (of your project) that you want to depend on Gora. The
+changing="true" attribute states that, Gora artifacts
+should not be cached, which is required if you want to change Gora's
+source and use the recompiled version.</p>
+<p>Add the following to your ivysettings.xml</p>
+<pre><code>&lt;resolvers&gt;
+  ...
+  &lt;chain name="internal"&gt;
+    &lt;resolver ref="local"&gt;
+  &lt;/chain&gt;
+  ...
+&lt;/resolvers&gt;
+&lt;modules&gt;
+  ...
+  &lt;module organisation="org.apache.gora" name=".*" resolver="internal"&gt;
+  ...
+&lt;/modules&gt;
+</code></pre>
+<p>This forces Gora to be built locally rather than look for it in other repositories.</p>
+<h2 id="using-maven-to-manage-gora">Using Maven to manage Gora<a class="headerlink" href="#using-maven-to-manage-gora" title="Permalink">&para;</a></h2>
+<p>If your project however uses maven, then you can include Gora dependencies
+to your project by adding the following lines to your pom.xml file:</p>
+<pre><code>&lt;dependency&gt;
+	&lt;groupId&gt;org.apache.gora&lt;/groupId&gt;
+	&lt;artifactId&gt;gora-core&lt;/artifactId&gt;
+	&lt;version&gt;${version}&lt;/version&gt;
+ &lt;/dependency&gt;
+
+&lt;dependency&gt;
+	&lt;groupId&gt;org.apache.gora&lt;/groupId&gt;
+	&lt;artifactId&gt;gora-accumulo&lt;/artifactId&gt;
+	&lt;version&gt;${version}&lt;/version&gt;
+&lt;/dependency&gt;
+
+...etc
+</code></pre>
+<p>N.B. The ${version} variable should be replaced by the most stable Gora release.</p>
+<p>Again, only add the modules that you will use.</p>
+<h2 id="specifying-gora-snapshot-dependencies">Specifying Gora SNAPSHOT dependencies<a class="headerlink" href="#specifying-gora-snapshot-dependencies" title="Permalink">&para;</a></h2>
+<p>If you want to depend on Gora development snapshots, e.g. to get access to recent bug fixes,
+you should add the following to your pom.xml:</p>
+<pre><code>&lt;repository&gt;
+  &lt;id&gt;apache-repo-snapshots&lt;/id&gt;
+  &lt;url&gt;https://repository.apache.org/content/repositories/snapshots/&lt;/url&gt;
+  &lt;releases&gt;
+    &lt;enabled&gt;false&lt;/enabled&gt;
+  &lt;/releases&gt;
+  &lt;snapshots&gt;
+    &lt;enabled&gt;true&lt;/enabled&gt;
+  &lt;/snapshots&gt;
+&lt;/repository&gt;
+</code></pre>
+<h2 id="managing-gora-jars-manually">Managing Gora Jars Manually<a class="headerlink" href="#managing-gora-jars-manually" title="Permalink">&para;</a></h2>
+<p>You can include Gora jars manually, if you prefer so. After installing Gora
+first and generating the desired artifacts, copy all the jars in gora-[modulename]/lib/
+and gora-[modulename]/target/gora-${modulename}.jar dir's to your desired
+location. Finally copy all the jars in gora-core/lib/ since all of the
+modules depend on gora-core.</p>
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permalink">&para;</a></h2>
+<p>After setting up Gora, you might want to check out the documentation.
+Most of the current documentation is linked to from the <a href="./index.html">overview</a>
+or is available on the <a href="https://cwiki.apache.org/confluence/display/GORA/Index">wiki</a>.</p>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

@@ -1,0 +1,1189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora Tutorial" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora Tutorial</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora Tutorial">
+
+    <h1 id="gora-tutorial">Gora Tutorial<a class="headerlink" href="#gora-tutorial" title="Permalink">&para;</a></h1>
+<p>Author : Enis S&ouml;ztutar, enis [at] apache [dot] org</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h2>
+<p>This is the official tutorial for Apache Gora. For this tutorial, we
+will be implementing a system to store our web server logs in Apache HBase,
+and analyze the results using Apache Hadoop and store the results either in HSQLDB or MySQL.</p>
+<p>In this tutorial we will first look at how to set up the environment and
+configure Gora and the data stores. Later, we will go over the data we will use and
+define the data beans that will be used to interact with the persistency layer.
+Next, we will go over the API of Gora to do some basic tasks such as storing objects,
+fetching and querying objects, and deleting objects. Last, we will go over an example
+program which uses Hadoop MapReduce to analyze the web server logs, and discuss the Gora
+MapReduce API in some detail.</p>
+<h2 id="table-of-content">Table of Content<a class="headerlink" href="#table-of-content" title="Permalink">&para;</a></h2>
+<div id="toc"><ul><li><a class="toc-href" href="#introduction-to-gora" title="Introduction to Gora">Introduction to Gora</a></li><li><a class="toc-href" href="#setting-up-gora" title="Setting up Gora">Setting up Gora</a></li><li><a class="toc-href" href="#setting-up-hbase" title="Setting up HBase">Setting up HBase</a></li><li><a class="toc-href" href="#configuring-gora" title="Configuring Gora">Configuring Gora</a></li><li><a class="toc-href" href="#modeling-the-data" title="Modeling the data">Modeling the data</a></li><li><a class="toc-href" href="#defining-data-beans" title="Defining data beans">Defining data beans</a></li><li><a class="toc-href" href="#compiling-avro-schemas" title="Compiling Avro Schemas">Compiling Avro Schemas</a></li><li><a class="toc-href" href="#defining-data-store-mappings" title="Defining data store mappings">Defining data store mappings</a><ul><li><a class="toc-href" href="#hbase-mappings" title="HBase mappings">HBase mappings</a></li></ul></li><li><a class="toc-href" href="#basic-api" title="Basic API">Basic API</a><ul><li><a class="toc-href" href="#parsing-the-logs" title="Parsing the logs">Parsing the logs</a></li><li><a class="toc-href" href="#storing-objects-in-the-datastore" title="Storing objects in the DataStore">Storing objects in the DataStore</a></li><li><a class="toc-href" href="#closing-the-datastore" title="Closing the DataStore">Closing the DataStore</a></li></ul></li><li><a class="toc-href" href="#persisted-data-in-hbase" title="Persisted data in HBase">Persisted data in HBase</a></li><li><a class="toc-href" href="#fetching-objects-from-data-store" title="Fetching objects from data store">Fetching objects from data store</a></li><li><a class="toc-href" href="#querying-objects" title="Querying objects">Querying objects</a></li><li><a class="toc-href" href="#deleting-objects" title="Deleting objects">Deleting objects</a></li><li><a class="toc-href" href="#mapreduce-support" title="MapReduce Support">MapReduce Support</a><ul><li><a class="toc-href" href="#log-analytics-in-mapreduce" title="Log analytics in MapReduce">Log analytics in MapReduce</a></li><li><a class="toc-href" href="#setting-up-the-environment" title="Setting up the environment">Setting up the environment</a></li><li><a class="toc-href" href="#setting-up-the-database" title="Setting up the database">Setting up the database</a></li><li><a class="toc-href" href="#configuring-gora_1" title="Configuring Gora">Configuring Gora</a><ul><li><a class="toc-href" href="#jdbc-properties-for-gora-sql-module-using-hsql" title="JDBC properties for gora-sql module using HSQL">JDBC properties for gora-sql module using HSQL</a></li><li><a class="toc-href" href="#jdbc-properties-for-gora-sql-module-using-mysql" title="JDBC properties for gora-sql module using MySQL">JDBC properties for gora-sql module using MySQL</a></li></ul></li><li><a class="toc-href" href="#modelling-the-data-data-beans-for-analytics" title="Modelling the data - Data Beans for Analytics">Modelling the data - Data Beans for Analytics</a></li><li><a class="toc-href" href="#data-store-mappings" title="Data store mappings">Data store mappings</a></li></ul></li><li><a class="toc-href" href="#constructing-the-job" title="Constructing the job">Constructing the job</a><ul><li><a class="toc-href" href="#gora-mappers-and-using-gora-an-input" title="Gora mappers and using Gora an input">Gora mappers and using Gora an input</a></li><li><a class="toc-href" href="#gora-reducers-and-using-gora-as-output" title="Gora reducers and using Gora as output">Gora reducers and using Gora as output</a></li><li><a class="toc-href" href="#running-the-job" title="Running the job">Running the job</a></li><li><a class="toc-href" href="#running-the-job-with-sql" title="Running the job with SQL">Running the job with SQL</a></li><li><a class="toc-href" href="#running-the-job-with-hbase" title="Running the job with HBase">Running the job with HBase</a></li></ul></li><li><a class="toc-href" href="#spark-backend" title="Spark Backend">Spark Backend</a></li><li><a class="toc-href" href="#jcache-caching-datastore" title="JCache caching dataStore">JCache caching dataStore</a></li><li><a class="toc-href" href="#more-examples" title="More Examples">More Examples</a></li><li><a class="toc-href" href="#feedback" title="Feedback">Feedback</a></li></ul></div>
+<h2 id="introduction-to-gora">Introduction to Gora<a class="headerlink" href="#introduction-to-gora" title="Permalink">&para;</a></h2>
+<p>The Apache Gora open source framework provides an in-memory data
+model and persistence for big data. Gora supports persisting to
+column stores, key value stores, document stores and RDBMSs, and
+analyzing the data with extensive Apache Hadoop MapReduce support. In Avro, the
+beans to hold the data and RPC interfaces are defined using a JSON
+schema. In mapping the data beans to data store specific settings,
+Gora depends on mapping files, which are specific to each data store.
+Unlike other OTD (Object-to-Datastore) mapping implementations, in Gora the data bean to data store
+specific schema mapping is explicit. This has the advantage that,
+when using data models such as HBase and Cassandra, you can always
+know how the values are persisted.</p>
+<p>Gora has a modular architecture. Most of the data stores in Gora,
+has it's own module, such as gora-hbase, gora-cassandra,
+and gora-sql. In your projects, you need to only include
+the artifacts from the modules you use. You can consult the <a href="/current/quickstart.html">quick start</a>
+for setting up your project.</p>
+<h2 id="setting-up-gora">Setting up Gora<a class="headerlink" href="#setting-up-gora" title="Permalink">&para;</a></h2>
+<p>As a first step, we need to download and compile the Gora source code. The source codes
+for the tutorial is in the gora-tutorial module. If you have
+already downloaded Gora, that's cool, otherwise, please go
+over the steps at the <a href="/current/quickstart.html">quickstart</a> guide for
+how to download and compile Gora.</p>
+<p>Now, after the source code for Gora is at hand, let's have a look at the files under the
+directory gora-tutorial.</p>
+<pre><code>$ cd gora-tutorial
+$ tree
+
+|-- conf
+|   |-- gora-hbase-mapping.xml
+|   |-- gora-sql-mapping.xml
+|   `-- gora.properties
+|
+|-- pom.xml
+| 
+`-- src
+    |-- examples
+    |   `-- java
+    |-- main
+    |   |-- avro
+    |   |   |-- metricdatum.json
+    |   |   `-- pageview.json
+    |   |-- java
+    |   |   `-- org
+    |   |       `-- apache
+    |   |           `-- gora
+    |   |               `-- tutorial
+    |   |                   `-- log
+    |   |                       |-- KeyValueWritable.java
+    |   |                       |-- LogAnalytics.java
+    |   |                       |-- LogAnalyticsSpark.java
+    |   |                       |-- LogManager.java
+    |   |                       |-- TextLong.java
+    |   |                       `-- generated
+    |   |                           |-- MetricDatum.java
+    |   |                           `-- Pageview.java
+    |   `-- resources
+    |       `-- access.log.tar.gz
+    `-- test
+        |-- conf
+        `-- java
+</code></pre>
+<p>Since gora-tutorial is a top level module of Gora, it depends on the directory
+structure imposed by Gora's main build scripts (pom.xml for Maven). The Java source code resides in directory
+<code>src/main/java/</code>, avro schemas in <code>src/main/avro/</code>, and data in <code>src/main/resources/</code>.</p>
+<h2 id="setting-up-hbase">Setting up HBase<a class="headerlink" href="#setting-up-hbase" title="Permalink">&para;</a></h2>
+<p>For this tutorial we will be using <a href="http://hbase.apache.org">HBase</a> to
+store the logs. For those of you not familiar with HBase, it is a NoSQL
+column store with an architecture very similar to Google's BigTable.</p>
+<p>If you don't already have already HBase setup, you can go over the steps at
+<a href="http://hbase.apache.org/book/quickstart.html">HBase Overview</a>
+documentation. Gora aims to support the most recent HBase versions however if you
+find compatibility problems please <a href="../mailing_lists.html">get in touch</a>.
+So download an <a href="http://www.apache.org/dyn/closer.cgi/hbase/">HBase release</a>.
+After extracting the file, cd to the hbase-${dist} directory and start the HBase server.</p>
+<pre><code>$ bin/start-hbase.sh
+</code></pre>
+<p>and make sure that HBase is available by using the Hbase shell.</p>
+<pre><code>$ bin/hbase shell
+</code></pre>
+<h2 id="configuring-gora">Configuring Gora<a class="headerlink" href="#configuring-gora" title="Permalink">&para;</a></h2>
+<p>Gora is configured through a file in the classpath named gora.properties.
+We will be using the following file <code>gora-tutorial/conf/gora.properties</code></p>
+<pre><code>  gora.datastore.default=org.apache.gora.hbase.store.HBaseStore
+  gora.datastore.autocreateschema=true
+</code></pre>
+<p>This file states that the default store will be HBaseStore,
+and schemas(tables) should be automatically created.
+More information for configuring different settings in <code>gora.properties</code>
+can be found <a href="/current/gora-conf.html">here</a>.</p>
+<h2 id="modeling-the-data">Modeling the data<a class="headerlink" href="#modeling-the-data" title="Permalink">&para;</a></h2>
+<p>For this tutorial, we will be parsing and storing the logs of a web server.
+Some example logs are at <code>src/main/resources/access.log.tar.gz</code>, which
+belongs to the (now shutdown) server at <a href="http://www.buldinle.com/">http://www.buldinle.com/</a>.
+Example logs contain 10,000 lines, between dates 2009/03/10 - 2009/03/15.
+The first thing, we need to do is to extract the logs.</p>
+<pre><code>$ tar zxvf src/main/resources/access.log.tar.gz -C src/main/resources/
+</code></pre>
+<p>You can also use your own log files, given that the log
+format is <a href="http://httpd.apache.org/docs/current/logs.html">Combined Log Format</a>.
+Some example lines from the log are:</p>
+<pre><code>88.254.190.73 - - [10/Mar/2009:20:40:26 +0200] "GET / HTTP/1.1" 200 43 "http://www.buldinle.com/" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; GTB5; .NET CLR 2.0.50727; InfoPath.2)
+78.179.56.27 - - [11/Mar/2009:00:07:40 +0200] "GET /index.php?i=3&amp;amp;a=1__6x39kovbji8&amp;amp;k=3750105 HTTP/1.1" 200 43 "http://www.buldinle.com/index.php?i=3&amp;amp;a=1__6X39Kovbji8&amp;amp;k=3750105" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; OfficeLiveConnector.1.3; OfficeLivePatch.0.0)
+78.163.99.14 - - [12/Mar/2009:18:18:25 +0200] "GET /index.php?a=3__x7l72c&amp;amp;k=4476881 HTTP/1.1" 200 43 "http://www.buldinle.com/index.php?a=3__x7l72c&amp;amp;k=4476881" "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; InfoPath.1)
+</code></pre>
+<p>The first fields in order are: User's ip, ignored, ignored, Date and
+time, HTTP method, URL, HTTP Method, HTTP status code, Number of bytes
+returned, Referrer, and User Agent.</p>
+<h2 id="defining-data-beans">Defining data beans<a class="headerlink" href="#defining-data-beans" title="Permalink">&para;</a></h2>
+<p>Data beans are the main way to hold the data in memory and persist in Gora. Gora
+needs to explicitly keep track of the status of the data in memory, so
+we use <a href="http://avro.apache.org">Apache Avro</a> for defining the beans. Using
+Avro gives us the possibility to explicitly keep track of an object's persistent state
+and a way to serialize an object's data.
+Defining data beans is a very easy task, but for the exact syntax please
+consult the <a href="http://avro.apache.org/docs/current/spec.html">Avro Specification</a>.
+First, we need to define the bean Pageview to hold a
+single URL access in the logs. Let's go over the class at <code>src/main/avro/pageview.json</code></p>
+<pre><code> {
+  "type": "record",
+  "name": "Pageview",
+  "namespace": "org.apache.gora.tutorial.log.generated",
+  "fields" : [
+    {"name": "url", "type": "string"},
+    {"name": "timestamp", "type": "long"},
+    {"name": "ip", "type": "string"},
+    {"name": "httpMethod", "type": "string"},
+    {"name": "httpStatusCode", "type": "int"},
+    {"name": "responseSize", "type": "int"},
+    {"name": "referrer", "type": "string"},
+    {"name": "userAgent", "type": "string"}
+  ]
+}
+</code></pre>
+<p>Avro schemas are declared in JSON.
+<a href="http://avro.apache.org/docs/current/spec.html#schema_record">Records</a>
+are defined with type "record", with a name as the name of the class, and a
+namespace which is mapped to the package name in Java. The fields
+are listed in the "fields" element. Each field is given with its type.</p>
+<h2 id="compiling-avro-schemas">Compiling Avro Schemas<a class="headerlink" href="#compiling-avro-schemas" title="Permalink">&para;</a></h2>
+<p>The next step after defining the data beans is to compile the schemas
+into Java classes. For that we will use the <a href="/current/compiler.html">GoraCompiler</a>.
+Invoke the Gora compiler from the top-level Gora directory with:</p>
+<pre><code>$ bin/gora goracompiler
+</code></pre>
+<p>results in:</p>
+<pre><code>$ Usage: GoraCompiler &lt;schema file&gt; &lt;output dir&gt; [-license &lt;id&gt;]
+   &lt;schema file&gt;     - individual avsc file to be compiled or a directory path containing avsc files
+   &lt;output dir&gt;      - output directory for generated Java files
+   [-license &lt;id&gt;]   - the preferred license header to add to the
+	           generated Java file. Current options include; 
+	  ASLv2   (Apache Software License v2.0) 
+	  AGPLv3  (GNU Affero General Public License)
+	  CDDLv1  (Common Development and Distribution License v1.0)
+	  FDLv13  (GNU Free Documentation License v1.3)
+	  GPLv1   (GNU General Public License v1.0)
+	  GPLv2   (GNU General Public License v2.0)
+	  GPLv3   (GNU General Public License v3.0)
+	  LGPLv21 (GNU Lesser General Public License v2.1)
+	  LGPLv3  (GNU Lesser General Public License v2.1)
+</code></pre>
+<p>so we will issue :</p>
+<pre><code>$ bin/gora goracompiler gora-tutorial/src/main/avro/pageview.json gora-tutorial/src/main/java/
+</code></pre>
+<p>to compile the Pageview class into <code>gora-tutorial/src/main/java/org/apache/gora/tutorial/log/generated/Pageview.java</code>.
+This will use the default license header which is ASLv2 for licensing the generated data beans.
+However, the tutorial java classes are already committed and present within SVN, so you do not need to do that now.</p>
+<p>The Gora compiler extends Avro's SpecificCompiler to convert a JSON definition
+into a Java class. Generated classes extend the Persistent interface.
+Most of the methods of the Persistent interface deal with bookkeeping for
+persistence and state tracking, so most of the time they are not used explicitly by the
+user. Now, let's look at the internals of the generated class Pageview.java.</p>
+<pre><code>public class Pageview extends PersistentBase {
+
+private Utf8 url;
+private long timestamp;
+private Utf8 ip;
+private Utf8 httpMethod;
+private int httpStatusCode;
+private int responseSize;
+private Utf8 referrer;
+private Utf8 userAgent;
+
+...
+
+public static final Schema _SCHEMA = Schema.parse("{\"type\":\"record\", ... ");
+  public static enum Field {
+  URL(0,"url"),
+  TIMESTAMP(1,"timestamp"),
+  IP(2,"ip"),
+  HTTP_METHOD(3,"httpMethod"),
+  HTTP_STATUS_CODE(4,"httpStatusCode"),
+  RESPONSE_SIZE(5,"responseSize"),
+  REFERRER(6,"referrer"),
+  USER_AGENT(7,"userAgent"),
+  ;
+  private int index;
+  private String name;
+  Field(int index, String name) {this.index=index;this.name=name;}
+  public int getIndex() {return index;}
+  public String getName() {return name;}
+  public String toString() {return name;}
+  };
+public static final String[] _ALL_FIELDS = {"url","timestamp","ip","httpMethod"
+  ,"httpStatusCode","responseSize","referrer","userAgent",};
+
+...
+}
+</code></pre>
+<p>We can see the actual field declarations in the class. Note that Avro uses Utf8
+class as a placeholder for string fields. We can also see the embedded Avro
+Schema declaration and an inner enum named Field. The enum and
+the _ALL_FIELDS fields will come in handy when we query the datastore for specific fields.</p>
+<h2 id="defining-data-store-mappings">Defining data store mappings<a class="headerlink" href="#defining-data-store-mappings" title="Permalink">&para;</a></h2>
+<p>Gora is designed to flexibly work with various types of data modeling,
+including column stores(such as HBase, Cassandra, etc), SQL databases, flat files(binary,
+JSON, XML encoded), and key-value stores. The mapping between the data bean and
+the data store is thus defined in XML mapping files. Each data store has its own
+mapping format, so that data-store specific settings can be leveraged more easily.
+The mapping files declare how the fields of the classes declared in Avro schemas
+are serialized and persisted to the data store.</p>
+<h3 id="hbase-mappings">HBase mappings<a class="headerlink" href="#hbase-mappings" title="Permalink">&para;</a></h3>
+<p>HBase mappings are stored at file named <code>gora-hbase-mapping.xml</code>.
+For this tutorial we will be using the file <code>gora-tutorial/conf/gora-hbase-mapping.xml</code>.</p>
+<pre><code>&lt;gora-otd&gt;
+  &lt;table name="Pageview"&gt; &lt;!-- optional descriptors for tables --&gt;
+    &lt;family name="common"&gt; &lt;!-- This can also have params like compression, bloom filters --&gt;
+    &lt;family name="http"/&gt;
+    &lt;family name="misc"/&gt;
+  &lt;/table&gt;
+
+  &lt;class name="org.apache.gora.tutorial.log.generated.Pageview" keyClass="java.lang.Long" table="Pageview"&gt;
+   &lt;field name="url" family="common" qualifier="url"/&gt;
+   &lt;field name="timestamp" family="common" qualifier="timestamp"/&gt;
+   &lt;field name="ip" family="common" qualifier="ip" /&gt;
+   &lt;field name="httpMethod" family="http" qualifier="httpMethod"/&gt;
+   &lt;field name="httpStatusCode" family="http" qualifier="httpStatusCode"/&gt;
+   &lt;field name="responseSize" family="http" qualifier="responseSize"/&gt;
+   &lt;field name="referrer" family="misc" qualifier="referrer"/&gt;
+   &lt;field name="userAgent" family="misc" qualifier="userAgent"/&gt;
+  &lt;/class&gt;
+
+  ...
+
+&lt;/gora-otd&gt;  
+</code></pre>
+<p>Every mapping file starts with the top level element <code>&lt;gora-otd&gt;</code>.
+Gora HBase mapping files can have two type of child elements, table and
+class declarations. All of the table and class definitions should be
+listed at this level.</p>
+<p>The table declaration is optional and most of the time, Gora infers the table
+declaration from the class sub elements. However, some of the HBase
+specific table configuration such as compression, blockCache, etc can be given here,
+if Gora is used to auto-create the tables. The exact syntax for the file can be found
+<a href="/current/gora-hbase.html">here</a>.</p>
+<p>In Gora, data store access is always
+done in a key-value data model, since most of the target backends support this model.
+DataStore API expects to know the class names of the key and persistent classes, so that
+they can be instantiated. The key value pair is declared in the class element.
+The name attribute is the fully qualified name of the class,
+and the keyClass attribute is the fully qualified class name of the key class.</p>
+<p>Children of the <code>class</code> element are <code>field</code>
+elements. Each field element has a name and family attribute, and
+an optional qualifier attribute. name attribute contains the name
+of the field in the persistent class, and family declares the column family
+of the HBase data model. If the qualifier is not given, the name of the field is used
+as the column qualifier. Note that map and array type fields are stored in unique column
+families, so the configuration should be list unique column families for each map and
+array type, and no qualifier should be given. The exact data model is discussed further
+at the <a href="/current/gora-hbase.html">gora-hbase</a> documentation.</p>
+<h2 id="basic-api">Basic API<a class="headerlink" href="#basic-api" title="Permalink">&para;</a></h2>
+<h3 id="parsing-the-logs">Parsing the logs<a class="headerlink" href="#parsing-the-logs" title="Permalink">&para;</a></h3>
+<p>Now that we have the basic setup, we can see Gora API in action. As you can notice below the API
+is pretty simple to use. We will be using the class LogManager (which is located at
+<code>gora-tutorial/src/main/java/org/apache/gora/tutorial/log/LogManager.java</code>) for parsing
+and storing the logs, deleting some lines and querying.</p>
+<p>First of all, let us look at the constructor. The only real thing it does is to call the
+init() method. init() method constructs the
+DataStore instance so that it can be used by the LogManager's methods.</p>
+<pre><code>  public LogManager() {
+    try {
+     init();
+    } catch (IOException ex) {
+    throw new RuntimeException(ex);
+    }
+  }
+  private void init() throws IOException {
+    dataStore = DataStoreFactory.getDataStore(Long.class, Pageview.class, new Configuration());
+  }
+</code></pre>
+<p>DataStore is probably the most important class in the Gora API.
+DataStore handles actual object persistence. Objects can be persisted,
+fetched, queried or deleted by the DataStore methods. Every data store that Gora supports, defines its own subclass
+of the DataStore class. For example gora-hbase module defines HBaseStore, and
+gora-sql module defines SqlStore. However, these subclasses are not explicitly
+used by the user.</p>
+<p>DataStores always have associated key and value(persistent) classes. Key class is the class of the keys of the
+data store, and the value is the actual data bean's class. The value class is almost always generated by
+Avro schema definitions using the Gora compiler.</p>
+<p>Data store objects are created by DataStoreFactory. It is necessary to
+provide the key and value class. The datastore class is optional,
+and if not specified it will be read from the configuration (<code>gora.properties</code>).</p>
+<p>For this tutorial, we have already defined the avro schema to use and compiled
+our data bean into Pageview class. For keys in the data store, we will be using Longs.
+The keys will hold the line of the pageview in the data file.</p>
+<p>Next, let's look at the main function of the LogManager class.</p>
+<pre><code>public static void main(String[] args) throws Exception {
+  if(args.length &gt; 2) {
+    System.err.println(USAGE);
+    System.exit(1);
+  }
+
+  LogManager manager = new LogManager();
+
+  if("-parse".equals(args[0])) {
+    manager.parse(args[1]);
+  } else if("-query".equals(args[0])) {
+  if(args.length == 2) 
+    manager.query(Long.parseLong(args[1]));
+  else 
+    manager.query(Long.parseLong(args[1]), Long.parseLong(args[2]));
+  } else if("-delete".equals(args[0])) {
+    manager.delete(Long.parseLong(args[1]));
+  } else if("-deleteByQuery".equalsIgnoreCase(args[0])) {
+    manager.deleteByQuery(Long.parseLong(args[1]), Long.parseLong(args[2]));
+  } else {
+    System.err.println(USAGE);
+    System.exit(1);
+  }
+
+  manager.close();
+}
+</code></pre>
+<p>We can use the example log manager program from the command line (in the top level Gora directory):</p>
+<pre><code>$ bin/gora logmanager 
+</code></pre>
+<p>which lists the usage as:</p>
+<pre><code>LogManager -parse &lt;input_log_file&gt;
+       -get &lt;lineNum&gt;
+       -query &lt;lineNum&gt;
+       -query &lt;startLineNum&gt; &lt;endLineNum&gt;
+       -delete &lt;lineNum&gt;
+       -deleteByQuery &lt;startLineNum&gt; &lt;endLineNum&gt;
+</code></pre>
+<p>So to parse and store our logs located at <code>gora-tutorial/src/main/resources/access.log</code>, we will issue:</p>
+<pre><code>$ bin/gora logmanager -parse gora-tutorial/src/main/resources/access.log
+</code></pre>
+<p>This should output something like:</p>
+<pre><code>10/09/30 18:30:17 INFO log.LogManager: Parsing file:gora-tutorial/src/main/resources/access.log
+10/09/30 18:30:23 INFO log.LogManager: finished parsing file. Total number of log lines:10000
+</code></pre>
+<p>Now, let's look at the code which parses the data and stores the logs.</p>
+<pre><code>private void parse(String input) throws IOException, ParseException {
+  BufferedReader reader = new BufferedReader(new FileReader(input));
+  long lineCount = 0;
+  try {
+    String line = reader.readLine();
+    do {
+      Pageview pageview = parseLine(line);
+    
+      if(pageview != null) {
+        //store the pageview 
+        storePageview(lineCount++, pageview);
+      }
+    
+      line = reader.readLine();
+    } while(line != null);
+  
+  } finally {
+  reader.close();  
+  }
+}
+</code></pre>
+<p>The file is iterated line-by-line. Notice that the parseLine(line)
+function does the actual parsing converting the string to a Pageview object
+defined earlier.</p>
+<pre><code>private Pageview parseLine(String line) throws ParseException {
+  StringTokenizer matcher = new StringTokenizer(line);
+  //parse the log line
+  String ip = matcher.nextToken();
+  ...
+
+  //construct and return pageview object
+  Pageview pageview = new Pageview();
+  pageview.setIp(new Utf8(ip));
+  pageview.setTimestamp(timestamp);
+  ...
+
+  return pageview;
+}
+</code></pre>
+<p>parseLine() uses standard StringTokenizers for the job
+and constructs and returns a Pageview object.</p>
+<h3 id="storing-objects-in-the-datastore">Storing objects in the DataStore<a class="headerlink" href="#storing-objects-in-the-datastore" title="Permalink">&para;</a></h3>
+<p>If we look back at the parse() method above, we can see that the
+Pageview objects returned by parseLine() are stored via
+storePageview() method.</p>
+<p>The storePageview() method is where magic happens, but if we look at the code,
+we can see that it is dead simple.</p>
+<pre><code>/** Stores the pageview object with the given key */
+private void storePageview(long key, Pageview pageview) throws IOException {
+  dataStore.put(key, pageview);
+}
+</code></pre>
+<p>All we need to do is to call the put() method, which expects a long as key and an instance of Pageview
+as a value.</p>
+<h3 id="closing-the-datastore">Closing the DataStore<a class="headerlink" href="#closing-the-datastore" title="Permalink">&para;</a></h3>
+<p>DataStore implementations can do a lot of caching for performance.
+However, this means that data is not always flushed to persistent storage all the times.
+So we need to make sure that upon finishing storing objects, we need to close the datastore
+instance by calling it's close() method.
+LogManager always closes it's datastore in it's own close() method.</p>
+<pre><code>private void close() throws IOException {
+  //It is very important to close the datastore properly, otherwise
+  //some data loss might occur.
+  if(dataStore != null)
+  dataStore.close();
+}
+</code></pre>
+<p>If you are pushing a lot of data, or if you want your data to be accessible before closing
+the data store, you can also the flush()
+method which, as expected, flushes the data to the underlying data store. However, the actual flush
+semantics can vary by the data store backend. For example, in SQL flush calls commit()
+on the jdbc Connection object, whereas in Hb=Base, <code>HTable#flush()</code> is called.
+Also note that even if you call flush() at the end of all data manipulation operations,
+you still need to call the close() on the datastore.</p>
+<h2 id="persisted-data-in-hbase">Persisted data in HBase<a class="headerlink" href="#persisted-data-in-hbase" title="Permalink">&para;</a></h2>
+<p>Now that we have stored the web access log data in HBase, we can look at
+how the data is stored at HBase. For that, start the HBase shell.</p>
+<pre><code>$ cd ../hbase-${version}
+$ bin/hbase shell
+</code></pre>
+<p>If you have a fresh HBase installation, there should be one table.</p>
+<pre><code>hbase(main):010:0&gt; list
+
+AccessLog                                                                                                     
+1 row(s) in 0.0470 seconds
+</code></pre>
+<p>Remember that AccessLog is the name of the table we specified at
+gora-hbase-mapping.xml. Looking at the contents of the table:</p>
+<pre><code>hbase(main):010:0&gt; scan 'AccessLog', {LIMIT=&gt;1}
+
+ROW                          COLUMN+CELL                                                                      
+ \x00\x00\x00\x00\x00\x00\x0 column=common:ip, timestamp=1285860617341, value=88.240.129.183                  
+ 0\x00                                                                                                        
+ \x00\x00\x00\x00\x00\x00\x0 column=common:timestamp, timestamp=1285860617341, value=\x00\x00\x01\x1F\xF1\xAEl
+ 0\x00                       P                                                                                
+ \x00\x00\x00\x00\x00\x00\x0 column=common:url, timestamp=1285860617341, value=/index.php?a=1__wwv40pdxdpo&amp;amp;k=2
+ 0\x00                       18978                                                                            
+ \x00\x00\x00\x00\x00\x00\x0 column=http:httpMethod, timestamp=1285860617341, value=GET                       
+ 0\x00                                                                                                        
+ \x00\x00\x00\x00\x00\x00\x0 column=http:httpStatusCode, timestamp=1285860617341, value=\x00\x00\x00\xC8      
+ 0\x00                                                                                                        
+ \x00\x00\x00\x00\x00\x00\x0 column=http:responseSize, timestamp=1285860617341, value=\x00\x00\x00+           
+ 0\x00                                                                                                        
+ \x00\x00\x00\x00\x00\x00\x0 column=misc:referrer, timestamp=1285860617341, value=http://www.buldinle.com/inde
+ 0\x00                       x.php?a=1__WWV40pdxdpo&amp;amp;k=218978                                                  
+ \x00\x00\x00\x00\x00\x00\x0 column=misc:userAgent, timestamp=1285860617341, value=Mozilla/4.0 (compatible; MS
+ 0\x00                       IE 6.0; Windows NT 5.1)
+</code></pre>
+<p>The output shows all the columns matching the first line with key 0. We can see
+the columns common:ip, common:timestamp, common:url, etc. Remember that
+these are the columns that we have described in the <code>gora-hbase-mapping.xml</code> file.</p>
+<p>You can also count the number of entries in the table to make sure that all the records
+have been stored.</p>
+<pre><code>hbase(main):010:0&gt; count 'AccessLog'
+  ... 
+  10000 row(s) in 1.0580 seconds
+</code></pre>
+<h2 id="fetching-objects-from-data-store">Fetching objects from data store<a class="headerlink" href="#fetching-objects-from-data-store" title="Permalink">&para;</a></h2>
+<p>Fetching objects from the data store is as easy as storing them. There are essentially
+two methods for fetching objects. First one is to fetch a single object given it's key. The
+second method is to run a query through the data store.</p>
+<p>To fetch objects one by one, we can use one of the overloaded
+<code>get()</code> methods.
+The method with signature <code>get(K key)</code> returns the object corresponding to the given key fetching all the
+fields. On the other hand <code>get(K key, String[] fields)</code> returns the object corresponding to the
+given key, but fetching only the fields given as the second argument.</p>
+<p>When run with the argument -get LogManager class fetches the pageview object
+from the data store and prints the results.</p>
+<pre><code>/** Fetches a single pageview object and prints it*/
+private void get(long key) throws IOException {
+  Pageview pageview = dataStore.get(key);
+  printPageview(pageview);
+}
+</code></pre>
+<p>To display the 42nd line of the access log :</p>
+<pre><code>$ bin/gora logmanager -get 42 
+
+org.apache.gora.tutorial.log.generated.Pageview@321ce053 {
+  "url":"/index.php?i=0&amp;amp;a=1__rntjt9z0q9w&amp;amp;k=398179"
+  "timestamp":"1236710649000"
+  "ip":"88.240.129.183"
+  "httpMethod":"GET"
+  "httpStatusCode":"200"
+  "responseSize":"43"
+  "referrer":"http://www.buldinle.com/index.php?i=0&amp;amp;a=1__RnTjT9z0Q9w&amp;amp;k=398179"
+  "userAgent":"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)"
+}
+</code></pre>
+<h2 id="querying-objects">Querying objects<a class="headerlink" href="#querying-objects" title="Permalink">&para;</a></h2>
+<p>DataStore API defines a Query interface to query the objects at the data store.
+Each data store implementation can use a specific implementation of the Query interface. Queries are
+instantiated by calling <code>DataStore#newQuery()</code>. When the query is run through the datastore, the results
+are returned via the Result interface. Let's see how we can run a query and display the results below in the
+the LogManager class.</p>
+<pre><code>/** Queries and prints pageview object that have keys between startKey and endKey*/
+private void query(long startKey, long endKey) throws IOException {
+  Query&lt;Long, Pageview&gt; query = dataStore.newQuery();
+  //set the properties of query
+  query.setStartKey(startKey);
+  query.setEndKey(endKey);
+
+  Result&lt;Long, Pageview&gt; result = query.execute();
+
+  printResult(result);
+}
+</code></pre>
+<p>After constructing a Query, its properties
+are set via the setter methods. Then calling <code>query.execute()</code> returns
+the <code>Result</code> object.</p>
+<p>Result interface allows us to iterate the results one by one by calling the
+<code>next()</code> method. The <code>getKey()</code> method returns the current key and <code>get()</code>
+returns current persistent object.</p>
+<pre><code>private void printResult(Result&lt;Long, Pageview&gt; result) throws IOException {
+
+  while(result.next()) { //advances the Result object and breaks if at end
+    long resultKey = result.getKey(); //obtain current key
+    Pageview resultPageview = result.get(); //obtain current value object
+  
+    //print the results
+    System.out.println(resultKey + ":");
+    printPageview(resultPageview);
+  }
+
+  System.out.println("Number of pageviews from the query:" + result.getOffset());
+}
+</code></pre>
+<p>With these functions defined, we can run the Log Manager class, to query the
+access logs at HBase. For example, to display the log records between lines 10 and 12
+we can use:</p>
+<pre><code>bin/gora logmanager -query 10 12
+</code></pre>
+<p>Which results in:</p>
+<pre><code>10:
+org.apache.gora.tutorial.log.generated.Pageview@d38d0eaa {
+  "url":"/"
+  "timestamp":"1236710442000"
+  "ip":"144.122.180.55"
+  "httpMethod":"GET"
+  "httpStatusCode":"200"
+  "responseSize":"43"
+  "referrer":"http://buldinle.com/"
+  "userAgent":"Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.6) Gecko/2009020911 Ubuntu/8.10 (intrepid) Firefox/3.0.6"
+}
+11:
+org.apache.gora.tutorial.log.generated.Pageview@b513110a {
+  "url":"/index.php?i=7&amp;amp;a=1__gefuumyhl5c&amp;amp;k=5143555"
+  "timestamp":"1236710453000"
+  "ip":"85.100.75.104"
+  "httpMethod":"GET"
+  "httpStatusCode":"200"
+  "responseSize":"43"
+  "referrer":"http://www.buldinle.com/index.php?i=7&amp;amp;a=1__GeFUuMyHl5c&amp;amp;k=5143555"
+  "userAgent":"Mozilla/5.0 (Windows; U; Windows NT 5.1; tr; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7"
+}
+</code></pre>
+<h2 id="deleting-objects">Deleting objects<a class="headerlink" href="#deleting-objects" title="Permalink">&para;</a></h2>
+<p>Just like fetching objects, there are two main methods to delete
+objects from the data store. The first one is to delete objects one by
+one using the <code>DataStore#delete(K key)</code> method, which takes the key of the object.
+Alternatively we can delete all of the data that matches a given query by
+calling the <code>DataStore#deleteByQuery(Query query)</code> method. By using <code>#deleteByQuery</code>, we can
+do fine-grain deletes, for example deleting just a specific field
+from several records.
+Continueing from the LogManager class, the api's for both are given below.</p>
+<pre><code>/**Deletes the pageview with the given line number */
+private void delete(long lineNum) throws Exception {
+  dataStore.delete(lineNum);
+  dataStore.flush(); //write changes may need to be flushed before they are committed 
+}
+
+/** This method illustrates delete by query call */
+private void deleteByQuery(long startKey, long endKey) throws IOException {
+  //Constructs a query from the dataStore. The matching rows to this query will be deleted
+  Query&lt;Long, Pageview&gt; query = dataStore.newQuery();
+  //set the properties of query
+  query.setStartKey(startKey);
+  query.setEndKey(endKey);
+
+  dataStore.deleteByQuery(query);
+}    
+</code></pre>
+<p>And from the command line :</p>
+<pre><code>bin/gora logmanager -delete 12
+bin/gora logmanager -deleteByQuery 40 50
+</code></pre>
+<h2 id="mapreduce-support">MapReduce Support<a class="headerlink" href="#mapreduce-support" title="Permalink">&para;</a></h2>
+<p>Gora has first class MapReduce support for <a href="http://hadoop.apache.org">Apache Hadoop</a>.
+Gora data stores can be used as inputs and outputs of jobs. Moreover, the objects can
+be serialized, and passed between tasks keeping their persistency state. For the
+serialization, Gora extends Avro DatumWriters.</p>
+<h3 id="log-analytics-in-mapreduce">Log analytics in MapReduce<a class="headerlink" href="#log-analytics-in-mapreduce" title="Permalink">&para;</a></h3>
+<p>For this part of the tutorial, we will be analyzing the logs that have been
+stored at HBase earlier. Specifically, we will develop a MapReduce program to
+calculate the number of daily pageviews for each URL in the site.</p>
+<p>We will be using the LogAnalytics class to analyze the logs, which can
+be found at <code>gora-tutorial/src/main/java/org/apache/gora/tutorial/log/LogAnalytics.java</code>.
+For computing the analytics, the mapper takes in pageviews, and outputs tuples of
+&lt;URL, timestamp&gt; pairs, with 1 as the value. The timestamp represents the day
+in which the pageview occurred, so that the daily pageviews are accumulated.
+The reducer just sums up the values, and outputs MetricDatum objects
+to be sent to the output Gora data store.</p>
+<h3 id="setting-up-the-environment">Setting up the environment<a class="headerlink" href="#setting-up-the-environment" title="Permalink">&para;</a></h3>
+<p>We will be using the logs stored at HBase by the LogManager class.
+We will push the output of the job to an HSQL database, since it has a zero conf
+set up. However, you can also use MySQL or HBase for storing the analytics results.
+If you want to continue with HBase, you can skip the next sections.</p>
+<h3 id="setting-up-the-database">Setting up the database<a class="headerlink" href="#setting-up-the-database" title="Permalink">&para;</a></h3>
+<p>First we need to download HSQL dependencies. For that, ensure that the hsqldb
+dependency is available in the Maven pom.xml.
+Ofcourse MySQL users should uncomment the mysql dependency instead.</p>
+<pre><code>&lt;!--&lt;dependency org="org.hsqldb" name="hsqldb" rev="2.0.0" conf="*-&gt;default"/&gt;--&gt;
+</code></pre>
+<p>Then we need to run Maven so that the new dependencies can be downloaded.</p>
+<pre><code>$ mvn 
+</code></pre>
+<p>If you are using Mysql, you should also setup the database server, create the database
+and give necessary permissions to create tables, etc so that Gora can run properly.</p>
+<h3 id="configuring-gora_1">Configuring Gora<a class="headerlink" href="#configuring-gora_1" title="Permalink">&para;</a></h3>
+<p>We will put the configuration necessary to connect to the database to
+<code>gora-tutorial/conf/gora.properties</code>.</p>
+<h4 id="jdbc-properties-for-gora-sql-module-using-hsql">JDBC properties for gora-sql module using HSQL<a class="headerlink" href="#jdbc-properties-for-gora-sql-module-using-hsql" title="Permalink">&para;</a></h4>
+<pre><code>gora.sqlstore.jdbc.driver=org.hsqldb.jdbcDriver
+gora.sqlstore.jdbc.url=jdbc:hsqldb:hsql://localhost/goratest
+</code></pre>
+<h4 id="jdbc-properties-for-gora-sql-module-using-mysql">JDBC properties for gora-sql module using MySQL<a class="headerlink" href="#jdbc-properties-for-gora-sql-module-using-mysql" title="Permalink">&para;</a></h4>
+<pre><code>gora.sqlstore.jdbc.driver=com.mysql.jdbc.Driver
+gora.sqlstore.jdbc.url=jdbc:mysql://localhost:3306/goratest
+gora.sqlstore.jdbc.user=root
+gora.sqlstore.jdbc.password=      
+</code></pre>
+<p>As expected the jdbc.driver property is the JDBC driver class,
+and jdbc.url is the JDBC connection URL. Moreover jdbc.user
+and jdbc.password can be specific is needed. More information for these
+parameters can be found at <a href="/current/gora-sql.html">gora-sql</a> documentation.</p>
+<h3 id="modelling-the-data-data-beans-for-analytics">Modelling the data - Data Beans for Analytics<a class="headerlink" href="#modelling-the-data-data-beans-for-analytics" title="Permalink">&para;</a></h3>
+<p>For web site analytics, we will be using a generic MetricDatum
+data structure. It holds a string metricDimension, a long
+timestamp, and a long metric fields. The first two fields
+are the dimensions of the web analytics data, and the last is the actual aggregate
+metric value. For example we might have an instance {metricDimension="/index",
+timestamp=101, metric=12}, representing that there have been 12 pageviews to
+the URL "/index" for the given time interval 101.</p>
+<p>The avro schema definition for MetricDatum can be found at
+<code>gora-tutorial/src/main/avro/metricdatum.json</code>, and the compiled source
+code at <code>gora-tutorial/src/main/java/org/apache/gora/tutorial/log/generated/MetricDatum.java</code>.</p>
+<pre><code>{
+  "type": "record",
+  "name": "MetricDatum",
+  "namespace": "org.apache.gora.tutorial.log.generated",
+  "fields" : [
+    {"name": "metricDimension", "type": "string"},
+    {"name": "timestamp", "type": "long"},
+    {"name": "metric", "type" : "long"}
+  ]
+}
+</code></pre>
+<h3 id="data-store-mappings">Data store mappings<a class="headerlink" href="#data-store-mappings" title="Permalink">&para;</a></h3>
+<p>We will be using the SQL backend to store the job output data, just to
+demonstrate the SQL backend.</p>
+<p>Similar to what we have seen with HBase, gora-sql plugin reads configuration from the
+<code>gora-sql-mappings.xml</code> file.
+Specifically, we will use the <code>gora-tutorial/conf/gora-sql-mappings.xml</code> file.</p>
+<pre><code>&lt;gora-otd&gt;
+  ...
+  &lt;class name="org.apache.gora.tutorial.log.generated.MetricDatum" keyClass="java.lang.String" table="Metrics"&gt;
+    &lt;primarykey column="id" length="512"/&gt;
+    &lt;field name="metricDimension" column="metricDimension" length="512"/&gt;
+    &lt;field name="timestamp" column="ts"/&gt;
+    &lt;field name="metric" column="metric/&gt;
+  &lt;/class&gt;
+&lt;/gora-otd&gt;
+</code></pre>
+<p>SQL mapping files contain one or more class elements as the children of gora-orm.
+The key value pair is declared in the class element. The name attribute is the
+fully qualified name of the class, and the keyClass attribute is the fully qualified class
+name of the key class.</p>
+<p>Children of the class element are field elements and one
+primaryKey element. Each field element has a name
+and column attribute, and optional  jdbc-type, length and scale attributes.
+name attribute contains the name of the field in the persistent class, and
+column attribute is the name of the
+column in the database. The primaryKey holds the actual key as the primary key field. Currently,
+Gora only supports tables with one primary key.</p>
+<h2 id="constructing-the-job">Constructing the job<a class="headerlink" href="#constructing-the-job" title="Permalink">&para;</a></h2>
+<p>In constructing the job object for Hadoop, we need to define whether we will use
+Gora as job input, output or both. Gora defines
+its own GoraInputFormat, and GoraOutputFormat, which
+uses DataStore's as input sources and output sinks for the jobs.
+Gora{In|Out}putFormat classes define static methods to set up the job properly.
+However, if the mapper or reducer extends Gora's mapper and reducer  classes,
+you can use the static methods defined in GoraMapper and
+GoraReducer since they are more convenient.</p>
+<p>For this tutorial we will use Gora as both input and output. As can be seen from the
+<code>createJob()</code> function, quoted below, we create the job
+as normal, and set the input parameters via
+<code>GoraMapper#initMapperJob()</code>, and <code>GoraReducer#initReducerJob()</code>.</p>
+<p><code>GoraMapper#initMapperJob()</code> takes a store and an optional query to fetch the data from.
+When a query is given, only the results of the query is used as the input of the job, if not all the records are used.
+The actual Mapper, map output key and value classes are passed to <code>initMapperJob()</code>
+function as well. <code>GoraReducer#initReducerJob()</code> accepts
+the data store to store the job's output as well as the actual reducer class.
+initMapperJob and initReducerJob functions have also overriden methods that take the data store class
+rather than data store instances.</p>
+<pre><code>  public Job createJob(DataStore&lt;Long, Pageview&gt; inStore
+      , DataStore&lt;String, MetricDatum&gt; outStore, int numReducer) throws IOException {
+    Job job = new Job(getConf());
+
+    job.setJobName("Log Analytics");
+    job.setNumReduceTasks(numReducer);
+    job.setJarByClass(getClass());
+
+    /* Mappers are initialized with GoraMapper.initMapper() or 
+     * GoraInputFormat.setInput()*/
+    GoraMapper.initMapperJob(job, inStore, TextLong.class, LongWritable.class
+        , LogAnalyticsMapper.class, true);
+
+    /* Reducers are initialized with GoraReducer#initReducer().
+     * If the output is not to be persisted via Gora, any reducer 
+     * can be used instead. */
+    GoraReducer.initReducerJob(job, outStore, LogAnalyticsReducer.class);
+
+    return job;
+  }
+</code></pre>
+<h3 id="gora-mappers-and-using-gora-an-input">Gora mappers and using Gora an input<a class="headerlink" href="#gora-mappers-and-using-gora-an-input" title="Permalink">&para;</a></h3>
+<p>Typically, if Gora is used as job input, the Mapper class extends<br/>
+GoraMapper. However, currently this is not forced by the API so other class hierarchies can be used instead.
+The mapper receives the key value pairs that are the results of the input query, and emits
+the results of the custom map task. Note that output records from map are independent
+from the input and output data stores, so any Hadoop serializable key value class can be used.
+However, Gora persistent classes are also Hadoop serializable. Hadoop serialization is
+handled by the PersistentSerialization class. Gora also defines a StringSerialization class, to serialize strings easily.</p>
+<p>Coming back to the code for the tutorial, we can see that LogAnalytics
+class defines an inner class LogAnalyticsMapper which extends
+GoraMapper. The map function receives Long keys which are the line
+numbers, and Pageview values as read from the input data store. The map simply
+rolls up the timestamp up to the day (meaning that only the day of the timestamp is used),
+and outputs the key as a tuple of &lt;URL,day&gt;.</p>
+<pre><code>private TextLong tuple;
+
+protected void map(Long key, Pageview pageview, Context context) 
+  throws IOException ,InterruptedException {
+  
+  Utf8 url = pageview.getUrl();
+  long day = getDay(pageview.getTimestamp());
+  
+  tuple.getKey().set(url.toString());
+  tuple.getValue().set(day);
+  
+  context.write(tuple, one);
+};
+</code></pre>
+<h3 id="gora-reducers-and-using-gora-as-output">Gora reducers and using Gora as output<a class="headerlink" href="#gora-reducers-and-using-gora-as-output" title="Permalink">&para;</a></h3>
+<p>Similar to the input, typically, if Gora is used as job output, the Reducer extends
+GoraReducer. The values emitted by the reducer are persisted to the output data store
+as a result of the job.</p>
+<p>For this tutorial, the LogAnalyticsReducer inner class,
+which extends GoraReducer, is used as the reducer. The reducer
+just sums up all the values that correspond to the &lt;URL,day&gt; tuple.
+Then the metric dimension object is constructed and emitted, which
+will be stored at the output data store.</p>
+<pre><code>protected void reduce(TextLong tuple
+    , Iterable&lt;LongWritable&gt; values, Context context) 
+  throws IOException ,InterruptedException {
+  
+  long sum = 0L; //sum up the values
+  for(LongWritable value: values) {
+    sum+= value.get();
+  }
+  
+  String dimension = tuple.getKey().toString();
+  long timestamp = tuple.getValue().get();
+  
+  metricDatum.setMetricDimension(new Utf8(dimension));
+  metricDatum.setTimestamp(timestamp);
+  
+  String key = metricDatum.getMetricDimension().toString();
+  metricDatum.setMetric(sum);
+  
+  context.write(key, metricDatum);
+};
+</code></pre>
+<h3 id="running-the-job">Running the job<a class="headerlink" href="#running-the-job" title="Permalink">&para;</a></h3>
+<p>Now that the job is constructed, we can run the Hadoop job as usual. Note that the run function
+of the LogAnalytics class parses the arguments and runs the job. We can run the program by</p>
+<pre><code>$ bin/gora loganalytics [&lt;input data store&gt; [&lt;output data store&gt;]]
+</code></pre>
+<h3 id="running-the-job-with-sql">Running the job with SQL<a class="headerlink" href="#running-the-job-with-sql" title="Permalink">&para;</a></h3>
+<p>Now, let's run the log analytics tools with the SQL backend(either Hsql or MySql). The input data store will be</p>
+<pre><code>org.apache.gora.hbase.store.HBaseStore 
+</code></pre>
+<p>and output store will be</p>
+<pre><code>org.apache.gora.sql.store.SqlStore
+</code></pre>
+<p>Remember that we have already configured the database
+connection properties and which database will be used at the Setting up the environment section.</p>
+<pre><code>$ bin/gora loganalytics org.apache.gora.hbase.store.HBaseStore  org.apache.gora.sql.store.SqlStore
+</code></pre>
+<p>Now we should see some logging output from the job, and whether it finished with success. To check out the output
+if we are using HSQLDB, below command can be used.</p>
+<pre><code>$ java -jar gora-tutorial/lib/hsqldb-2.0.0.jar
+</code></pre>
+<p>In the connection URL, the same URL that we have provided in gora.properties should be used. If on the other hand
+MySQL is used, than we should be able to see the output using the mysql command line utility.</p>
+<p>The results of the job are stored at the table Metrics, which is defined at the <code>gora-sql-mapping.xml</code>
+file. Running a select query over this data confirms that the daily pageview metrics for the web site is indeed stored.
+To see the most popular pages, run:</p>
+<p>&gt; SELECT METRICDIMENSION, TS, METRIC  FROM metrics order by metric desc</p>
+<table class="table">
+<tr><th>METRICDIMENSION</th> <th>TS</th> <th>METRIC</th></tr>
+<tr><td>/</td> <td>	1236902400000</td> <td>	220</td></tr>
+<tr><td>/</td> <td>	1236988800000</td> <td>	212</td></tr>
+<tr><td>/</td> <td>	1236816000000</td> <td>	191</td></tr>
+<tr><td>/</td> <td>	1237075200000</td> <td>	155</td></tr>
+<tr><td>/</td> <td>	1241395200000</td> <td>	111</td></tr>
+<tr><td>/</td> <td>	1236643200000</td> <td>	110</td></tr>
+<tr><td>/</td> <td>	1236729600000</td> <td>	95</td></tr>
+<tr><td>/index.php?a=3__x8g0vi&amp;k=5508310</td> <td>	1236816000000</td> <td>	45</td></tr>
+<tr><td>/index.php?a=1__5kf9nvgrzos&amp;k=208773</td> <td>	1236816000000</td> <td>	37</td></tr>
+<tr><td>...</td> <td>...</td> <td>...</td></tr>
+</table>
+<p>As you can see, the home page (/) for various days and some other pages are listed.
+In total 3033 rows are present at the metrics table.</p>
+<h3 id="running-the-job-with-hbase">Running the job with HBase<a class="headerlink" href="#running-the-job-with-hbase" title="Permalink">&para;</a></h3>
+<p>Since HBaseStore is already defined as the default data store at <code>gora.properties</code>
+we can run the job with HBase as:</p>
+<pre><code>$ bin/gora loganalytics
+</code></pre>
+<p>The outputs of the job will be saved in the Metrics table, whose layout is defined at
+<code>gora-hbase-mapping.xml</code> file. To see the results:</p>
+<pre><code>hbase(main):010:0&gt; scan 'Metrics', {LIMIT=&gt;1}
+
+ROW                          COLUMN+CELL
+ /?a=1__-znawtuabsy&amp;amp;k=96804_ column=common:metric, timestamp=1289815441740, value=\x00\x00\x00\x00\x00\x00\x00
+ 1236902400000               \x09
+ /?a=1__-znawtuabsy&amp;amp;k=96804_ column=common:metricDimension, timestamp=1289815441740, value=/?a=1__-znawtuabsy&amp;amp;
+ 1236902400000               k=96804
+ /?a=1__-znawtuabsy&amp;amp;k=96804_ column=common:ts, timestamp=1289815441740, value=\x00\x00\x01\x1F\xFD \xD0\x00
+ 1236902400000
+1 row(s) in 0.0490 seconds
+</code></pre>
+<h2 id="spark-backend">Spark Backend<a class="headerlink" href="#spark-backend" title="Permalink">&para;</a></h2>
+<p>Log analytics example will be implemented via GoraSparkEngine at this tutorial to explain Spark backend of Gora.
+Data will be read from Hbase, map/reduce methods will be run and result will be written into Solr (version: 4.10.3).
+All the process will be done over Spark.</p>
+<p>Persist data into Hbase as described at <a href="/current/tutorial.html#log-analytics-in-mapreduce">Log analytics in MapReduce</a>.</p>
+<p>To write result into Solr, create a schemaless core named as Metrics. To do it easily, you can rename default core of collection1 to Metrics which is at
+<code>solr-4.10.3/example/example-schemaless/solr</code> folder and edit <code>solr-4.10.3/example/example-schemaless/solr/Metrics/core.properties</code> as follows:</p>
+<pre><code>name=Metrics
+</code></pre>
+<p>Then run start command for Solr:</p>
+<pre><code>solr-4.10.3/example$ java -Dsolr.solr.home=example-schemaless/solr/ -jar start.jar
+</code></pre>
+<p>Read data from Hbase, generate some metrics and write results into Solr with Spark via Gora. Here is how to initialize in and out data stores:</p>
+<pre><code>public int run(String[] args) throws Exception {
+  DataStore&lt;Long, Pageview&gt; inStore;
+  DataStore&lt;String, MetricDatum&gt; outStore;
+  Configuration hadoopConf = new Configuration();
+  if (args.length &gt; 0) {
+    String dataStoreClass = args[0];
+    inStore = DataStoreFactory.getDataStore(dataStoreClass, Long.class, Pageview.class, hadoopConf);
+    if (args.length &gt; 1) {
+      dataStoreClass = args[1];
+    }
+    outStore = DataStoreFactory.getDataStore(dataStoreClass, String.class, MetricDatum.class, hadoopConf);
+    } else {
+      inStore = DataStoreFactory.getDataStore(Long.class, Pageview.class, hadoopConf);
+      outStore = DataStoreFactory.getDataStore(String.class, MetricDatum.class, hadoopConf);
+  }
+ ...
+}
+</code></pre>
+<p>Pass input data store&rsquo;s key and value classes and instantiate a GoraSparkEngine:</p>
+<pre><code>GoraSparkEngine&lt;Long, Pageview&gt; goraSparkEngine = new GoraSparkEngine&lt;&gt;(Long.class, Pageview.class);
+</code></pre>
+<p>Construct a JavaSparkContext. Register input data store&rsquo;s value class as Kryo class:</p>
+<pre><code>SparkConf sparkConf = new SparkConf().setAppName("Gora Spark Integration Application").setMaster("local");
+Class[] c = new Class[1];
+c[0] = inStore.getPersistentClass();
+sparkConf.registerKryoClasses(c);
+JavaSparkContext sc = new JavaSparkContext(sparkConf);
+</code></pre>
+<p>You can get JavaPairRDD from input data store:</p>
+<pre><code>JavaPairRDD&lt;Long, Pageview&gt; goraRDD = goraSparkEngine.initialize(sc, inStore);
+</code></pre>
+<p>When you get it, you can work on it as like you are writing a code for Spark! For example:</p>
+<pre><code>long count = goraRDD.count();
+System.out.println("Total Log Count: " + count);
+</code></pre>
+<p>These are the functions of map and reduce phases for this example:</p>
+<pre><code>/** The number of milliseconds in a day */
+private static final long DAY_MILIS = 1000 * 60 * 60 * 24;
+
+/**
+* map function used in calculation
+*/
+private static Function&lt;Pageview, Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt;&gt; mapFunc = new Function&lt;Pageview, Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt;&gt;() {
+  @Override
+  public Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt; call(Pageview pageview) throws Exception {
+    String url = pageview.getUrl().toString();
+    Long day = getDay(pageview.getTimestamp());
+    Tuple2&lt;String, Long&gt; keyTuple = new Tuple2&lt;&gt;(url, day);
+    return new Tuple2&lt;&gt;(keyTuple, 1L);
+  }
+};
+
+/**
+* reduce function used in calculation
+*/
+private static Function2&lt;Long, Long, Long&gt; redFunc = new Function2&lt;Long, Long, Long&gt;() {
+  @Override
+  public Long call(Long aLong, Long aLong2) throws Exception {
+    return aLong + aLong2;
+  }
+};
+
+/**
+* metric function used after map phase
+*/
+private static PairFunction&lt;Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt;, String, MetricDatum&gt; metricFunc = new PairFunction&lt;Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt;, String, MetricDatum&gt;() {
+  @Override
+  public Tuple2&lt;String, MetricDatum&gt; call(
+    Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt; tuple2LongTuple2) throws Exception {
+    String dimension = tuple2LongTuple2._1()._1();
+    long timestamp = tuple2LongTuple2._1()._2();
+    MetricDatum metricDatum = new MetricDatum();
+    metricDatum.setMetricDimension(dimension);
+    metricDatum.setTimestamp(timestamp);
+    String key = metricDatum.getMetricDimension().toString();
+    key += "_" + Long.toString(timestamp);
+    metricDatum.setMetric(tuple2LongTuple2._2());
+    return new Tuple2&lt;&gt;(key, metricDatum);
+  }
+};
+
+/**
+* Rolls up the given timestamp to the day cardinality, so that data can be aggregated daily
+*/
+private static long getDay(long timeStamp) {
+  return (timeStamp / DAY_MILIS) * DAY_MILIS;
+}
+</code></pre>
+<p>Here is how to run map and reduce functions at existing JavaPairRDD:</p>
+<pre><code>JavaRDD&lt;Tuple2&lt;Tuple2&lt;String, Long&gt;, Long&gt;&gt; mappedGoraRdd = goraRDD.values().map(mapFunc);
+JavaPairRDD&lt;String, MetricDatum&gt; reducedGoraRdd = JavaPairRDD.fromJavaRDD(mappedGoraRdd).reduceByKey(redFunc).mapToPair(metricFunc);
+</code></pre>
+<p>When you want to persist result into output data store, (in our example it is Solr), you should do it as follows:</p>
+<pre><code>Configuration sparkHadoopConf = goraSparkEngine.generateOutputConf(outStore);
+reducedGoraRdd.saveAsNewAPIHadoopDataset(sparkHadoopConf);
+</code></pre>
+<p>That&rsquo;s all! You can check Solr to verify the result.</p>
+<h2 id="jcache-caching-datastore">JCache caching dataStore<a class="headerlink" href="#jcache-caching-datastore" title="Permalink">&para;</a></h2>
+<p>This tutorial is about exposing Apache Gora persistent dataStore over Apache Gora default caching dataStore JCache. This sample exhibits how caching can reduce read latency
+for consecutive reads when data beans are retrieved from intermediate cache as opposite to directly through the backend for consecutive iteration.</p>
+<p>Start HBase.</p>
+<pre><code>/hbase-0.98.19-hadoop2/bin$ ./start-hbase.sh
+</code></pre>
+<p>Start DistributedLogManager. ( Expose HBase dataStore over JCache dataStore )</p>
+<pre><code>/gora/bin$ ./gora distributedlogmanager 
+</code></pre>
+<p>Persist Log Databeans to HBase either via the path <b> JCache DataStore -&gt; HBase DataStore -&gt; HBase </b> either via direct path <b> HBase DataStore -&gt; HBase </b></p>
+<pre><code>-parse persistent|cache &lt;-input_log_file-&gt; - 
+</code></pre>
+<p>Benchmark dataBean read latency for two paths, path via <b> JCache DataStore &lt;- HBase DataStore &lt;- HBase </b> and path via <b> HBase DataStore &lt;- HBase </b></p>
+<pre><code>-benchmark &lt;-startLineNum-&gt; &lt;-endLineNum-&gt; &lt;-iterations-&gt;
+</code></pre>
+<h2 id="more-examples">More Examples<a class="headerlink" href="#more-examples" title="Permalink">&para;</a></h2>
+<p>Other than this tutorial, there are several places that you can find
+examples of Gora in action.</p>
+<p>The first place to look at is the examples directories
+under various Gora modules. All the modules have a <code>/src/examples/</code> directory
+under which some example classes can be found. Especially, there are some classes that are used for tests under
+<code>gora-core/src/examples/</code></p>
+<p>Second, various unit tests of Gora modules can be referred to see the API in use. The unit tests can be found
+at <code>gora-core/src/test/</code>.</p>
+<p>The source code for the projects using Gora can also be checked out as a reference. <a href="http://nutch.apache.org">Apache Nutch</a> is
+one of the first class users of Gora; so looking into how Nutch uses Gora is always a good idea. Gora is however also in use
+in other Apache projects such as <a href="http://giraph.apache.org">Apache Giraph</a></p>
+<p>Please feel free to grab our <a href="http://gora.apache.org/resources/img/powered-by-gora.png">poweredBy</a> sticker and embedded it in anything backed by Apache Gora.</p>
+<h2 id="feedback">Feedback<a class="headerlink" href="#feedback" title="Permalink">&para;</a></h2>
+<p>At last, thanks for trying out Gora. If you find any bugs or you have suggestions for improvement,
+do not hesitate to give feedback on the <a href="mailto:dev@gora.apache.org">dev@gora.apache.org</a> <a href="../mailing_lists.html">mailing list</a>.</p>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

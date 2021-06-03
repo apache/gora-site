@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora Configuration" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora Configuration</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora Configuration">
+
+    <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h1>
+<p><strong>Camel-Gora</strong> is an <a href="http://camel.apache.org/">Apache Camel</a> component that allows you to work with NoSQL databases using the
+<a href="http://gora.apache.org/">Apache Gora</a> framework.</p>
+<p><strong>N.B.</strong> Camel-Gora is NOT a Gora module... but instead a Camel one. This documentation exists to provide detail on how
+Gora is being used in different settings.</p>
+<p><strong>Available as of Camel 2.14</strong></p>
+<div id="toc"><ul><li><a class="toc-href" href="#maven-configuration" title="Maven Configuration">Maven Configuration</a></li><li><a class="toc-href" href="#uri-format" title="URI format">URI format</a></li><li><a class="toc-href" href="#configuratiion" title="Configuratiion">Configuratiion</a></li><li><a class="toc-href" href="#supported-gora-operations" title="Supported Gora Operations">Supported Gora Operations</a></li><li><a class="toc-href" href="#options" title="Options">Options</a><ul><li><a class="toc-href" href="#gora-headers" title="Gora Headers">Gora Headers</a></li><li><a class="toc-href" href="#gora-configuration-attributes" title="Gora Configuration attributes">Gora Configuration attributes</a></li><li><a class="toc-href" href="#gora-query-attributes" title="Gora Query attributes">Gora Query attributes</a></li><li><a class="toc-href" href="#usage-examples" title="Usage examples">Usage examples</a></li><li><a class="toc-href" href="#more-resources" title="More resources">More resources</a></li></ul></li></ul></div>
+<h2 id="maven-configuration">Maven Configuration<a class="headerlink" href="#maven-configuration" title="Permalink">&para;</a></h2>
+<p>Maven users will need to add the following dependency to their pom.xml for this component:</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
+    &lt;artifactId&gt;camel-gora&lt;/artifactId&gt;
+    &lt;version&gt;x.x.x&lt;/version&gt;
+    &lt;!-- use the same version as your Camel core version --&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="uri-format">URI format<a class="headerlink" href="#uri-format" title="Permalink">&para;</a></h2>
+<pre><code>gora:instanceName[?options]
+</code></pre>
+<p>Hbase examples with mandatory options :</p>
+<p><em>XML</em></p>
+<pre><code>&lt;to uri="gora:foobar?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p><em>Java DSL</em></p>
+<pre><code>to("gora:foobar?keyClass=java.lang.Long&amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<h2 id="configuratiion">Configuratiion<a class="headerlink" href="#configuratiion" title="Permalink">&para;</a></h2>
+<p>Using camel-gora needs some configuration. This mainly involve to configure the <code>AvroStore</code> through the <code>gora.properties</code> file and to define the relevant mappings as part of the <em><a href="http://gora.apache.org/current/gora-core.html">gora-core</a></em> module.</p>
+<p>Extensive information for this configuration can be found in the apache <a href="./index.html">gora documentation</a> and the <a href="./gora-conf.html">gora-conf</a> page.</p>
+<h2 id="supported-gora-operations">Supported Gora Operations<a class="headerlink" href="#supported-gora-operations" title="Permalink">&para;</a></h2>
+<p>Supported operations include : <em><strong>put</strong>, <strong>get</strong>, <strong>delete</strong>, <strong>getSchemaName</strong>, <strong>deleteSchema</strong>, <strong>createSchema</strong>, <strong>query</strong>, <strong>deleteByQuery</strong>, <strong>schemaExists</strong></em>.</p>
+<p>Some of the operations require arguments while some others no. The arguments to operations could be either the <em>body</em> of the <em>in</em> message or defined in a header property. Below there is a list with some additional info for each operation.</p>
+<table class="table">
+<tr><th align="left">Property</th><th align="left">Description</th></tr>
+<tr>
+<td><tt><code>put</code></tt>
+<td>*Inserts the persistent object with the given key.*</td>
+</td></tr>
+<tr>
+<td><tt><code>get</code></tt>
+<td>*Returns the object corresponding to the given key fetching all the fields.*</td>
+</td></tr>
+<tr>
+<td><tt><code>delete</code></tt>
+<td>*Deletes the object with the given key.*</td>
+</td></tr>
+<tr>
+<td><tt><code>getSchemaName</code></tt>
+<td>*Returns the schema name given to this DataStore.*</td>
+</td></tr>
+<tr>
+<td><tt><code>deleteSchema</code></tt>
+<td>*Deletes the underlying schema or table (or similar) in the datastore that holds the objects.*</td>
+</td></tr>
+<tr>
+<td><tt><code>createSchema</code></tt>
+<td>*Creates the optional schema or table (or similar) in the datastore to hold the objects.*</td>
+</td></tr>
+<tr>
+<td><tt><code>query</code></tt>
+<td>*Executes the given query and returns the results.*</td>
+</td></tr>
+<tr>
+<td><tt><code>deleteByQuery</code></tt>
+<td>*Deletes all the objects matching the query.*</td>
+</td></tr>
+<tr>
+<td><tt><code>schemaExists</code></tt>
+<td>*Returns whether the schema that holds the data exists in the datastore.*</td>
+</td></tr>
+</table>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permalink">&para;</a></h2>
+<h3 id="gora-headers">Gora Headers<a class="headerlink" href="#gora-headers" title="Permalink">&para;</a></h3>
+<table class="table">
+<tr><th align="left">Property</th><th align="left">Description</th></tr>
+<tr>
+<td><tt><code>GoraOperation</code></tt>
+<td>*Used in order to define the operation to execute.*</td>
+</td></tr>
+<tr>
+<tr>
+<td><tt><code>GoraKey</code></tt>
+<td>*Used in order to define the datum key for the operations need it.*</td>
+</td></tr>
+</tr></table>
+<h3 id="gora-configuration-attributes">Gora Configuration attributes<a class="headerlink" href="#gora-configuration-attributes" title="Permalink">&para;</a></h3>
+<table class="table">
+<tr><th align="left">Property</th><th align="left">Type</th><th align="left">Description</th></tr>
+<tr>
+<td><tt><code>keyClass</code></tt>
+</td><td>_String_</td>
+<td>*Key type.* *</td>
+</tr>
+<tr>
+<td><tt><code>valueClass</code></tt>
+</td><td>_String_</td>
+<td> *Value type.* *</td>
+</tr>
+<tr>
+<td><tt><code>dataStoreClass</code></tt>
+</td><td>_String_</td>
+<td> *DataStore type* *</td>
+</tr>
+<tr>
+<td><tt><code>hadoopConfiguration</code></tt>
+</td><td>_Configuration_</td>
+<td> *Hadoop Configuration*</td>
+</tr>
+<tr>
+<td><tt><code>concurrentConsumers</code></tt>
+</td><td>_int_</td>
+<td> *Concurrent Consumers (used only by consumers).*</td>
+</tr>
+<tr>
+<td><tt><code>flushOnEveryOperation</code></tt>
+</td><td>_boolean_</td>
+<td> *Flush on every operation (used only by producers).*</td>
+</tr>
+</table>
+<p><em>NOTE: the gora configuration properties marked with asterisk are mandatory</em></p>
+<h3 id="gora-query-attributes">Gora Query attributes<a class="headerlink" href="#gora-query-attributes" title="Permalink">&para;</a></h3>
+<table class="table">
+<tr><th align="left">Property</th><th align="left">Type</th><th align="left">Description</th></tr>
+<tr>
+<td><tt><code>startTime</code></tt>
+</td><td>_long_</td>
+<td> *Start Time attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>endTime</code></tt>
+</td><td>_long_</td>
+<td> *End Time attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>timeRangeFrom</code></tt>
+</td><td>_long_</td>
+<td> *Time Range From attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>timeRangeTo</code></tt>
+</td><td>_long_</td>
+<td> *Time Range To attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>limit</code></tt>
+</td><td>_long_</td>
+<td> *Gora Query Limit attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>timestamp</code></tt>
+</td><td>_long_</td>
+<td> *Timestamp attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>startKey</code></tt>
+</td><td>_Object_</td>
+<td> *Start Key attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>endKey</code></tt>
+</td><td>_Object_</td>
+<td> *End Key attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>keyRangeFrom</code></tt>
+</td><td>_Object_</td>
+<td> *Key Range From attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>keyRangeTo</code></tt>
+</td><td>_Object_</td>
+<td> *Key Range To attribute.*</td>
+</tr>
+<tr>
+<td><tt><code>fields</code></tt>
+</td><td>_String_</td>
+<td> *Fields attribute.*</td>
+</tr>
+</table>
+<h3 id="usage-examples">Usage examples<a class="headerlink" href="#usage-examples" title="Permalink">&para;</a></h3>
+<p><strong>Create Schema</strong> <em>(XML DSL)</em>:</p>
+<pre><code>&lt;setHeader headerName="GoraOperation"&gt;
+   &lt;constant&gt;CreateSchema&lt;/constant&gt;
+&lt;/setHeader&gt;
+
+&lt;to uri="gora:foobar?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p><strong>SchemaExists</strong> <em>(XML DSL)</em>:</p>
+<pre><code>  &lt;setHeader headerName="GoraOperation"&gt;
+  	&lt;constant&gt;SchemaExists&lt;/constant&gt;
+  &lt;/setHeader&gt;
+  
+  &lt;to uri="gora:foobar?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p><strong>Put</strong> <em>(XML DSL)</em>:</p>
+<pre><code>  &lt;setHeader headerName="GoraOperation"&gt;
+    &lt;constant&gt;put&lt;/constant&gt;
+  &lt;/setHeader&gt;
+       
+  &lt;setHeader headerName="GoraKey"&gt;
+    &lt;constant&gt;22222&lt;/constant&gt;
+  &lt;/setHeader&gt;
+
+  &lt;to uri="gora:foo?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p><strong>Get</strong> <em>(XML DSL)</em>:</p>
+<pre><code>&lt;setHeader headerName="GoraOperation"&gt;
+   &lt;constant&gt;GET&lt;/constant&gt;
+&lt;/setHeader&gt;
+
+&lt;setHeader headerName="GoraKey"&gt;
+   &lt;constant&gt;10101&lt;/constant&gt;
+&lt;/setHeader&gt;
+
+&lt;to uri="gora:bar?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p><strong>Delete</strong> <em>(XML DSL)</em>:</p>
+<pre><code>&lt;setHeader headerName="GoraOperation"&gt;
+  &lt;constant&gt;DELETE&lt;/constant&gt;
+&lt;/setHeader&gt;
+
+&lt;setHeader headerName="GoraKey"&gt;
+  &lt;constant&gt;22222&lt;/constant&gt;
+&lt;/setHeader&gt;
+
+&lt;to uri="gora:bar?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p><strong>Query</strong> <em>(XML DSL)</em>:</p>
+<pre><code>&lt;to uri="gora:foobar?keyClass=java.lang.Long&amp;amp;valueClass=org.apache.camel.component.gora.generated.Pageview&amp;amp;dataStoreClass=org.apache.gora.hbase.store.HBaseStore"/&gt;
+</code></pre>
+<p>The full usage examples in the form of integration tests can be found at <a href="https://github.com/ipolyzos/camel-gora-examples/">camel-gora-examples</a> repository.</p>
+<h3 id="more-resources">More resources<a class="headerlink" href="#more-resources" title="Permalink">&para;</a></h3>
+<p>For more please information and in depth configuration refer to the <a href="./overview.html">Apache Gora Documentation</a> and the <a href="./tutorial.html">Apache Gora Tutorial</a>.</p>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

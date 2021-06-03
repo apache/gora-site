@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora Compiler Overview" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora Compiler Overview</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora Compiler Overview">
+
+    <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h1>
+<p>The Gora compiler converts JSON files (the schema(s)) into persistent Java classes/data beans.
+You can then use those classes to interact with a variety of data storage software e.g. the Gora datastore implementations.</p>
+<p>The compiler is very simple to run. But first you should add the Gora installation directory to your path.</p>
+<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permalink">&para;</a></h1>
+<pre><code> $ bin/gora goracompiler
+</code></pre>
+<p>results in:</p>
+<pre><code> $ Usage: GoraCompiler &lt;schema file&gt; &lt;output dir&gt; [-license &lt;id&gt;]
+   &lt;schema file&gt;     - individual avsc file to be compiled or a directory path containing avsc files
+   &lt;output dir&gt;      - output directory for generated Java files
+   [-license &lt;id&gt;]   - the preferred license header to add to the
+           generated Java file. Current options include; 
+    ASLv2   (Apache Software License v2.0) 
+    AGPLv3  (GNU Affero General Public License)
+    CDDLv1  (Common Development and Distribution License v1.0)
+    FDLv13  (GNU Free Documentation License v1.3)
+    GPLv1   (GNU General Public License v1.0)
+    GPLv2   (GNU General Public License v2.0)
+    GPLv3   (GNU General Public License v3.0)
+    LGPLv21 (GNU Lesser General Public License v2.1)
+    LGPLv3  (GNU Lesser General Public License v2.1)
+</code></pre>
+<p>so for example, one would typically enter:</p>
+<pre><code> $ bin/gora goracompiler gora-tutorial/src/main/avro/pageview.json gora-tutorial/src/main/java/
+</code></pre>
+<p>The schema file is a single JSON file or a directory containing JSON files.</p>
+<p>The output directory is the destination for the generated Java source files. For example, if you specific src/main/java then the
+generate source is placed into src/main/java/generated. It's generally a good idea to ignore the generate directory in whatever
+version control software you're using. You are using version control, right?</p>
+<p>Finally, the license parameter tells the compile to add a license header to each generated file. Current header options include:</p>
+<ul>
+<li>ASLv2   (<a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License v2.0</a>)</li>
+<li>AGPLv3  (<a href="http://www.gnu.org/licenses/agpl.html">GNU Affero General Public License</a>)</li>
+<li>CDDLv1  (<a href="http://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License v1.0</a>)</li>
+<li>FDLv13  (&lt;a href-"<a href="http://www.gnu.org/copyleft/fdl.html%22%3EGNU">http://www.gnu.org/copyleft/fdl.html"&gt;GNU</a> Free Documentation License v1.3)</li>
+<li>GPLv1   (<a href="http://www.gnu.org/licenses/gpl-1.0.html">GNU General Public License v1.0</a>)</li>
+<li>GPLv2   (<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License v2.0</a>)</li>
+<li>GPLv3   (<a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>)</li>
+<li>LGPLv21 (<a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License v2.1</a>)</li>
+<li>LGPLv3  (<a href="http://www.gnu.org/licenses/lgpl-3.0.html">GNU Lesser General Public License v3</a>)</li>
+</ul>
+<p>It should be noted that if no license header argument is passed, by default the ASLv2 license profile is selected.</p>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora Module Overview" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora Module Overview</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora Module Overview">
+
+    <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h2>
+<div id="toc"><ul><li><a class="toc-href" href="#gora-modules" title="Gora Modules">Gora Modules</a></li><li><a class="toc-href" href="#gora-testing" title="Gora Testing">Gora Testing</a><ul><li><a class="toc-href" href="#junit-tests" title="JUnit Tests">JUnit Tests</a></li><li><a class="toc-href" href="#goraci-integration-testing-suite" title="GoraCI Integration Testing Suite">GoraCI Integration Testing Suite</a><ul><li><a class="toc-href" href="#background" title="Background">Background</a></li><li><a class="toc-href" href="#the-anatomy-of-goraci-tests" title="The Anatomy of GoraCI tests">The Anatomy of GoraCI tests</a></li><li><a class="toc-href" href="#building-goraci" title="Building GoraCI">Building GoraCI</a></li><li><a class="toc-href" href="#java-class-description" title="Java Class Description">Java Class Description</a></li><li><a class="toc-href" href="#gora-and-hadoop" title="Gora and Hadoop">Gora and Hadoop</a></li><li><a class="toc-href" href="#goraci-and-hbase" title="GoraCI and HBase">GoraCI and HBase</a></li><li><a class="toc-href" href="#concurrency" title="Concurrency">Concurrency</a></li><li><a class="toc-href" href="#conclusions" title="Conclusions">Conclusions</a></li></ul></li></ul></li></ul></div>
+<p>This is the main entry point for Gora documentation. Here are some pointers for further info:</p>
+<ul>
+<li>First if you haven't already done so, make sure to check the <a href="./quickstart.html">quick start guide</a>.</li>
+<li>Basic information about gora modules can be found below.</li>
+<li>You can also take a look at the <a href="./api/javadoc.html">API Documentation</a> which contains the javadoc
+for all of the modules combined.</li>
+<li>We are always looking for <a href="../contribute.html">Documentation contributions</a>.</li>
+</ul>
+<p>You can find an abstract overview of how to configure Gora <a href="./gora-conf.html">here</a>.</p>
+<h2 id="gora-modules">Gora Modules<a class="headerlink" href="#gora-modules" title="Permalink">&para;</a></h2>
+<p>Gora source code is organized in a modular architecture. The gora-core module
+is the main module which contains the core of the code. All other modules depend
+on the gora-core module.
+Each datastore backend in Gora resides in it's own module. The documentation for
+the specific module can be found at the module's documentation directory.</p>
+<p>It is wise so start with going over the documentation for the gora-core
+module and then the specific data store module(s) you want to use. The
+following modules are currently implemented in Gora.</p>
+<ul>
+<li><a href="./compiler.html">gora-compiler</a>: A page dedicated to the GoraCompiler; a critical part of the Gora workflow;</li>
+<li><a href="./compiler-cli.html">gora-compiler-cli</a>: A page dedicated to the GoraCompiler Command Line Interface; a utility module for working with the Gora Compiler;</li>
+<li><a href="./gora-core.html">gora-core</a>: Module containing core functionality, AvroStore and DataFileAvroStore stores, GoraSparkEngine;</li>
+<li><a href="./gora-accumulo.html">gora-accumulo</a>: Module for <a href="http://accumulo.apache.org">Apache Accumulo</a> backend and AccumuloStore implementation;</li>
+<li><a href="./gora-camel.html">camel-gora</a>: An <a href="http://camel.apache.org/">Apache Camel</a> component that allows you to work with NoSQL databases using Gora;</li>
+<li><a href="./gora-cassandra.html">gora-cassandra</a>: Module for <a href="http://cassandra.apacheorg">Apache Cassandra</a> backend and CassandraStore implementation;</li>
+<li><a href="./gora-dynamodb.html">gora-dynamodb</a>: Module for <a href="http://aws.amazon.com/dynamodb/">Amazon DynamoDB</a> backend and DynamoDBStore implementation;</li>
+<li><a href="./gora-hbase.html">gora-hbase</a>: Module for <a href="http://hbase.apache.org">Apache HBase</a> backend and HBaseStore implementation;</li>
+<li><a href="./gora-jcache.html">gora-jcache</a>: Module for <a href="https://hazelcast.com/use-cases/caching/jcache-provider">Hazelcast JCache</a> caching and JCacheStore implementation;</li>
+<li><a href="./gora-couchdb.html">gora-couchdb</a>: Module for <a href="http://couchdb.apache.org">Apache CouchDB</a> backend and CouchDBStore implementation;</li>
+<li><a href="./gora-metamodel.html">gora-metamodel</a>: Module for <a href="http://metamodel.incubator.apache.org">Apache MetaModel</a> backend and query functionality;</li>
+<li><a href="./gora-mongodb.html">gora-mongodb</a>: Module for <a href="http://www.mongodb.org/">MongoDB</a> backend and MongoStore implementation;</li>
+<li><a href="./gora-solr.html">gora-solr</a>: Module for <a href="http://lucene.apache.org/solr">Apache Solr</a> backend and SolrStore implementation;</li>
+<li><a href="./gora-aerospike.html">gora-aerospike</a>: Module for <a href="http://www.aerospike.com/">Aerospike</a> backend and Aerospike implementation;</li>
+<li><a href="./gora-ignite.html">gora-ignite</a>: Module for <a href="https://ignite.apache.org/">Apache Ignite</a> backend and IgniteStore implementation;</li>
+<li><a href="./gora-kudu.html">gora-kudu</a>: Module for <a href="https://kudu.apache.org/">Apache Kudu</a> backend and KuduStore implementation;</li>
+<li><a href="./gora-pig.html">gora-pig</a>: Module for loading/writing using Apache Gora in an <a href="https://pig.apache.org/">Apache Pig</a> script;</li>
+<li><a href="./tutorial.html">gora-tutorial</a>: The Gora LogManager tutorial;</li>
+<li>gora-sources-dist: Packaging module used to build and distribute Gora sources during project releases;</li>
+</ul>
+<p>We currently have modules under development for several other storage mediums such
+as <a href="http://www.oracle.com/technetwork/database/database-technologies/nosqldb/overview/index.html">Oracle NoSQL</a>
+and <a href="http://lucene.apache.org">Apache Lucene</a>. Consult the Gora source, located on <a href="https://github.com/apache/gora/">Github</a>
+for a complete list of modules.</p>
+<h2 id="gora-testing">Gora Testing<a class="headerlink" href="#gora-testing" title="Permalink">&para;</a></h2>
+<p>Gora currently has two testing mechanisms</p>
+<ul>
+<li>JUnit Tests: These are included for every module which provides a DataStore within Gora.</li>
+<li>Integration Tests: A custom testing suite called GoraCI (Continuous Ingestion) which stress tests Gora functionality at scale.</li>
+</ul>
+<h3 id="junit-tests">JUnit Tests<a class="headerlink" href="#junit-tests" title="Permalink">&para;</a></h3>
+<p>Unit tests in Gora are implemented using the popular <a href="http://junit.org">JUnit</a> framework.
+Each module which implements the <a href="https://builds.apache.org/view/All/job/gora-trunk/javadoc/index.html?org/apache/gora/store/DataStore.html">DataStore</a>
+interface similarly implements a <a href="https://github.com/apache/gora/blob/master/gora-core/src/test/java/org/apache/gora/store/DataStoreTestBase.java">DataStoreTestBase</a> API
+which test utilities for DataStores. The DataStoreTestBase class delegates actual test execution
+to <a href="https://github.com/apache/gora/blob/master/gora-core/src/test/java/org/apache/gora/store/DataStoreTestUtil.java">DataStoreTestUtil</a>.</p>
+<p>The tests begin in a fairly trivial fashion testing functionality like datastore schema creation
+schema deletion, etc and continue in this manner getting progressively more complex
+as we begin testing some more advanced features within the Gora API.
+In addition to the unit tests contained within this class, the best place to look for
+API functionality is at the examples directories under various Gora modules. Most
+modules contain a <code>/src/examples/</code> directory under which some example
+classes can be found. Specifically, there are some classes that are used for tests
+under <a href="https://github.com/apache/gora/tree/master/gora-core/src/examples">gora-core/src/examples/</a>.</p>
+<h3 id="goraci-integration-testing-suite">GoraCI Integration Testing Suite<a class="headerlink" href="#goraci-integration-testing-suite" title="Permalink">&para;</a></h3>
+<h4 id="background">Background<a class="headerlink" href="#background" title="Permalink">&para;</a></h4>
+<p>Since Gora 0.5, the GoraCI suite has been part of the mainstream Gora codebase.</p>
+<p>Credit for GoraCI can be handed to Keith Turner (Gora PMC member) for his foresight
+in developing GoraCI which we have now extended from gora-accumulo to the entire suite
+of Gora modules.</p>
+<p><a href="http://accumulo.apache.org">Apache Accumulo</a> has a test suite that verifies that data is not lost
+at scale.  This test suite is called
+<a href="http://svn.apache.org/viewvc/accumulo/tags/1.4.0/test/system/continuous/ScaleTest.odp?view=co">continuous ingest</a>.<br/>
+Essentially the test runs many ingest clients that continually create linked lists containing <strong>25 million</strong>
+nodes. At some point the clients are stopped and a map reduce job is run to
+ensure no linked list has a hole. A hole indicates data was lost.</p>
+<p>The nodes in the linked list are random.  This causes each linked list to
+spread across the table.  Therefore if one part of a table loses data, then it
+will be detected by references in another part of the table.</p>
+<p>This project is a version of the test suite written using Apache Gora [1].
+Goraci has been tested against Accumulo and HBase.</p>
+<h4 id="the-anatomy-of-goraci-tests">The Anatomy of GoraCI tests<a class="headerlink" href="#the-anatomy-of-goraci-tests" title="Permalink">&para;</a></h4>
+<p>Below is rough sketch of how data is written.  For specific details look at the
+<a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Generator.java">Generator code</a></p>
+<ol>
+<li>Write out 1 million nodes</li>
+<li>Flush the client</li>
+<li>Write out 1 million that reference previous million</li>
+<li>If this is the 25th set of 1 million nodes, then update 1st set of million
+to point to last</li>
+<li>goto 1</li>
+</ol>
+<p>The key is that nodes only reference flushed nodes.  Therefore a node should
+never reference a missing node, even if the ingest client is killed at any
+point in time.</p>
+<p>When running this test suite w/ Accumulo there is a script running in parallel
+called the Aggitator that randomly and continuously kills server processes.<br/>
+The outcome was that many data loss bugs were found in Accumulo by doing this.
+This test suite can also help find bugs that impact uptime and stability when
+run for days or weeks.</p>
+<p>This test suite consists the following</p>
+<ul>
+<li>a few Java programs</li>
+<li>a little helper script to run the java programs</li>
+<li>a maven script to build it.</li>
+</ul>
+<p>When generating data, its best to have each map task generate a multiple of 25
+million.  The reason for this is that circular linked list are generated every
+25M.  Not generating a multiple in 25M will result in some nodes in the linked
+list not having references.  The loss of an unreferenced node can not be
+detected.</p>
+<h4 id="building-goraci">Building GoraCI<a class="headerlink" href="#building-goraci" title="Permalink">&para;</a></h4>
+<p>As GoraCI is packaged with the Gora master branch source it is automatically
+built every time you execute</p>
+<pre><code>mvn install
+</code></pre>
+<p>The maven pom file has some profiles that attempt to make it easier to run
+GoraCI against different Gora backends by copying the jars you need into <code>lib</code>.
+Before packaging its important to edit <code>gora.properties</code> and set it correctly
+for your datastore.  To run against Accumulo do the following.</p>
+<pre><code>vim src/main/resources/gora.properties //set Accumulo properties
+mvn package -Paccumulo-1.4
+</code></pre>
+<p>To run against HBase, do the following.</p>
+<pre><code>vim src/main/resources/gora.properties //set HBase properties
+mvn package -Phbase-0.92
+</code></pre>
+<p>To run against Cassandra, do the following.</p>
+<pre><code>vim src/main/resources/gora.properties //set Cassandra properties
+mvn package -Pcassandra-1.1.2
+</code></pre>
+<p>For other datastores mentioned in <code>gora.properties</code>, you will need to copy the
+appropriate deps into <code>lib</code>.  Feel free to update the pom with other profiles, <a href="https://issues.apache.org/jira/browse/GORA/">open
+a ticket</a> or just <a href="https://github.com/apache/gora/">send us a pull request</a>.</p>
+<h4 id="java-class-description">Java Class Description<a class="headerlink" href="#java-class-description" title="Permalink">&para;</a></h4>
+<p>Below is a description of the Java programs</p>
+<ul>
+<li><a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Generator.java">org.apache.gora.goraci.Generator</a> -
+A map only job that generates data.  As stated previously, its best to generate data in multiples of 25M.</li>
+<li><a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Verify.java">org.apache.gora.goraci.Verify</a>    -
+A map reduce job that looks for holes.  Look at the counts after running.  REFERENCED and UNREFERENCED are
+ok, any UNDEFINED counts are bad. Do not run at the same time as the Generator.</li>
+<li><a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Walker.java">org.apache.gora.goraci.Walker</a>    -
+A standalong program that start following a linked list and emits timing info.</li>
+<li><a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Print.java">org.apache.gora.goraci.Print</a>     -
+A standalone program that prints nodes in the linked list</li>
+<li><a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Delete.java">org.apache.gora.goraci.Delete</a>    -
+A standalone program that deletes a single node</li>
+<li><a href="https://github.com/apache/gora/blob/master/gora-goraci/src/main/java/org/apache/gora/goraci/Loop.java">org.apache.gora.goraci.Loop</a>      -
+Runs generation and verify in a loop</li>
+</ul>
+<p><a href="https://github.com/apache/gora/blob/master/gora-goraci/goraci.sh">goraci.sh</a> is a helper script that you can use to run the above programs.  It
+assumes all needed jars are in the <code>lib</code> dir.  It does not need the package name.
+You can just run <code>goraci.sh Generator</code>, below is an example.</p>
+<pre><code>$ ./goraci.sh Generator
+Usage : Generator &lt;num mappers&gt; &lt;num nodes&gt;
+</code></pre>
+<p>For Gora to work, it needs a <code>gora.properties</code> file on the classpath and a
+<code>gora-$datastore-mapping.xml</code> mapping file on the classpath, the contents of both are datastore specific,
+more details can be found here [2]. You can edit the ones in src/main/resources
+and build the <code>goraci-${version}-SNAPSHOT.jar</code> with those. Alternatively remove
+those and put them on the classpath through some other means.</p>
+<h4 id="gora-and-hadoop">Gora and Hadoop<a class="headerlink" href="#gora-and-hadoop" title="Permalink">&para;</a></h4>
+<p>Gora uses <a href="http://avro.apache.org">Apache Avro</a> which uses a Json library that Hadoop has an old version of.
+The two libraries  jackson-core and jackson-mapper need to be updated in
+<code>$HADOOP_HOME/lib</code> and <code>$HADOOP_HOME/share/hadoop/lib/</code>.  Currently these are updated to
+jackson-core-asl-1.4.2.jar and jackson-mapper-asl-1.4.2.jar.  For details see
+<a href="https://issues.apache.org/jira/browse/HADOOP-6945">HADOOP-6945</a>.</p>
+<h4 id="goraci-and-hbase">GoraCI and HBase<a class="headerlink" href="#goraci-and-hbase" title="Permalink">&para;</a></h4>
+<p>To improve performance running read jobs such as the Verify step, enable
+scanner caching on the command line.  For example:</p>
+<pre><code>$ ./gorachi.sh Verify -Dhbase.client.scanner.caching=1000 \
+   -Dmapred.map.tasks.speculative.execution=false verify_dir 1000
+</code></pre>
+<p>Dependent on how you have your Hadoop and HBase setup deployed, you may need to
+change the <code>gorachi.sh</code> script around some.  Here is one suggestion that may help
+in the case where your Hadoop and HBase configuration are other than under the
+Hadoop and HBase home directories.</p>
+<pre><code>diff --git a/org.apache.gora.goraci.sh b/org.apache.gora.goraci.sh
+index db1562a..31c3c94 100755
+--- a/org.apache.gora.goraci.sh
++++ b/org.apache.gora.goraci.sh
+@@ -95,6 +95,4 @@ done
+ #run it
+ export HADOOP_CLASSPATH="$CLASSPATH"
+ LIBJARS=`echo $HADOOP_CLASSPATH | tr : ,`
+ -hadoop jar "$GORACI_HOME/lib/org.apache.gora.goraci-0.0.1-SNAPSHOT.jar" $CLASS -libjars "$LIBJARS" "$@"
+ -
+ -
+ +CLASSPATH="${HBASE_CONF_DIR}" hadoop --config "${HADOOP_CONF_DIR} jar "$GORACI_HOME/lib/org.apache.gora.goraci-0.0.1-SNAPSHOT.jar" $CLASS -files "${HBASE_CONF_DIR}/hbase-site.xml" -libjars "$LIBJARS" "$@"
+</code></pre>
+<p>You will need to define <code>HBASE_CONF_DIR</code> and HADOOP_CONF_DIR before you run your
+<strong>goraci</strong> jobs.  For example:</p>
+<pre><code>$ export HADOOP_CONF_DIR=/home/you/hadoop-conf
+$ export HBASE_CONF_DIR=/home/you/hbase-conf
+$ PATH=/home/you/hadoop-1.0.2/bin:$PATH ./goraci.sh Generator 1000 1000000
+</code></pre>
+<h4 id="concurrency">Concurrency<a class="headerlink" href="#concurrency" title="Permalink">&para;</a></h4>
+<p>Its possible to run verification at the same time as generation.  To do this
+supply the -c option to Generator and Verify.  This will cause Genertor to
+create a secondary table which holds information about what verification can
+safely verify.  Running Verify with the <strong>-c</strong> option will make it run slower
+because more information must be brought back to the client side for filtering
+purposes.  The Loop program also supports the -c option, which will cause it to
+run verification concurrently with generation.</p>
+<p>If verification is run at the same time as generation without the <strong>-c</strong> option,
+then it will inevitably fail.  This is because verification mappers read
+different parts of the table at different times and giving an inconsistent view
+of the table.  So one mapper may read a part of a table before a node is
+written, when the node is later referenced it will appear to be missing.  The
+<strong>-c</strong> option basically filters out newer information using data written to the
+secondary table.</p>
+<h4 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permalink">&para;</a></h4>
+<p>This test suite does not do everything that the Accumulo test suite does,
+mainly it does not collect statistics and generate reports.  The reports
+are useful for assesing performance.</p>
+<p>Below shows running a test of the test.  Ingest one linked list, deleted a node
+in it, ensure the verifaction map reduce job notices that the node is missing.
+Not all output is shown, just the important parts.</p>
+<pre><code>$ ./goraci.sh Generator  1 25000000
+$ ./goraci.sh Print -s 2000000000000000 -l 1
+  2000001f65dbd238:30350f9ae6f6e8f7:000004265852:ef09f9dd-75b1-4c16-9f14-0fa84f3029b6
+$ ./goraci.sh Print -s 30350f9ae6f6e8f7 -l 1
+  30350f9ae6f6e8f7:4867fe03de6ea6c8:000003265852:ef09f9dd-75b1-4c16-9f14-0fa84f3029b6
+$ ./goraci.sh Delete 30350f9ae6f6e8f7
+  Delete returned true
+$ ./goraci.sh Verify gci_verify_1 2 
+  11/12/20 17:12:31 INFO mapred.JobClient:   org.apache.gora.goraci.Verify$Counts
+  11/12/20 17:12:31 INFO mapred.JobClient:     UNDEFINED=1
+  11/12/20 17:12:31 INFO mapred.JobClient:     REFERENCED=24999998
+  11/12/20 17:12:31 INFO mapred.JobClient:     UNREFERENCED=1
+$ hadoop fs -cat gci_verify_1/part\* 30350f9ae6f6e8f7	2000001f65dbd238
+</code></pre>
+<p>The map reduce job found the one undefined node and gave the node that
+referenced it.</p>
+<p>Below are some timing statistics for running Goraci on a 10 node cluster.</p>
+<pre><code>Store           | Task                   | Time    | Undef  | Unref | Ref        
+----------------+------------------------+---------+--------+-------+------------
+accumulo-1.4.0  | Generator 10 100000000 | 40m 16s |    N/A |   N/A |        N/A     
+accumulo-1.4.0  | Verify /tmp/goraci1 40 |  6m  7s |      0 |     0 | 1000000000  
+hbase-0.92.1    | Generator 10 100000000 |  2h 44m |    N/A |   N/A |        N/A     
+hbase-0.92.1    | Verify /tmp/goraci2 40 |  6m 34s |      0 |     0 | 1000000000
+</code></pre>
+<p>HBase and Accumulo are configured differently out-of-the-box.  We used the Accumulo
+3G, native configuration examples in the <a href="https://github.com/apache/gora/tree/master/gora-goraci/src/main/resources">conf/examples</a> directory.</p>
+<p>To provide a comparable memory footprint, we increased the HBase jvm to "-Xmx4000m",
+and turned on compression for the ci table:</p>
+<pre><code>create 'ci', {NAME=&gt;'meta', COMPRESSION=&gt;'GZ'}
+</code></pre>
+<p>We also turned down the replication of write-ahead logs to be comparable to Accumulo:</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;hbase.regionserver.hlog.replication&lt;/name&gt;
+  &lt;value&gt;2&lt;/value&gt;
+&lt;/property&gt;
+</code></pre>
+<p>For the accumulo run, we set the split threshold to 512M:</p>
+<pre><code>shell&gt; config -t ci -s table.split.threshold=512M
+</code></pre>
+<p>This was done so that Accumulo would end up with 64 tablets, which is the
+number of regions HBase had. The number of tablets/regions determines how
+much parallelism there is in the map phase of the verify step.</p>
+<p>Sometimes when this test suite is run against HBase data is lost.  This issue
+is being tracked under <a href="https://issues.apache.org/jira/browse/HBASE-5754">HBASE-5754</a></p>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

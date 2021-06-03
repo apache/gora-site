@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora Core Module" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora Core Module</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora Core Module">
+
+    <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink">&para;</a></h1>
+<p>This is the main documentation for Gora + Hadoop compatibility which comes in the
+form of <b>Gora Shims</b>.</p>
+<p>According to our great friends over at <a href="http://en.wikipedia.org/wiki/Shim_%28computing%29">Wikipedia</a>,
+Shim's are described as</p>
+<pre><code>...a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere. Shims typically come about when the behavior of an API changes, thereby causing compatibility issues for older applications which still rely on the older functionality. In such cases, the older API can still be supported by a thin compatibility layer on top of the newer code.
+</code></pre>
+<p>Shims functionality in Gora is provided across the following Gora modules</p>
+<ul>
+<li><b>gora-shims-distribution</b>,</li>
+<li><b>gora-shims-hadoop</b>,</li>
+<li><b>gora-shims-hadoop1</b>, and</li>
+<li><b>gora-shims-hadoop2</b></li>
+</ul>
+<p>As explained within the <a href="./gora-core.html">Gora Core</a> module documentation,
+every module in Gora depends on <a href="./gora-core.html">Gora Core</a>.
+In turn, <a href="./gora-core.html">Gora Core</a> depends upon the
+<b>gora-shims-distribution</b> module.</p>
+<p>This page therefore describes how to use the Gora Shims layers when building Gora
+into your software stack.</p>
+<div id="toc"><ul><li><a class="toc-href" href="#gora-shims-distribution" title="gora-shims-distribution">gora-shims-distribution</a><ul><li><a class="toc-href" href="#description" title="Description">Description</a></li><li><a class="toc-href" href="#dependency-definition" title="Dependency Definition">Dependency Definition</a></li></ul></li><li><a class="toc-href" href="#gora-shims-hadoop" title="gora-shims-hadoop">gora-shims-hadoop</a><ul><li><a class="toc-href" href="#description_1" title="Description">Description</a></li><li><a class="toc-href" href="#dependency-definition_1" title="Dependency Definition">Dependency Definition</a></li></ul></li><li><a class="toc-href" href="#gora-shims-hadoop1" title="gora-shims-hadoop1">gora-shims-hadoop1</a><ul><li><a class="toc-href" href="#description_2" title="Description">Description</a></li><li><a class="toc-href" href="#dependency-definition_2" title="Dependency Definition">Dependency Definition</a></li></ul></li><li><a class="toc-href" href="#gora-shims-hadoop2" title="gora-shims-hadoop2">gora-shims-hadoop2</a><ul><li><a class="toc-href" href="#description_3" title="Description">Description</a></li><li><a class="toc-href" href="#dependency-definition_3" title="Dependency Definition">Dependency Definition</a></li></ul></li></ul></div>
+<h1 id="gora-shims-distribution">gora-shims-distribution<a class="headerlink" href="#gora-shims-distribution" title="Permalink">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permalink">&para;</a></h2>
+<p>This module provides the structure for using Gora Hadoop shims. The module only defines direct dependencies
+on all of the other shims modules but contains no actual Java code itself.</p>
+<p><strong>This module is the only dependency which needs to be defined for users to take advantage of Gora Shims. The dependency
+should be used as below.</strong></p>
+<h2 id="dependency-definition">Dependency Definition<a class="headerlink" href="#dependency-definition" title="Permalink">&para;</a></h2>
+<p><a href="http://search.maven.org/#artifactdetails%7Corg.apache.gora%7Cgora-shims-distribution%7C0.6%7Cbundle">Click Here</a></p>
+<h1 id="gora-shims-hadoop">gora-shims-hadoop<a class="headerlink" href="#gora-shims-hadoop" title="Permalink">&para;</a></h1>
+<h2 id="description_1">Description<a class="headerlink" href="#description_1" title="Permalink">&para;</a></h2>
+<p>This module contains functional Java code for enabling dynamic selection of the Hadoop environment based upon the
+presence of <strong>org.apache.hadoop.util.VersionInfo</strong>. This is a two-part process where we first obtain the <a href="https://github.com/apache/gora/blob/master/gora-shims-hadoop/src/main/java/org/apache/gora/shims/hadoop/HadoopShimFactory.java#L79-L94">Hadoop
+Major version</a>.
+We then <a href="https://github.com/apache/gora/blob/master/gora-shims-hadoop/src/main/java/org/apache/gora/shims/hadoop/HadoopShimFactory.java#L56-L77">select the appropriate Gora Shim</a>
+based on detecting the Hadoop Major version. This code looks the following:</p>
+<pre><code>/**
+ * Get the Hadoop major version number.
+ *
+ * @return The major version number of Hadoop.
+ */
+public String getMajorVersion() {
+  String vers = VersionInfo.getVersion();
+  String[] parts = vers.split("\\.");
+  if (parts.length &lt; 2) {
+    throw new RuntimeException("Unable to parse Hadoop version: "
+    + vers + " (expected X.Y.* format)");
+  }
+  return parts[0];
+}
+
+/**
+ * Get the Hadoop shim for the Hadoop version on the class path. In case it
+ * fails to obtain an appropriate shim (i.e. unsupported Hadoop version), it
+ * throws a {@link RuntimeException}.
+ *
+ * Note that this method is potentially costly.
+ *
+ * @return A newly created instance of a {@link HadoopShim}.
+ */
+public HadoopShim getHadoopShim() {
+  String version = getMajorVersion();
+  String className = HADOOP_VERSION_TO_IMPL_MAP.get(version);
+  try {
+    Class&lt;?&gt; class1 = Class.forName(className);
+    return HadoopShim.class.cast(class1.newInstance());
+  } catch (Exception e) {
+    throw new RuntimeException(
+      "Could not load Hadoop shim for version " + version
+      + ", className=" + className, e);
+  }
+}
+</code></pre>
+<h2 id="dependency-definition_1">Dependency Definition<a class="headerlink" href="#dependency-definition_1" title="Permalink">&para;</a></h2>
+<p><a href="http://search.maven.org/#artifactdetails%7Corg.apache.gora%7Cgora-shims-hadoop%7C0.6%7Cbundle">Click Here</a></p>
+<h1 id="gora-shims-hadoop1">gora-shims-hadoop1<a class="headerlink" href="#gora-shims-hadoop1" title="Permalink">&para;</a></h1>
+<h2 id="description_2">Description<a class="headerlink" href="#description_2" title="Permalink">&para;</a></h2>
+<p>This module provides all functionality for Hadoop 1.X support in Gora. The Hadoop version is specified within
+the project <a href="https://github.com/apache/gora/blob/master/pom.xml">pom.xml</a> within the <strong>${hadoop1-version}</strong> variable.</p>
+<p>The actual <a href="https://github.com/apache/gora/blob/master/gora-shims-hadoop1/src/main/java/org/apache/gora/shims/hadoop1/HadoopShim1.java">code implementation</a>
+is very simple. Essentially it consists of two Java methods</p>
+<pre><code> /**
+  * {@inheritDoc}
+  */
+ public Job createJob(Configuration configuration) throws IOException {
+   return new Job(configuration);
+ }
+ /**
+  * {@inheritDoc}
+  */
+ public JobContext createJobContext(Configuration configuration) {
+   return new JobContext(configuration, null); 
+ }
+</code></pre>
+<h2 id="dependency-definition_2">Dependency Definition<a class="headerlink" href="#dependency-definition_2" title="Permalink">&para;</a></h2>
+<p><a href="http://search.maven.org/#artifactdetails%7Corg.apache.gora%7Cgora-shims-hadoop1%7C0.6%7Cbundle">Click Here</a></p>
+<h1 id="gora-shims-hadoop2">gora-shims-hadoop2<a class="headerlink" href="#gora-shims-hadoop2" title="Permalink">&para;</a></h1>
+<h2 id="description_3">Description<a class="headerlink" href="#description_3" title="Permalink">&para;</a></h2>
+<p>This module provides all functionality for Hadoop 2.X support in Gora. The Hadoop version is specified within
+the project <a href="https://github.com/apache/gora/blob/master/pom.xml">pom.xml</a> within the <strong>${hadoop2-version}</strong> variable.</p>
+<p>The actual <a href="https://github.com/apache/gora/blob/master/gora-shims-hadoop1/src/main/java/org/apache/gora/shims/hadoop1/HadoopShim1.java">code implementation</a>
+is very simple. Essentially it consists of two Java methods</p>
+<pre><code>/**
+ * {@inheritDoc}
+ *
+ * Use the Hadoop 2.x way of creating a {@link Job} object.
+ */
+public Job createJob(Configuration configuration) throws IOException {
+  Job instance = Job.getInstance(configuration);
+  return instance;
+}
+/**
+ * {@inheritDoc}
+ *
+ * Use the Hadoop 2.x way of creating a {@link JobContext} object.
+ */
+public JobContext createJobContext(Configuration configuration) {
+  return new JobContextImpl(configuration, null);
+}
+</code></pre>
+<h2 id="dependency-definition_3">Dependency Definition<a class="headerlink" href="#dependency-definition_3" title="Permalink">&para;</a></h2>
+<p><a href="http://search.maven.org/#artifactdetails%7Corg.apache.gora%7Cgora-shims-hadoop2%7C0.6%7Cbundle">Click Here</a></p>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

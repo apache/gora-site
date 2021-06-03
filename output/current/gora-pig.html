@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora Pig Module" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora Pig Module</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora Pig Module">
+
+    <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink">&para;</a></h2>
+<p>This is the main documentation for the gora-pig module. gora-pig module enables loading/storing data through Apache Gora in Pig scripts.</p>
+<div id="toc"><ul><li><a class="toc-href" href="#introduction" title="Introduction">Introduction</a><ul><li><a class="toc-href" href="#data-models" title="Data models">Data models</a><ul><li><a class="toc-href" href="#primitivesimple-types" title="Primitive/Simple types">Primitive/Simple types</a></li><li><a class="toc-href" href="#complex-types" title="Complex types">Complex types</a></li></ul></li><li><a class="toc-href" href="#full-options-for-load" title="Full options for LOAD">Full options for LOAD</a></li></ul></li><li><a class="toc-href" href="#writing-to-datastores" title="Writing to datastores">Writing to datastores</a></li><li><a class="toc-href" href="#deleting-elements" title="Deleting elements">Deleting elements</a></li></ul></div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h2>
+<p>Apache Pig is a platform for analyzing large data sets that consists of a high-level language for expressing data analysis programs. With the module gora-pig we allow to operate on the data from Pig scripts using Apache Gora as storage.
+The objective of this document is to describe the approach taken to implement a Pig adapter for Gora and show how to load/store the data.</p>
+<p>Warning: Not all Gora modules are adapted to be used under Pig, since they have to implement loading the mapping defined from gora properties with the key "gora.mapping". At this moment are adapted <strong>gora-hbase</strong> and <strong>gora-kudu</strong>.</p>
+<h3 id="data-models">Data models<a class="headerlink" href="#data-models" title="Permalink">&para;</a></h3>
+<p>Apache Gora is an Object Datastore Mapper which has its own data model inheriting Avro data types, and Apache Pig has its own data model. Because of this, it is needed an adaptation between both data models.</p>
+<p>The following tables shows the different types and a possible conversions between Gora and Pig types.</p>
+<h4 id="primitivesimple-types">Primitive/Simple types<a class="headerlink" href="#primitivesimple-types" title="Permalink">&para;</a></h4>
+<table class="table">
+<thead>
+<tr>
+<th>Gora</th>
+<th>Pig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>int (32-bit)</td>
+<td>int (32-bit)</td>
+</tr>
+<tr>
+<td>long (64-bit)</td>
+<td>long (64-bit)</td>
+</tr>
+<tr>
+<td>float (32-bit)</td>
+<td>float (32-bit)</td>
+</tr>
+<tr>
+<td>double (64-bit)</td>
+<td>double (64-bit)</td>
+</tr>
+<tr>
+<td>bytes (8-bit)</td>
+<td>bytearray</td>
+</tr>
+<tr>
+<td>string (unicode)</td>
+<td>chararray (string UTF-8)</td>
+</tr>
+<tr>
+<td>-</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>-</td>
+<td>biginteger</td>
+</tr>
+<tr>
+<td>-</td>
+<td>bigdecimal</td>
+</tr></tbody></table>
+<h4 id="complex-types">Complex types<a class="headerlink" href="#complex-types" title="Permalink">&para;</a></h4>
+<table class="table">
+<thead>
+<tr>
+<th>Gora</th>
+<th>Pig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>record</td>
+<td>tuple</td>
+</tr>
+<tr>
+<td>enum</td>
+<td>int</td>
+</tr>
+<tr>
+<td>array</td>
+<td>bag</td>
+</tr>
+<tr>
+<td>map&lt;String, 'b&gt;</td>
+<td>map&lt;chararray, 'b&gt;</td>
+</tr>
+<tr>
+<td>union</td>
+<td>[the non-null type]</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>-</td>
+</tr></tbody></table>
+<p>Since <code>datetime</code>, <code>biginteger</code> and <code>bigdecimal</code> aren't handled by Apache Gora, it isn't possible to persist those types.</p>
+<p>For unions, only nullable fields (<code>union:[null, type]</code>) are handled. Fixed type is not handled.</p>
+<p>Notice that Gora's records are converted into Pig's tuples, and arrays into bags (index matters). When persisting, those types are the expected when checking the schemas.</p>
+<p>##Reading from datastores</p>
+<p>The storage GoraStorage is the responsible for loading and persisting entities. The simplest syntax to load data is the following:</p>
+<pre><code>    register gora/*.jar;
+    webpage = LOAD '.' USING org.apache.gora.pig.GoraStorage('{
+      "persistentClass": "admin.WebPage",
+      "fields": "baseUrl,status,content"
+    }') ;
+</code></pre>
+<p>It loads the fields <code>baseUrl</code>, <code>status</code> and <code>content</code> <strong>(must not have spaces!)</strong> for the entity <code>WebPage</code>.</p>
+<p>The files <code>gora.properties</code>, <code>gora-xxx-mapping.xml</code> and support files are provided through the classpath to Pig client. They must be included inside one of the registered <code>*.jar</code> files.</p>
+<p>The complete <code>LOAD</code> options allows to configure the options for each storage and avoid using the global configuration files when multiple different stores are used:</p>
+<pre><code>    webpage = LOAD '.' USING org.apache.gora.pig.GoraStorage('{
+      "persistentClass": "admin.WebPage",
+      "keyClass": "java.lang.String",
+      "fields": "*",
+      "goraProperties": "",
+      "mapping": "",
+      "configuration": {}
+    }') ;
+</code></pre>
+<h3 id="full-options-for-load">Full options for LOAD<a class="headerlink" href="#full-options-for-load" title="Permalink">&para;</a></h3>
+<p>The configuration options are the following:</p>
+<ul>
+<li><strong>persistentClass</strong> (mandatory): The full name of the persistent class including the namespace.</li>
+<li><strong>keyClass</strong>: The full name of the key class. <strong>By now only <code>java.lang.String</code> is supported</strong>.</li>
+<li><strong>fields</strong> (mandatory): Comma-separated list of field names (without spaces!) or '*' to load all fields.</li>
+<li><strong>goraProperties</strong>: String with gora.properties configuration. Each line must be separated by \n.</li>
+<li><strong>mapping</strong>: XML mapping for the entities loaded. Each line must be separated by \n and escaped quotes as \"</li>
+<li><strong>configuration</strong>: object with a map from keys to values that will be added to the configuration.</li>
+</ul>
+<p>In JSON Strings, line feeds must be escaped as \n.</p>
+<p>An example of Gora properties value is:</p>
+<pre><code>    "gora.datastore.default=org.apache.gora.hbase.store.HBaseStore\\ngora.datastore.autocreateschema=true\\ngora.hbasestore.scanner.caching=4"
+</code></pre>
+<p>An example of mapping is:</p>
+<pre><code>    "&lt;?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?&gt;\\n&lt;gora-odm&gt;\\n&lt;table name=\\"webpage\\"&gt;\\n&lt;family name=\\"f\\" maxVersions=\\"1\\"/&gt;\\n&lt;/table&gt;\\n&lt;class table=\\"webpage\\" keyClass=\\"java.lang.String\\" name=\\"admin.WebPage\\"&gt;\\n&lt;field name=\\"baseUrl\\" family=\\"f\\" qualifier=\\"bas\\"/&gt;\\n&lt;field name=\\"status\\" family=\\"f\\" qualifier=\\"st\\"/&gt;\\n&lt;field name=\\"content\\" family=\\"f\\" qualifier=\\"cnt\\"/&gt;\\n&lt;/class&gt;\\n&lt;/gora-odm&gt;"
+</code></pre>
+<p>The configuration options is a JSON object with string key-values like this:</p>
+<pre><code>    {
+      "hbase.zookeeper.quorum": "hdp4,hdp1,hdp3",
+      "zookeeper.znode.parent": "/hbase-unsecure"
+    }
+</code></pre>
+<h2 id="writing-to-datastores">Writing to datastores<a class="headerlink" href="#writing-to-datastores" title="Permalink">&para;</a></h2>
+<p>To write a Pig relation to a datastore, the command is:</p>
+<pre><code>    STORE webpages INTO '.' USING org.apache.gora.pig.GoraStorage('{
+      "persistentClass": "",
+      "fields": "",
+      "goraProperties": "",
+      "mapping": "",
+      "configuration": {}
+    }') ;
+</code></pre>
+<p>All the fields listed in "fields" will be persisted. If a field listed is missing in the relation the process will fail with an exception. Only the fields listed will be updated if the element already exists.</p>
+<h2 id="deleting-elements">Deleting elements<a class="headerlink" href="#deleting-elements" title="Permalink">&para;</a></h2>
+<p>To delete elements of a collection is <code>GoraDeleteStorage</code>. Given a relation with schema <code>(key:chararray)</code> rows, the following will delete all rows with that keys:</p>
+<pre><code>    STORE webpages INTO '.' USING org.apache.gora.pig.GoraDeleteStorage('{
+      "persistentClass": "",
+      "goraProperties": "",
+      "mapping": "",
+      "configuration": {}
+    }') ;
+</code></pre>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- 
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License. 
+-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="dev@gora.apache.org" />
+
+  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <META name="Description" content="Apache Gora -- Gora HBase Module" />
+  <META name="Keywords" content="Apache Gora NoSQL Framework" />
+  <META name="Owner" content="dev@gora.apache.org" />
+  <META name="Robots" content="index, follow" />
+  <META name="Security" content="Public" />
+  <META name="Source" content="wiki template" />
+  <META name="DC.Rights" content="Copyright 2010-2021, The Apache Software Foundation" />
+
+  <!-- The styles -->
+  <link href="/resources/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+.headerlink {
+  visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+  visibility: visible
+}  </style>
+  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/resources/css/gora.css" rel="stylesheet">
+
+  <style type="text/css">
+    .stpulldown-gradient
+    {
+      background: #E1E1E1;
+      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+      color: #636363;
+    }
+    #stpulldown .stpulldown-logo
+    {
+      height: 40px;
+      width: 300px;
+      margin-left: 20px;
+      margin-top: 5px;
+      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
+    }
+  </style>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/resources/img/feather-small.png">
+
+  <title>Apache Gora&trade; - Gora HBase Module</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="/credits.html">People</a></li>
+                <li><a href="/related.html">Related Projects</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/current/index.html">Current Documentation</a></li>
+                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
+                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
+                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
+                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
+                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
+                <li><a href="/version_control.html">Version Control</a></li>
+				<li><a href="/roadmap.html">Roadmap</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="http://www.apache.org">Apache Home</a></li>
+                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
+                <li><a href="http://www.apache.org/security/">Security</a></li>
+                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
+                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
+            <input value="gora.apache.org" name="sitesearch" type="hidden" />
+            <input class="search-query" name="q" id="query" type="text" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
+        </div> <!--/.nav-collapse -->
+      </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+  </div> <!-- /navbar -->
+
+  <div class="container top-buffer" id="Gora_Gora HBase Module">
+
+    <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink">&para;</a></h2>
+<p>This is the main documentation for the gora-solr module. gora-solr
+module enables <a href="http://lucene.apache.org/solr">Apache Solr</a> backend support for Gora.</p>
+<div id="toc"><ul><li><a class="toc-href" href="#goraproperties" title="gora.properties">gora.properties</a></li><li><a class="toc-href" href="#gora-solr-mappings" title="Gora Solr mappings">Gora Solr mappings</a></li><li><a class="toc-href" href="#solr-schemaxml" title="Solr Schema.xml">Solr Schema.xml</a></li><li><a class="toc-href" href="#solr-solrconfigxml" title="Solr solrconfig.xml">Solr solrconfig.xml</a></li></ul></div>
+<h2 id="goraproperties">gora.properties<a class="headerlink" href="#goraproperties" title="Permalink">&para;</a></h2>
+<ul>
+<li><code>gora.datastore.default=org.apache.gora.solr.store.SolrStore</code> - Implementation of the storage class</li>
+<li><code>gora.datastore.autocreateschema=true</code> - Create the table if doesn't exist</li>
+<li><code>gora.solrstore.solr.url=<a href="http://localhost:9876/solr">http://localhost:9876/solr</a></code> - The URL of the Solr server.</li>
+<li><code>gora.solrstore.solr.config</code> -  The <code>solrconfig.xml</code> file to be used.</li>
+<li><code>gora.solrstore.solr.schema</code> - The <code>schema.xml</code> file to be used.</li>
+<li><code>gora.solrstore.solr.batchSize</code> - A batch size unit (ArrayList) of SolrDocument's to be used for writing to Solr. A default value of <b>100</b> is used if this value is absent. This value must be of type <b>Integer</b>.</li>
+<li><code>gora.solrstore.solr.solrjserver</code> - The solrj implementation to use. This has a default value of <b>http</b> for <i><a href="">HttpSolrServer</a></i>. Available options include <b>http</b> (<i><a href="http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/HttpSolrServer.html">HttpSolrServer</a></i>), <b>cloud</b> (<i><a href="http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/CloudSolrServer.html">CloudSolrServer</a></i>), <b>concurrent</b> (<i><a href="http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/ConcurrentUpdateSolrServer.html">ConcurrentUpdateSolrServer</a></i>) and <b>loadbalance</b> (<i><a href="http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/LBHttpSolrServer.html">LBHttpSolrServer</a></i>). This value must be of type <b>String</b>.</li>
+<li><code>gora.solrstore.solr.commitWithin</code> - A batch commit unit for SolrDocument's used when making (commit) calls to Solr. A default value of 1000 is used if this value is absent. This value must be of type <b>Integer</b>.</li>
+<li><code>gora.solrstore.solr.resultsSize</code> - The maximum number of results to return when we make a call to <code>org.apache.gora.solr.store.SolrStore#execute(Query)</code>. This value must be of type <b>Integer</b>.</li>
+</ul>
+<h2 id="gora-solr-mappings">Gora Solr mappings<a class="headerlink" href="#gora-solr-mappings" title="Permalink">&para;</a></h2>
+<p>Say we wished to map some Employee data and store it into the SolrStore.</p>
+<pre><code>&lt;gora-otd&gt;
+    &lt;class name="org.apache.gora.examples.generated.Employee" keyClass="java.lang.String" table="Employee"&gt;
+      &lt;primarykey column="ssn"/&gt;
+      &lt;field name="name" column="name"/&gt;
+      &lt;field name="dateOfBirth" column="dateOfBirth"/&gt;
+      &lt;field name="salary" column="salary"/&gt;
+      &lt;field name="boss" column="boss"/&gt;
+      &lt;field name="webpage" column="webpage"/&gt;
+    &lt;/class&gt;
+&lt;/gora-otd&gt;
+</code></pre>
+<p>Here you can see that we require the definition of only one child element within the
+<code>gora-otd</code> mapping configuration, namely;</p>
+<p>The class element where we specify of persistent fields which values should map to. This contains;</p>
+<ol>
+<li>
+<p>a parameter containing the Persistent class <b>name</b> e.g. <code>org.apache.gora.examples.generated.Employee</code>,</p>
+</li>
+<li>
+<p>a parameter containing the <b>keyClass</b> e.g. <code>java.lang.String</code> which specifies the keys which map to the field values,</p>
+</li>
+<li>
+<p>a parameter containing the <b>Table name</b> e.g. <code>Employee</code>,</p>
+</li>
+<li>
+<p>finally nested child element(s) mapping fields which are to be persisted into Solr. <b>We must provide a primary key for each object that we wish to persist into Solr.</b> Additional object fields need to be configured such that they receive;</p>
+<p>a parameter containing the <b>name</b> e.g. (name, dateOfBirth, ssn, salary, boss and webpage respectively),</p>
+<p>a parameter containing the <b>column family</b> to which they belong e.g. (all info in this case),</p>
+</li>
+</ol>
+<h2 id="solr-schemaxml">Solr Schema.xml<a class="headerlink" href="#solr-schemaxml" title="Permalink">&para;</a></h2>
+<p><code>schema.xml</code> is an essential aspect of defining a storage and query model for your Solr data.</p>
+<p>The Solr community maintain their own documentation relating to schema.xml, this can be found at <a href="http://wiki.apache.org/solr/SchemaXml">http://wiki.apache.org/solr/SchemaXml</a>.</p>
+<pre><code>&lt;schema name="testexample" version="1.5"&gt;
+
+  &lt;fields&gt;
+
+    &lt;!-- Common Fields --&gt;
+    &lt;field name="_version_" type="long" indexed="true" stored="true"/&gt;
+
+    &lt;!-- Employee Fields --&gt;
+    &lt;field name="ssn"         type="string" indexed="true" stored="true" required="true" multiValued="false" /&gt; 
+    &lt;field name="name"        type="string" indexed="true" stored="true" /&gt;
+    &lt;field name="dateOfBirth" type="long" stored="true" /&gt; 
+    &lt;field name="salary"      type="int" stored="true" /&gt; 
+    &lt;field name="boss"        type="binary" stored="true" /&gt;
+    &lt;field name="webpage"     type="binary" stored="true" /&gt;
+
+  &lt;/fields&gt;
+
+  &lt;uniqueKey&gt;ssn&lt;/uniqueKey&gt;
+
+  &lt;types&gt;
+
+    &lt;fieldType name="string" class="solr.StrField" sortMissingLast="true" /&gt;
+    &lt;fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0"/&gt;
+    &lt;fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/&gt;
+    &lt;fieldtype name="binary" class="solr.BinaryField"/&gt;
+
+  &lt;/types&gt;  
+
+&lt;/schema&gt;
+</code></pre>
+<h2 id="solr-solrconfigxml">Solr solrconfig.xml<a class="headerlink" href="#solr-solrconfigxml" title="Permalink">&para;</a></h2>
+<p>Similar to <code>schema.xml</code> above, <code>solrconfig.xml</code> documentation is also maintained by the Solr community.</p>
+<p>Please see an example configuration below but also please refer to <a href="http://wiki.apache.org/solr/SolrConfigXml">http://wiki.apache.org/solr/SolrConfigXml</a>.</p>
+<pre><code>&lt;config&gt;
+  &lt;luceneMatchVersion&gt;LUCENE_40&lt;/luceneMatchVersion&gt;
+  &lt;dataDir&gt;${solr.data.dir:}&lt;/dataDir&gt;
+  &lt;directoryFactory name="DirectoryFactory" 
+                class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/&gt; 
+  &lt;codecFactory class="solr.SchemaCodecFactory"/&gt;
+  &lt;schemaFactory class="ClassicIndexSchemaFactory"/&gt;
+  &lt;indexConfig&gt;
+    &lt;lockType&gt;${solr.lock.type:native}&lt;/lockType&gt;
+  &lt;/indexConfig&gt;
+
+  &lt;jmx /&gt;
+
+  &lt;updateHandler class="solr.DirectUpdateHandler2"&gt;
+    &lt;updateLog&gt;
+      &lt;str name="dir"&gt;${solr.ulog.dir:}&lt;/str&gt;
+    &lt;/updateLog&gt;
+  &lt;/updateHandler&gt;
+
+  &lt;query&gt;
+    &lt;maxBooleanClauses&gt;1024&lt;/maxBooleanClauses&gt;
+    &lt;filterCache class="solr.FastLRUCache"
+             size="512"
+             initialSize="512"
+             autowarmCount="0"/&gt;
+    &lt;queryResultCache class="solr.LRUCache"
+                 size="512"
+                 initialSize="512"
+                 autowarmCount="0"/&gt;
+    &lt;documentCache class="solr.LRUCache"
+               size="512"
+               initialSize="512"
+               autowarmCount="0"/&gt;
+    &lt;enableLazyFieldLoading&gt;true&lt;/enableLazyFieldLoading&gt;
+    &lt;queryResultWindowSize&gt;20&lt;/queryResultWindowSize&gt;
+    &lt;queryResultMaxDocsCached&gt;200&lt;/queryResultMaxDocsCached&gt;
+    &lt;listener event="newSearcher" class="solr.QuerySenderListener"&gt;
+      &lt;arr name="queries"&gt;
+      &lt;/arr&gt;
+    &lt;/listener&gt;
+    &lt;listener event="firstSearcher" class="solr.QuerySenderListener"&gt;
+      &lt;arr name="queries"&gt;
+        &lt;lst&gt;
+          &lt;str name="q"&gt;static firstSearcher warming in solrconfig.xml&lt;/str&gt;
+        &lt;/lst&gt;
+      &lt;/arr&gt;
+    &lt;/listener&gt;
+    &lt;useColdSearcher&gt;false&lt;/useColdSearcher&gt;
+    &lt;maxWarmingSearchers&gt;2&lt;/maxWarmingSearchers&gt;
+  &lt;/query&gt;
+
+  &lt;requestDispatcher handleSelect="false" &gt;
+    &lt;requestParsers enableRemoteStreaming="true" 
+                multipartUploadLimitInKB="2048000"
+                formdataUploadLimitInKB="2048"
+                addHttpRequestToContext="false"/&gt;
+    &lt;httpCaching never304="true" /&gt;
+  &lt;/requestDispatcher&gt;
+
+  &lt;requestHandler name="/select" class="solr.SearchHandler"&gt;
+    &lt;lst name="defaults"&gt;
+      &lt;str name="echoParams"&gt;explicit&lt;/str&gt;
+      &lt;int name="rows"&gt;10&lt;/int&gt;
+      &lt;str name="df"&gt;ssn&lt;/str&gt;
+    &lt;/lst&gt;
+  &lt;/requestHandler&gt;
+
+  &lt;requestHandler name="/query" class="solr.SearchHandler"&gt;
+    &lt;lst name="defaults"&gt;
+      &lt;str name="echoParams"&gt;explicit&lt;/str&gt;
+      &lt;str name="wt"&gt;json&lt;/str&gt;
+      &lt;str name="indent"&gt;true&lt;/str&gt;
+      &lt;str name="df"&gt;ssn&lt;/str&gt;
+    &lt;/lst&gt;
+  &lt;/requestHandler&gt;
+
+  &lt;requestHandler name="/get" class="solr.RealTimeGetHandler"&gt;
+    &lt;lst name="defaults"&gt;
+      &lt;str name="omitHeader"&gt;true&lt;/str&gt;
+    &lt;/lst&gt;
+  &lt;/requestHandler&gt;
+
+  &lt;requestHandler name="/update" class="solr.UpdateRequestHandler"&gt;
+  &lt;/requestHandler&gt;
+&lt;/config&gt;
+</code></pre>
+
+
+  </div> <!-- /container (main block) -->
+
+  <hr>
+
+  <div class="container">
+    <footer>
+      <p>Copyright © 2010-2021 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+      </p>
+      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
+      </p>
+    </footer>
+
+  </div> <!-- /container -->
+
+  <!-- The javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
+  <script src="/resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>
