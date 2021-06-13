@@ -1,0 +1,55 @@
+==== ./content/nightly_builds.md
+==== ./content/version_control.md
+==== ./content/credits.md
+==== ./content/contribute.md
+==== ./content/related.md
+==== ./content/current/gora-sql.md
+==== ./content/current/gora-mongodb.md
+==== ./content/current/gora-couchdb.md
+==== ./content/current/overview.md
+==== ./content/current/gora-shims.md
+==== ./content/current/gora-metamodel.md
+==== ./content/current/compiler-cli.md
+==== ./content/current/gora-kudu.md
+==== ./content/current/gora-hbase.md
+==== ./content/current/quickstart.md
+==== ./content/current/gora-aerospike.md
+==== ./content/current/gora-ignite.md
+==== ./content/current/gora-pig.md
+==== ./content/current/gora-cassandra.md
+==== ./content/current/gora-camel.md
+==== ./content/current/gora-jcache.md
+==== ./content/current/compiler.md
+==== ./content/current/tutorial.md
+321c321
+< ## Basic API </title>
+---
+> ## Basic API
+==== ./content/current/index.md
+74c74
+< ### GoraCI Integration Testsing Suite
+---
+> ### GoraCI Integration Testing Suite
+==== ./content/current/api/javadoc.md
+==== ./content/current/gora-accumulo.md
+==== ./content/current/gora-conf.md
+==== ./content/current/gora-solr.md
+==== ./content/current/gora-core.md
+==== ./content/current/gora-dynamodb.md
+==== ./content/roadmap.md
+0a1,2
+> Title: Gora Roadmap Documentation
+> 
+==== ./content/index.md
+16c16
+<         Apache Spark&trade;, Apache Flink&trade; and Apache Pig&trade; support. Gora uses the [Apache Software License v2.0](https://www.apache.org/licenses/LICENSE-2.0.html). 
+---
+>         Apache Spark&trade;, Apache Flink&trade; and Apache Pig&trade; support. Gora uses the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License v2.0</a>. 
+18c18
+<         You can find the Gora DOAP [here](./current/doap_Gora.rdf).
+---
+>         You can find the Gora DOAP <a href="./current/doap_Gora.rdf">here</a>.
+==== ./content/mailing_lists.md
+==== ./content/downloads.md
+==== ./content/about.md
+==== ./README.md
