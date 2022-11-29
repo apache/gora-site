@@ -1,7 +1,7 @@
 Title: Gora CouchDB Module
 
 ## Overview
-This is the main documentation for the gora-couchdb module. gora-couchdb module enables [Apache CouchDB](http://couchdb.apache.org/) backend support for Gora.
+This is the main documentation for the gora-couchdb module. gora-couchdb module enables [Apache CouchDB](https://couchdb.apache.org/) backend support for Gora.
 
 [TOC] 
 

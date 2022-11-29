@@ -2,7 +2,7 @@ Title: Gora DynamoDB Module
 
 ## Overview
 This is the main documentation for the gora-dynamodb module. 
-gora-dynamodb module enables [Amazon DynamoDB](http://aws.amazon.com/dynamodb/) backend support for Gora.
+gora-dynamodb module enables [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) backend support for Gora.
 
 [TOC]
 

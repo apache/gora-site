@@ -18,8 +18,8 @@ The Gora user mailing list addresses are :
       <td><a href="mailto:user@gora.apache.org">Users list</a></td>
       <td><a href="mailto:user-subscribe@gora.apache.org">Subscribe</a></td>
       <td><a href="mailto:user-unsubscribe@gora.apache.org">Unsubscribe</a></td>
-      <td><a href="http://www.mail-archive.com/user%40gora.apache.org/">Search</a></td>
-      <td><a href="http://mail-archives.apache.org/mod_mbox/gora-user/">List</a></td>
+      <td><a href="https://www.mail-archive.com/user%40gora.apache.org/">Search</a></td>
+      <td><a href="https://mail-archives.apache.org/mod_mbox/gora-user/">List</a></td>
     </tr>
   </tbody>
 </table>
@@ -45,8 +45,8 @@ The Gora developer mailing list addresses are :
       <td><a href="mailto:dev@gora.apache.org">Dev list</a></td>
       <td><a href="mailto:dev-subscribe@gora.apache.org">Subscribe</a></td>
       <td><a href="mailto:dev-unsubscribe@gora.apache.org">Unsubscribe</a></td>
-      <td><a href="http://www.mail-archive.com/dev%40gora.apache.org/">Search</a></td>
-      <td><a href="http://mail-archives.apache.org/mod_mbox/gora-dev/">List</a></td>
+      <td><a href="https://www.mail-archive.com/dev%40gora.apache.org/">Search</a></td>
+      <td><a href="https://mail-archives.apache.org/mod_mbox/gora-dev/">List</a></td>
     </tr>
   </tbody>
 </table>
@@ -72,8 +72,8 @@ The Gora commit's mailing list is :
       <td><a href="mailto:commits@gora.apache.org">Commits</a></td>
       <td><a href="mailto:commits-subscribe@gora.apache.org">Subscribe</a></td>
       <td><a href="mailto:commits-unsubscribe@gora.apache.org">Unsubscribe</a></td>
-      <td><a href="http://www.mail-archive.com/commits%40gora.apache.org/">Search</a></td>
-      <td><a href="http://mail-archives.apache.org/mod_mbox/gora-commits/">List</a></td>
+      <td><a href="https://www.mail-archive.com/commits%40gora.apache.org/">Search</a></td>
+      <td><a href="https://mail-archives.apache.org/mod_mbox/gora-commits/">List</a></td>
     </tr>
   </tbody>
 </table>

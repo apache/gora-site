@@ -8,13 +8,13 @@ the Apache Software Foundation.
 
 ### Anonymous Access (read-only)
 The Apache git repository can be used for accessing development trunk code.
-The URL for anonymous read-only access is [http://git.apache.org/gora.git/](http://git.apache.org/gora.git/). 
-Alternatively the Github mirror at [http://github.com/apache/gora](http://github.com/apache/gora) can also be used. 
+The URL for anonymous read-only access is [https://git.apache.org/gora.git/](https://git.apache.org/gora.git/). 
+Alternatively the Github mirror at [https://github.com/apache/gora](https://github.com/apache/gora) can also be used. 
 The repository can be cloned by:
 
-    $ git clone http://git.apache.org/gora.git/ 
+    $ git clone https://git.apache.org/gora.git/ 
 
-More instructions for setting up git access can be found [here](http://www.apache.org/dev/git.html).
+More instructions for setting up git access can be found [here](https://www.apache.org/dev/git.html).
 
 ### Committer Access (read-write)
 Committers should always clone the read-write codebase as this is the latest codebase
@@ -26,4 +26,4 @@ The code can be cloned as follows
     $ git clone https://git-wip-us.apache.org/repos/asf/gora.git
 
 Committers should also be aware that the committers area and website are still hosted in
-the official Apache SVN. More information can be found [here](http://svn.apache.org/repos/asf/gora/README). 
+the official Apache SVN. More information can be found [here](https://svn.apache.org/repos/asf/gora/README). 

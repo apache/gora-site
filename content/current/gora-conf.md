@@ -6,7 +6,7 @@ Gora reads necessary configuration from a properties file name
 <code>gora.properties</code>. 
 
 The file is searched in the classpath, which is 
-obtained using the <code>ClassLoader</code> of the [DataStoreFactory](http://gora.apache.org/current/api/apidocs-0.4/index.html?org/apache/gora/store/DataStoreFactory.html)
+obtained using the <code>ClassLoader</code> of the [DataStoreFactory](https://gora.apache.org/current/api/apidocs-0.4/index.html?org/apache/gora/store/DataStoreFactory.html)
  class.
 
 The following properties are recognized:
@@ -20,7 +20,7 @@ The following properties are recognized:
 </table>
 
 <code>gora.datastore.default</code> is perhaps the most important property in this file. 
-This property configures the default [DataStore](http://gora.apache.org/current/api/apidocs-0.4/index.html?org/apache/gora/store/DataStore.html) implementation to use. 
+This property configures the default [DataStore](https://gora.apache.org/current/api/apidocs-0.4/index.html?org/apache/gora/store/DataStore.html) implementation to use. 
 However, other data stores can still be instantiated thorough the API. 
 Data store implementation in Gora distribution include:
 

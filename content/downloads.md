@@ -13,11 +13,11 @@ various aspects of the codebase during or as a prerequisite to using Gora in you
 See the [CHANGES](https://github.com/apache/gora/blob/apache-gora-0.9/CHANGES.md#apache-gora-09-release---120819-ddmmyyyy)
 file for more information on the list of updates in this release.
 
-Gora is always distributed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+Gora is always distributed under the [Apache License, version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
 
 ## Prerequsites
 
-You require [Apache Maven](http://maven.apache.org) to build the Gora source code. 
+You require [Apache Maven](https://maven.apache.org) to build the Gora source code. 
 Maven can either be downloaded and installed manually or alternatively via command
 line via your operating system package manager.
 
@@ -25,8 +25,8 @@ line via your operating system package manager.
 
 ## Downloads
 
-<a href="http://www.apache.org/dyn/closer.lua/gora/0.9/apache-gora-0.9-src.tar.gz" class="btn btn-primary btn-large">Download (0.9 src.tar.gz)</a>
-<a href="http://www.apache.org/dyn/closer.lua/gora/0.9/apache-gora-0.9-src.zip" class="btn btn-primary btn-large">Download (0.9 src.zip)</a>
+<a href="https://www.apache.org/dyn/closer.lua/gora/0.9/apache-gora-0.9-src.tar.gz" class="btn btn-primary btn-large">Download (0.9 src.tar.gz)</a>
+<a href="https://www.apache.org/dyn/closer.lua/gora/0.9/apache-gora-0.9-src.zip" class="btn btn-primary btn-large">Download (0.9 src.zip)</a>
 
 ## Mirrors
 
@@ -47,17 +47,17 @@ The checksum and signature are links to the originals on the main distribution s
   <tbody>
   <tr>
     <td>Apache Gora 0.9 (tar.gz)</td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/gora/0.9/apache-gora-0.9-src.tar.gz">apache-gora-0.9-src.tar.gz</a></td> 
-    <!-- <td><a href="http://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.tar.gz.md5">apache-gora-0.9-src.tar.gz.md5</a> </td>  -->
-    <td><a href="http://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.tar.gz.asc">apache-gora-0.9-src.tar.gz.asc</a> </td> 
-    <td><a href="http://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.tar.gz.sha512">apache-gora-0.9-src.tar.gz.sha512</a> </td>
+    <td><a href="https://www.apache.org/dyn/closer.cgi/gora/0.9/apache-gora-0.9-src.tar.gz">apache-gora-0.9-src.tar.gz</a></td> 
+    <!-- <td><a href="https://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.tar.gz.md5">apache-gora-0.9-src.tar.gz.md5</a> </td>  -->
+    <td><a href="https://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.tar.gz.asc">apache-gora-0.9-src.tar.gz.asc</a> </td> 
+    <td><a href="https://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.tar.gz.sha512">apache-gora-0.9-src.tar.gz.sha512</a> </td>
   </tr>
   <tr>
     <td>Apache Gora 0.9 (zip)</td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/gora/0.9/apache-gora-0.9-src.zip">apache-gora-0.9-src.zip</a></td>
-    <!-- <td><a href="http://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.zip.md5">apache-gora-0.9-src.zip.md5</a></td> -->
-    <td><a href="http://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.zip.asc">apache-gora-0.9-src.zip.asc</a></td>
-    <td><a href="http://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.zip.sha512">apache-gora-0.9-src.zip.sha512</a></td>
+    <td><a href="https://www.apache.org/dyn/closer.cgi/gora/0.9/apache-gora-0.9-src.zip">apache-gora-0.9-src.zip</a></td>
+    <!-- <td><a href="https://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.zip.md5">apache-gora-0.9-src.zip.md5</a></td> -->
+    <td><a href="https://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.zip.asc">apache-gora-0.9-src.zip.asc</a></td>
+    <td><a href="https://www.apache.org/dist/gora/0.9/apache-gora-0.9-src.zip.sha512">apache-gora-0.9-src.zip.sha512</a></td>
   </tr>
   </tbody>
 </table>
@@ -66,7 +66,7 @@ The checksum and signature are links to the originals on the main distribution s
 It is essential that you verify the integrity of the downloaded files using the PGP and SHA512 signatures. 
 published with every Gora release.
 
-Please read [Verifying Apache HTTP Server Releases](http://httpd.apache.org/dev/verification.html) 
+Please read [Verifying Apache HTTP Server Releases](https://httpd.apache.org/dev/verification.html) 
 for more information on why you should verify our releases.
 
 We strongly recommend you verify your downloads with at least both PGP Signature and SHA512 Checksum. Guidance
@@ -74,11 +74,11 @@ for doing so is provided below.
 
 ## PGP Signature
 The PGP signatures can be verified using PGP or GPG. First download the 
-[KEYS](http://www.apache.org/dist/gora/KEYS) as well as the asc signature file 
+[KEYS](https://www.apache.org/dist/gora/KEYS) as well as the asc signature file 
 for the relevant distribution. 
 
 <b>N.B.</b>Make sure you get these files from the 
-[main distribution directory](http://www.apache.org/dist/gora/), rather than from a 
+[main distribution directory](https://www.apache.org/dist/gora/), rather than from a 
 mirror. Then verify the signatures using the following
 
     $ gpg --import KEYS
@@ -96,8 +96,8 @@ output should match the string in apache-gora-X.Y.Z.tar.gz.sha512
 
 ## Previous Releases
 If you are looking for previous releases of Apache Gora, have a look in the 
-[Apache Archives](http://archive.apache.org/dist/gora/), or alternatively 
-for even older releases check out the [Incubator archives](http://archive.apache.org/dist/incubator/gora/).
+[Apache Archives](https://archive.apache.org/dist/gora/), or alternatively 
+for even older releases check out the [Incubator archives](https://archive.apache.org/dist/incubator/gora/).
 
 Subscribe to the dev@ [mailing list](./mailing_lists.html) if you want to 
 get notified about future releases. You can check out the Gora 

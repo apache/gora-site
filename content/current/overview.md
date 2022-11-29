@@ -23,10 +23,10 @@ following modules are currently implemented in gora.
 
 * [gora-compiler](./compiler.html): A page dedicated to the GoraCompiler; a critical part of the Gora workflow.
 * [gora-core](./gora-core.html): Module containing core functionality, AvroStore and DataFileAvroStore stores;
-* [gora-accumulo](./gora-accumulo.html): Module for [Apache Accumulo](http://accumulo.apache.org) backend and AccumuloStore implementation;
-* [gora-cassandra](./gora-cassandra.html): Module for [Apache Cassandra](http://cassandra.apacheorg) backend and CassandraStore implementation;
-* [gora-dynamodb](./gora-dynamodb.html): Module for [Amazon DynamoDB](http://aws.amazon.com/dynamodb/) backend and DynamoDBStore implementation;
-* [gora-hbase](./gora-hbase.html): Module for [Apache HBase](http://hbase.apache.org) backend and HBaseStore implementation;
-* [gora-sql](./gora-sql.html): Module for [HSQLDB](http://hsqldb.org/) and [MySQL](http://www.mysql.com/) backend and SqlStore implementation;
-* [gora-mongodb](./gora-mongodb.html): Module for [MongoDB](http://www.mongodb.org/) backend and MongoStore implementation;
-* [gora-aerospike](./gora-aerospike.html): Module for [Aerospike](http://www.aerospike.com/) backend and Aerospike implementation;
+* [gora-accumulo](./gora-accumulo.html): Module for [Apache Accumulo](https://accumulo.apache.org) backend and AccumuloStore implementation;
+* [gora-cassandra](./gora-cassandra.html): Module for [Apache Cassandra](https://cassandra.apacheorg) backend and CassandraStore implementation;
+* [gora-dynamodb](./gora-dynamodb.html): Module for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) backend and DynamoDBStore implementation;
+* [gora-hbase](./gora-hbase.html): Module for [Apache HBase](https://hbase.apache.org) backend and HBaseStore implementation;
+* [gora-sql](./gora-sql.html): Module for [HSQLDB](https://hsqldb.org/) and [MySQL](https://www.mysql.com/) backend and SqlStore implementation;
+* [gora-mongodb](./gora-mongodb.html): Module for [MongoDB](https://www.mongodb.org/) backend and MongoStore implementation;
+* [gora-aerospike](./gora-aerospike.html): Module for [Aerospike](https://aerospike.com/) backend and Aerospike implementation;

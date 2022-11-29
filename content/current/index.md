@@ -28,17 +28,17 @@ following modules are currently implemented in Gora.
 * [gora-compiler](./compiler.html): A page dedicated to the GoraCompiler; a critical part of the Gora workflow;
 * [gora-compiler-cli](./compiler-cli.html): A page dedicated to the GoraCompiler Command Line Interface; a utility module for working with the Gora Compiler;
 * [gora-core](./gora-core.html): Module containing core functionality, AvroStore and DataFileAvroStore stores, GoraSparkEngine;
-* [gora-accumulo](./gora-accumulo.html): Module for [Apache Accumulo](http://accumulo.apache.org) backend and AccumuloStore implementation;
-* [camel-gora](./gora-camel.html): An [Apache Camel](http://camel.apache.org/) component that allows you to work with NoSQL databases using Gora;
-* [gora-cassandra](./gora-cassandra.html): Module for [Apache Cassandra](http://cassandra.apacheorg) backend and CassandraStore implementation;
-* [gora-dynamodb](./gora-dynamodb.html): Module for [Amazon DynamoDB](http://aws.amazon.com/dynamodb/) backend and DynamoDBStore implementation;
-* [gora-hbase](./gora-hbase.html): Module for [Apache HBase](http://hbase.apache.org) backend and HBaseStore implementation;
+* [gora-accumulo](./gora-accumulo.html): Module for [Apache Accumulo](https://accumulo.apache.org) backend and AccumuloStore implementation;
+* [camel-gora](./gora-camel.html): An [Apache Camel](https://camel.apache.org/) component that allows you to work with NoSQL databases using Gora;
+* [gora-cassandra](./gora-cassandra.html): Module for [Apache Cassandra](https://cassandra.apacheorg) backend and CassandraStore implementation;
+* [gora-dynamodb](./gora-dynamodb.html): Module for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) backend and DynamoDBStore implementation;
+* [gora-hbase](./gora-hbase.html): Module for [Apache HBase](https://hbase.apache.org) backend and HBaseStore implementation;
 * [gora-jcache](./gora-jcache.html): Module for [Hazelcast JCache](https://hazelcast.com/use-cases/caching/jcache-provider) caching and JCacheStore implementation;
-* [gora-couchdb](./gora-couchdb.html): Module for [Apache CouchDB](http://couchdb.apache.org) backend and CouchDBStore implementation;
-* [gora-metamodel](./gora-metamodel.html): Module for [Apache MetaModel](http://metamodel.incubator.apache.org) backend and query functionality;
-* [gora-mongodb](./gora-mongodb.html): Module for [MongoDB](http://www.mongodb.org/) backend and MongoStore implementation;
-* [gora-solr](./gora-solr.html): Module for [Apache Solr](http://lucene.apache.org/solr) backend and SolrStore implementation;
-* [gora-aerospike](./gora-aerospike.html): Module for [Aerospike](http://www.aerospike.com/) backend and Aerospike implementation;
+* [gora-couchdb](./gora-couchdb.html): Module for [Apache CouchDB](https://couchdb.apache.org) backend and CouchDBStore implementation;
+* [gora-metamodel](./gora-metamodel.html): Module for [Apache MetaModel](https://attic.apache.org/projects/metamodel.html) backend and query functionality;
+* [gora-mongodb](./gora-mongodb.html): Module for [MongoDB](https://www.mongodb.org/) backend and MongoStore implementation;
+* [gora-solr](./gora-solr.html): Module for [Apache Solr](https://solr.apache.org/) backend and SolrStore implementation;
+* [gora-aerospike](./gora-aerospike.html): Module for [Aerospike](https://aerospike.com/) backend and Aerospike implementation;
 * [gora-ignite](./gora-ignite.html): Module for [Apache Ignite](https://ignite.apache.org/) backend and IgniteStore implementation;
 * [gora-kudu](./gora-kudu.html): Module for [Apache Kudu](https://kudu.apache.org/) backend and KuduStore implementation;
 * [gora-pig](./gora-pig.html): Module for loading/writing using Apache Gora in an [Apache Pig](https://pig.apache.org/) script;
@@ -46,8 +46,8 @@ following modules are currently implemented in Gora.
 * gora-sources-dist: Packaging module used to build and distribute Gora sources during project releases;
 
 We currently have modules under development for several other storage mediums such 
-as [Oracle NoSQL](http://www.oracle.com/technetwork/database/database-technologies/nosqldb/overview/index.html) 
-and [Apache Lucene](http://lucene.apache.org). Consult the Gora source, located on [Github](https://github.com/apache/gora/)
+as [Oracle NoSQL](https://www.oracle.com/technetwork/database/database-technologies/nosqldb/overview/index.html) 
+and [Apache Lucene](https://lucene.apache.org). Consult the Gora source, located on [Github](https://github.com/apache/gora/)
 for a complete list of modules.
 
 ## Gora Testing
@@ -56,7 +56,7 @@ Gora currently has two testing mechanisms
  * Integration Tests: A custom testing suite called GoraCI (Continuous Ingestion) which stress tests Gora functionality at scale.
 
 ### JUnit Tests
-Unit tests in Gora are implemented using the popular [JUnit](http://junit.org) framework.
+Unit tests in Gora are implemented using the popular [JUnit](https://junit.org) framework.
 Each module which implements the [DataStore](https://builds.apache.org/view/All/job/gora-trunk/javadoc/index.html?org/apache/gora/store/DataStore.html)
 interface similarly implements a [DataStoreTestBase](https://github.com/apache/gora/blob/master/gora-core/src/test/java/org/apache/gora/store/DataStoreTestBase.java) API
 which test utilities for DataStores. The DataStoreTestBase class delegates actual test execution
@@ -80,9 +80,9 @@ Credit for GoraCI can be handed to Keith Turner (Gora PMC member) for his foresi
 in developing GoraCI which we have now extended from gora-accumulo to the entire suite
 of Gora modules.
 
-[Apache Accumulo](http://accumulo.apache.org) has a test suite that verifies that data is not lost
+[Apache Accumulo](https://accumulo.apache.org) has a test suite that verifies that data is not lost
 at scale.  This test suite is called 
-[continuous ingest](http://svn.apache.org/viewvc/accumulo/tags/1.4.0/test/system/continuous/ScaleTest.odp?view=co).  
+[continuous ingest](https://svn.apache.org/viewvc/accumulo/tags/1.4.0/test/system/continuous/ScaleTest.odp?view=co).  
 Essentially the test runs many ingest clients that continually create linked lists containing **25 million**
 nodes. At some point the clients are stopped and a map reduce job is run to
 ensure no linked list has a hole. A hole indicates data was lost.    
@@ -189,7 +189,7 @@ and build the <code>goraci-${version}-SNAPSHOT.jar</code> with those. Alternativ
 those and put them on the classpath through some other means.
 
 #### Gora and Hadoop
-Gora uses [Apache Avro](http://avro.apache.org) which uses a Json library that Hadoop has an old version of.
+Gora uses [Apache Avro](https://avro.apache.org) which uses a Json library that Hadoop has an old version of.
 The two libraries  jackson-core and jackson-mapper need to be updated in
 <code>$HADOOP_HOME/lib</code> and <code>$HADOOP_HOME/share/hadoop/lib/</code>.  Currently these are updated to
 jackson-core-asl-1.4.2.jar and jackson-mapper-asl-1.4.2.jar.  For details see

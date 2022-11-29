@@ -2,11 +2,11 @@ Title: Gora MongoDB Module
 
 ## Overview
 This is the main documentation for the gora-mongodb module. gora-mongodb 
-module enables [MongoDB](http://www.mongodb.org) backend support for Gora.
+module enables [MongoDB](https://www.mongodb.org) backend support for Gora.
 
-This module has been tested with MongoDB Server [2.4.x](http://docs.mongodb.org/master/release-notes/2.4/)
-and [2.6.x](http://docs.mongodb.org/master/release-notes/2.6/) series.
-It will connect to remote MongoDB server(s) using standard [Java MongoDB Driver](http://docs.mongodb.org/ecosystem/drivers/java/)
+This module has been tested with MongoDB Server [2.4.x](https://docs.mongodb.org/master/release-notes/2.4/)
+and [2.6.x](https://docs.mongodb.org/master/release-notes/2.6/) series.
+It will connect to remote MongoDB server(s) using standard [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/)
 
 [TOC]
 
