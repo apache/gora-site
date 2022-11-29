@@ -1,7 +1,7 @@
 Title: Gora Aerospike Module
 
 ## Overview
-This is the main documentation for the gora-aerospike module. <b>gora-aerospike</b> module enables [Aerospike](http://www.aerospike.com/) backend support for Gora.
+This is the main documentation for the gora-aerospike module. <b>gora-aerospike</b> module enables [Aerospike](https://aerospike.com/) backend support for Gora.
 
 [TOC] 
 

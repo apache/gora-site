@@ -4,7 +4,7 @@ Title: Gora Core Module
 This is the main documentation for Gora + Hadoop compatibility which comes in the
 form of <b>Gora Shims</b>. 
 
-According to our great friends over at [Wikipedia](http://en.wikipedia.org/wiki/Shim_%28computing%29),
+According to our great friends over at [Wikipedia](https://en.wikipedia.org/wiki/Shim_%28computing%29),
 Shim's are described as
 
     ...a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere. Shims typically come about when the behavior of an API changes, thereby causing compatibility issues for older applications which still rely on the older functionality. In such cases, the older API can still be supported by a thin compatibility layer on top of the newer code.
@@ -38,7 +38,7 @@ should be used as below.**
 
 ## Dependency Definition
 
-[Click Here](http://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-distribution|0.6|bundle)
+[Click Here](https://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-distribution|0.6|bundle)
 
 # gora-shims-hadoop
 
@@ -90,7 +90,7 @@ based on detecting the Hadoop Major version. This code looks the following:
 
 ## Dependency Definition
 
-[Click Here](http://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-hadoop|0.6|bundle)
+[Click Here](https://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-hadoop|0.6|bundle)
 
 # gora-shims-hadoop1
 
@@ -118,7 +118,7 @@ is very simple. Essentially it consists of two Java methods
 
 ## Dependency Definition
 
-[Click Here](http://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-hadoop1|0.6|bundle)
+[Click Here](https://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-hadoop1|0.6|bundle)
 
 
 # gora-shims-hadoop2
@@ -152,5 +152,5 @@ is very simple. Essentially it consists of two Java methods
 
 ## Dependency Definition
 
-[Click Here](http://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-hadoop2|0.6|bundle)
+[Click Here](https://search.maven.org/#artifactdetails|org.apache.gora|gora-shims-hadoop2|0.6|bundle)
 

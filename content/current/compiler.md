@@ -41,14 +41,14 @@ version control software you're using. You are using version control, right?
 
 Finally, the license parameter tells the compile to add a license header to each generated file. Current header options include:
 
-* ASLv2   (<a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License v2.0</a>)
-* AGPLv3  (<a href="http://www.gnu.org/licenses/agpl.html">GNU Affero General Public License</a>)
-* CDDLv1  (<a href="http://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License v1.0</a>)
-* FDLv13  (<a href-"http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License v1.3</a>)
-* GPLv1   (<a href="http://www.gnu.org/licenses/gpl-1.0.html">GNU General Public License v1.0</a>)
-* GPLv2   (<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License v2.0</a>)
-* GPLv3   (<a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>)
-* LGPLv21 (<a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License v2.1</a>)
-* LGPLv3  (<a href="http://www.gnu.org/licenses/lgpl-3.0.html">GNU Lesser General Public License v3</a>)
+* ASLv2   (<a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License v2.0</a>)
+* AGPLv3  (<a href="https://www.gnu.org/licenses/agpl.html">GNU Affero General Public License</a>)
+* CDDLv1  (<a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License v1.0</a>)
+* FDLv13  (<a href-"https://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License v1.3</a>)
+* GPLv1   (<a href="https://www.gnu.org/licenses/gpl-1.0.html">GNU General Public License v1.0</a>)
+* GPLv2   (<a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License v2.0</a>)
+* GPLv3   (<a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>)
+* LGPLv21 (<a href="https://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License v2.1</a>)
+* LGPLv3  (<a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU Lesser General Public License v3</a>)
 
 It should be noted that if no license header argument is passed, by default the ASLv2 license profile is selected.

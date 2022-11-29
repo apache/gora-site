@@ -2,18 +2,18 @@ Title: Gora HBase Module
 
 ## Overview
 This is the main documentation for the gora-solr module. gora-solr 
-module enables [Apache Solr](http://lucene.apache.org/solr) backend support for Gora. 
+module enables [Apache Solr](https://solr.apache.org) backend support for Gora. 
 
 [TOC]
 
 ## gora.properties 
 * <code>gora.datastore.default=org.apache.gora.solr.store.SolrStore</code> - Implementation of the storage class 
 * <code>gora.datastore.autocreateschema=true</code> - Create the table if doesn't exist
-* <code>gora.solrstore.solr.url=http://localhost:9876/solr</code> - The URL of the Solr server.
+* <code>gora.solrstore.solr.url=https://localhost:9876/solr</code> - The URL of the Solr server.
 * <code>gora.solrstore.solr.config</code> -  The <code>solrconfig.xml</code> file to be used.
 * <code>gora.solrstore.solr.schema</code> - The <code>schema.xml</code> file to be used.
 * <code>gora.solrstore.solr.batchSize</code> - A batch size unit (ArrayList) of SolrDocument's to be used for writing to Solr. A default value of <b>100</b> is used if this value is absent. This value must be of type <b>Integer</b>.
-* <code>gora.solrstore.solr.solrjserver</code> - The solrj implementation to use. This has a default value of <b>http</b> for <i>[HttpSolrServer]()</i>. Available options include <b>http</b> (<i>[HttpSolrServer](http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/HttpSolrServer.html)</i>), <b>cloud</b> (<i>[CloudSolrServer](http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/CloudSolrServer.html)</i>), <b>concurrent</b> (<i>[ConcurrentUpdateSolrServer](http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/ConcurrentUpdateSolrServer.html)</i>) and <b>loadbalance</b> (<i>[LBHttpSolrServer](http://lucene.apache.org/solr/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/LBHttpSolrServer.html)</i>). This value must be of type <b>String</b>.
+* <code>gora.solrstore.solr.solrjserver</code> - The solrj implementation to use. This has a default value of <b>http</b> for <i>[HttpSolrServer]()</i>. Available options include <b>http</b> (<i>[HttpSolrServer](https://solr.apache.org/docs/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/HttpSolrServer.html)</i>), <b>cloud</b> (<i>[CloudSolrServer](https://solr.apache.org/docs/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/CloudSolrServer.html)</i>), <b>concurrent</b> (<i>[ConcurrentUpdateSolrServer](https://solr.apache.org/docs/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/ConcurrentUpdateSolrServer.html)</i>) and <b>loadbalance</b> (<i>[LBHttpSolrServer](https://solr.apache.org/docs/4_8_1/solr-solrj/index.html?org/apache/solr/client/solrj/impl/LBHttpSolrServer.html)</i>). This value must be of type <b>String</b>.
 * <code>gora.solrstore.solr.commitWithin</code> - A batch commit unit for SolrDocument's used when making (commit) calls to Solr. A default value of 1000 is used if this value is absent. This value must be of type <b>Integer</b>.
 * <code>gora.solrstore.solr.resultsSize</code> - The maximum number of results to return when we make a call to <code>org.apache.gora.solr.store.SolrStore#execute(Query)</code>. This value must be of type <b>Integer</b>.
  
@@ -52,7 +52,7 @@ The class element where we specify of persistent fields which values should map 
 
 <code>schema.xml</code> is an essential aspect of defining a storage and query model for your Solr data.
 
-The Solr community maintain their own documentation relating to schema.xml, this can be found at [http://wiki.apache.org/solr/SchemaXml](http://wiki.apache.org/solr/SchemaXml).
+The Solr community maintain their own documentation relating to schema.xml, this can be found at [https://wiki.apache.org/solr/SchemaXml](https://wiki.apache.org/solr/SchemaXml).
 
     <schema name="testexample" version="1.5">
 
@@ -88,7 +88,7 @@ The Solr community maintain their own documentation relating to schema.xml, this
 
 Similar to <code>schema.xml</code> above, <code>solrconfig.xml</code> documentation is also maintained by the Solr community.
 
-Please see an example configuration below but also please refer to [http://wiki.apache.org/solr/SolrConfigXml](http://wiki.apache.org/solr/SolrConfigXml). 
+Please see an example configuration below but also please refer to [https://wiki.apache.org/solr/SolrConfigXml](https://wiki.apache.org/solr/SolrConfigXml). 
 
     <config>
       <luceneMatchVersion>LUCENE_40</luceneMatchVersion>

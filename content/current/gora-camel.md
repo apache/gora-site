@@ -2,8 +2,8 @@ Title: Gora Configuration
 
 # Introduction
 
-**Camel-Gora** is an [Apache Camel](http://camel.apache.org/) component that allows you to work with NoSQL databases using the 
-[Apache Gora](http://gora.apache.org/) framework. 
+**Camel-Gora** is an [Apache Camel](https://camel.apache.org/) component that allows you to work with NoSQL databases using the 
+[Apache Gora](https://gora.apache.org/) framework. 
 
 **N.B.** Camel-Gora is NOT a Gora module... but instead a Camel one. This documentation exists to provide detail on how 
 Gora is being used in different settings.
@@ -41,7 +41,7 @@ Maven users will need to add the following dependency to their pom.xml for this 
 
 ## Configuratiion
 
- Using camel-gora needs some configuration. This mainly involve to configure the <code>AvroStore</code> through the <code>gora.properties</code> file and to define the relevant mappings as part of the *[gora-core](http://gora.apache.org/current/gora-core.html)* module.
+ Using camel-gora needs some configuration. This mainly involve to configure the <code>AvroStore</code> through the <code>gora.properties</code> file and to define the relevant mappings as part of the *[gora-core](https://gora.apache.org/current/gora-core.html)* module.
 
  Extensive information for this configuration can be found in the apache [gora documentation](./index.html) and the [gora-conf](./gora-conf.html) page. 
 

@@ -2,7 +2,7 @@ Title: How to Contribute
 
 ## Gora Development Process
 Gora assumes a development process encouraged by the Apache Software Foundation (ASF). 
-ASF is based on [meritocracy](http://www.apache.org/foundation/how-it-works.html). 
+ASF is based on [meritocracy](https://www.apache.org/foundation/how-it-works.html). 
 We encourage open discussion and open development. Nearly everything in Gora is done over 
 on the [mailing lists](./mailing_lists.html) and [Jira issues](https://issues.apache.org/jira/browse/GORA).
 

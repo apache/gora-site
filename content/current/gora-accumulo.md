@@ -2,7 +2,7 @@ Title: Gora Accumulo Module
 
 ## Overview
 This is the main documentation for the gora-accumulo module which
-enables [Apache Accumulo](http://accumulo.apache.org) backend support for Gora. 
+enables [Apache Accumulo](https://accumulo.apache.org) backend support for Gora. 
 
 [TOC]
 
@@ -45,7 +45,7 @@ The **table** element; where we specify:
   
    a **name** (String): family name e.g. info
 
-   a **config** (key:value): which is a typical key/value-type configuration for Accumulo runtime configuration. A fully comprehensive list of options can be found [here](http://accumulo.apache.org/1.5/accumulo_user_manual.html#_table_configuration)   
+   a **config** (key:value): which is a typical key/value-type configuration for Accumulo runtime configuration. A fully comprehensive list of options can be found [here](https://accumulo.apache.org/1.5/accumulo_user_manual.html#_table_configuration)   
 
 The **class** element where we specify of persistent fields which values should map to. This contains;
 

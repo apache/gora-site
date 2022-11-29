@@ -2,7 +2,7 @@ Title: Gora HBase Module
 
 ## Overview
 This is the main documentation for the gora-hbase module. gora-hbase 
-module enables [Apache HBase](http://hbase.apache.org) backend support for Gora.
+module enables [Apache HBase](https://hbase.apache.org) backend support for Gora.
 
 [TOC] 
 
@@ -48,19 +48,19 @@ The table element; where we specify:
 
    <b>name</b> (String): family name e.g. info
 
-   <b>compression</b> (String): the compression option to use in HBase. Please see <a href="http://hbase.apache.org/book/compression.html">HBase documentation</a>.
+   <b>compression</b> (String): the compression option to use in HBase. Please see <a href="https://hbase.apache.org/book/compression.html">HBase documentation</a>.
 
    <b>blockCache</b> (boolean):  an LRU cache that contains three levels of block priority to allow for scan-resistance and in-memory ColumnFamilies. Please see <a href="https://hbase.apache.org/book/regionserver.arch.html#block.cache">HBase documentation</a>.
 
-   <b>blockSize</b> (Integer): The blocksize can be configured for each ColumnFamily in a table, and this defaults to 64k. Larger cell values require larger blocksizes. There is an inverse relationship between blocksize and the resulting StoreFile indexes (i.e., if the blocksize is doubled then the resulting indexes should be roughly halved). Please see <a href="http://hbase.apache.org/book/perf.schema.html#schema.cf.blocksize">HBase documentation</a>. 
+   <b>blockSize</b> (Integer): The blocksize can be configured for each ColumnFamily in a table, and this defaults to 64k. Larger cell values require larger blocksizes. There is an inverse relationship between blocksize and the resulting StoreFile indexes (i.e., if the blocksize is doubled then the resulting indexes should be roughly halved). Please see <a href="https://hbase.apache.org/book/perf.schema.html#schema.cf.blocksize">HBase documentation</a>. 
 
-   <b>bloomFilter</b> (String): Bloom Filters can be enabled per-ColumnFamily. We use <code>HColumnDescriptor.setBloomFilterType(NONE | ROW | ROWCOL)</code> to enable blooms per Column Family. Default = NONE for no bloom filters. If ROW, the hash of the row will be added to the bloom on each insert. If ROWCOL, the hash of the row + column family name + column family qualifier will be added to the bloom on each key insert. Please see <a href="http://hbase.apache.org/book/perf.schema.html#schema.bloom">HBase documentation</a>.
+   <b>bloomFilter</b> (String): Bloom Filters can be enabled per-ColumnFamily. We use <code>HColumnDescriptor.setBloomFilterType(NONE | ROW | ROWCOL)</code> to enable blooms per Column Family. Default = NONE for no bloom filters. If ROW, the hash of the row will be added to the bloom on each insert. If ROWCOL, the hash of the row + column family name + column family qualifier will be added to the bloom on each key insert. Please see <a href="https://hbase.apache.org/book/perf.schema.html#schema.bloom">HBase documentation</a>.
 
-   <b>maxVersions</b> (Integer): The maximum number of row versions to store is configured per column family via <code>HColumnDescriptor</code>. The default for max versions is <b>3</b>. This is an important parameter because HBase does not overwrite row values, but rather stores different values per row by time (and qualifier). Excess versions are removed during major compaction's. The number of max versions may need to be increased or decreased depending on application needs. Please see <a href="http://hbase.apache.org/book/schema.versions.html">HBase documentation</a>.
+   <b>maxVersions</b> (Integer): The maximum number of row versions to store is configured per column family via <code>HColumnDescriptor</code>. The default for max versions is <b>3</b>. This is an important parameter because HBase does not overwrite row values, but rather stores different values per row by time (and qualifier). Excess versions are removed during major compaction's. The number of max versions may need to be increased or decreased depending on application needs. Please see <a href="https://hbase.apache.org/book/schema.versions.html">HBase documentation</a>.
 
    <b>timeToLive</b> (Integer): ColumnFamilies can set a TTL length in seconds, and HBase will automatically delete rows once the expiration time is reached. This applies to all versions of a row - even the current one. The TTL time encoded in the HBase for the row is specified in UTC. Please see <a href="https://hbase.apache.org/book/ttl.html">HBase documentation</a>.
 
-   <b>inMemory</b> (Boolean): ColumnFamilies can optionally be defined as in-memory. Data is still persisted to disk, just like any other ColumnFamily. In-memory blocks have the highest priority in the Block Cache, but it is not a guarantee that the entire table will be in memory. Please see <a href="http://hbase.apache.org/book/perf.schema.html#cf.in.memory">HBase documentation</a>.
+   <b>inMemory</b> (Boolean): ColumnFamilies can optionally be defined as in-memory. Data is still persisted to disk, just like any other ColumnFamily. In-memory blocks have the highest priority in the Block Cache, but it is not a guarantee that the entire table will be in memory. Please see <a href="https://hbase.apache.org/book/perf.schema.html#cf.in.memory">HBase documentation</a>.
 
 The class element where we specify of persistent fields which values should map to. This contains;
 

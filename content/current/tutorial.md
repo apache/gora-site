@@ -91,15 +91,15 @@ structure imposed by Gora's main build scripts (pom.xml for Maven). The Java sou
 <code>src/main/java/</code>, avro schemas in <code>src/main/avro/</code>, and data in <code>src/main/resources/</code>.
 
 ## Setting up HBase
-For this tutorial we will be using [HBase](http://hbase.apache.org) to 
+For this tutorial we will be using [HBase](https://hbase.apache.org) to 
 store the logs. For those of you not familiar with HBase, it is a NoSQL
 column store with an architecture very similar to Google's BigTable.
 
 If you don't already have already HBase setup, you can go over the steps at 
-[HBase Overview](http://hbase.apache.org/book/quickstart.html)
+[HBase Overview](https://hbase.apache.org/book/quickstart.html)
 documentation. Gora aims to support the most recent HBase versions however if you
 find compatibility problems please [get in touch](../mailing_lists.html).
-So download an [HBase release](http://www.apache.org/dyn/closer.cgi/hbase/). 
+So download an [HBase release](https://www.apache.org/dyn/closer.cgi/hbase/). 
 After extracting the file, cd to the hbase-${dist} directory and start the HBase server. 
  
     $ bin/start-hbase.sh
@@ -130,7 +130,7 @@ The first thing, we need to do is to extract the logs.
     $ tar zxvf src/main/resources/access.log.tar.gz -C src/main/resources/
 
 You can also use your own log files, given that the log 
-format is [Combined Log Format](http://httpd.apache.org/docs/current/logs.html).
+format is [Combined Log Format](https://httpd.apache.org/docs/current/logs.html).
 Some example lines from the log are:
 
     88.254.190.73 - - [10/Mar/2009:20:40:26 +0200] "GET / HTTP/1.1" 200 43 "http://www.buldinle.com/" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; GTB5; .NET CLR 2.0.50727; InfoPath.2)
@@ -144,11 +144,11 @@ returned, Referrer, and User Agent.
 ## Defining data beans
 Data beans are the main way to hold the data in memory and persist in Gora. Gora 
 needs to explicitly keep track of the status of the data in memory, so 
-we use [Apache Avro](http://avro.apache.org) for defining the beans. Using 
+we use [Apache Avro](https://avro.apache.org) for defining the beans. Using 
 Avro gives us the possibility to explicitly keep track of an object's persistent state 
 and a way to serialize an object's data. 
 Defining data beans is a very easy task, but for the exact syntax please
-consult the [Avro Specification](http://avro.apache.org/docs/current/spec.html).
+consult the [Avro Specification](https://avro.apache.org/docs/current/spec.html).
 First, we need to define the bean Pageview to hold a
 single URL access in the logs. Let's go over the class at <code>src/main/avro/pageview.json</code>
 
@@ -169,7 +169,7 @@ single URL access in the logs. Let's go over the class at <code>src/main/avro/pa
     }
 
 Avro schemas are declared in JSON. 
-[Records](http://avro.apache.org/docs/current/spec.html#schema_record)
+[Records](https://avro.apache.org/docs/current/spec.html#schema_record)
 are defined with type "record", with a name as the name of the class, and a 
 namespace which is mapped to the package name in Java. The fields 
 are listed in the "fields" element. Each field is given with its type. 
@@ -683,7 +683,7 @@ And from the command line :
     bin/gora logmanager -deleteByQuery 40 50
 
 ## MapReduce Support
-Gora has first class MapReduce support for [Apache Hadoop](http://hadoop.apache.org). 
+Gora has first class MapReduce support for [Apache Hadoop](https://hadoop.apache.org). 
 Gora data stores can be used as inputs and outputs of jobs. Moreover, the objects can 
 be serialized, and passed between tasks keeping their persistency state. For the 
 serialization, Gora extends Avro DatumWriters.
@@ -1131,11 +1131,11 @@ under which some example classes can be found. Especially, there are some classe
 Second, various unit tests of Gora modules can be referred to see the API in use. The unit tests can be found 
 at <code>gora-core/src/test/</code>. 
 
-The source code for the projects using Gora can also be checked out as a reference. [Apache Nutch](http://nutch.apache.org) is 
+The source code for the projects using Gora can also be checked out as a reference. [Apache Nutch](https://nutch.apache.org) is 
 one of the first class users of Gora; so looking into how Nutch uses Gora is always a good idea. Gora is however also in use 
-in other Apache projects such as [Apache Giraph](http://giraph.apache.org)
+in other Apache projects such as [Apache Giraph](https://giraph.apache.org)
 
-Please feel free to grab our [poweredBy](http://gora.apache.org/resources/img/powered-by-gora.png) sticker and embedded it in anything backed by Apache Gora.
+Please feel free to grab our [poweredBy](https://gora.apache.org/resources/img/powered-by-gora.png) sticker and embedded it in anything backed by Apache Gora.
 
 ## Feedback
 At last, thanks for trying out Gora. If you find any bugs or you have suggestions for improvement, 

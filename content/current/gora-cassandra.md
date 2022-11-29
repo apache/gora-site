@@ -2,7 +2,7 @@ Title: Gora Cassandra Module
 
 ## Overview
 This is the main documentation for the gora-cassandra module which
-enables [Apache Cassandra](http://cassandra.apache.org) backend support for Gora. 
+enables [Apache Cassandra](https://cassandra.apache.org) backend support for Gora. 
 
 [TOC]
 
@@ -117,9 +117,9 @@ The <b>keyspace</b> element; where we specify:
 
 1. a parameter containing the Cassandra keyspace schema name e.g. <b>RecordKeySpace</b>, 
 
-2. a parameter containing the durable write enabled property in the Cassandra keyspace e.g. <b>false</b>, More about durable write can be found [here](http://docs.datastax.com/en/cassandra/2.1/cassandra/dml/dml_durability_c.html).
+2. a parameter containing the durable write enabled property in the Cassandra keyspace e.g. <b>false</b>, More about durable write can be found [here](https://docs.datastax.com/en/cassandra/2.1/cassandra/dml/dml_durability_c.html).
 
-3. the child element <b>placementStrategy</b> containing the Cassandra placementStrategy details, a parameter containing the Cassandra placement strategy name,  e.g. <b>SimpleStrategy</b>, gora-cassandra will use SimpleStrategy by default if no value for this attribute is specified. More about placement strategies can be found [here](http://docs.datastax.com/en/archived/cassandra/2.0/cassandra/architecture/architectureDataDistributeReplication_c.html).
+3. the child element <b>placementStrategy</b> containing the Cassandra placementStrategy details, a parameter containing the Cassandra placement strategy name,  e.g. <b>SimpleStrategy</b>, gora-cassandra will use SimpleStrategy by default if no value for this attribute is specified. More about placement strategies can be found [here](https://docs.datastax.com/en/archived/cassandra/2.0/cassandra/architecture/architectureDataDistributeReplication_c.html).
 
 4. a parameter containing a <b>replicationFactor</b> attribute with value integer. Again the replicationFactor value associated with the Keyspace tag
    will only apply if Gora creates the Keyspace and will have no effect if this is being used against 
