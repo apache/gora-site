@@ -19,13 +19,11 @@ Gora active committers include (ordered by username)
 * [Chris A. Mattmann](http://sunset.usc.edu/~mattmann/) (mattmann) - NASA JPL **CPCH**
 * Roland von Herget (rherget) - ? **CP**
 * Renato Marroquin (rmarroquin) - Universidad Catolica San Pablo **CP**
-* Sertan Alkan (sertan) - Konneka **CP**
 * Dave Woollard (woollard) - NASA JPL **CP**
 * [Alparslan Avcı](http://tr.linkedin.com/pub/alparslan-avci/15/b19/b42/) (alparslanavci) - AGMLab **CP**
 * [Apostolos Giannakidis](http://uk.linkedin.com/in/giannakidisapostolos) (apgiannakidis) - Oracle **CP**
 * [Damien Raude-Morvan](https://www.linkedin.com/in/damienraudemorvan) (drazzib) - [Dictanova](http://www.dictanova.com) **CP**
 * [Pierre Sutra](https://sites.google.com/site/0track/) (otrack) - [Telecom SudParis](http://www.telecom-sudparis.eu/) **CP**
-* [Madhawa Gunasekara](http://www.linkedin.com/in/mgunasekara) (madhawa) - Independent **CP**
 * [Talat Uyarer](https://tr.linkedin.com/in/talatuyarer) (talat) - **CP**
 
 Gora members can be contacted by appending @apache.org to their usernames. 
@@ -48,6 +46,8 @@ Gora members can be contacted by appending @apache.org to their usernames.
 * [Ferdy Galema](http://www.linkedin.com/pub/ferdy-galema/4/5ba/b44) (ferdy / ferdy.g (JIRA)) - Kalooga **CP**
 * Dogacan Guney (dogacan) - Google **CP**
 * Julien Nioche (jnioche) - DigitalPebble **CP**
+* Sertan Alkan (sertan) - **CP**
+* [Madhawa Gunasekara](http://www.linkedin.com/in/mgunasekara) (madhawa) - Independent **CP**
 
 ## Contributors
 
