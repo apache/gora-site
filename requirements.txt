@@ -1,2 +1,3 @@
 pelican
 BeautifulSoup4
+markdown

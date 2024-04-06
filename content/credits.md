@@ -2,56 +2,37 @@ Title: Gora Credits
 
 ## A page dedicated to our community past and present!
 
-## Committers
-Gora active committers include (ordered by username)
+| Name                  | Username                                                          | Organization                                           | Roles   |
+| --------------------- | ----------------------------------------------------------------- | ------------------------------------------------------ | ------- |
+| Andrzej Bialecki      | ab                                                                | [Getopt](http://www.getopt.org/)                       | CP      |
+| Andrew Hart           | [ahart](https://www.linkedin.com/in/andrewfhart/)                 | [NASA JPL](https://jpl.nasa.gov/)                      | CP      |
+| Alfonso Nishikawa     | [alfonsonishikawa](https://people.apache.org/%7Ealfonsonishikawa) |                                                        | CP      |
+| Enis Soztutar         | [enis](https://people.apache.org/%7Eenis)                         | [Hortonworks](https://hortonworks.com/)                | CP      |
+| Henry Saputra         | [hsaputra](https://www.linkedin.com/in/henrysaputra)              |                                                        | CP      |
+| Ioannis Canellos      | [iocanel](https://iocanel.blogspot.com/)                          | [RedHat](https://www.redhat.com/)                      | CP      |
+| Furkan KAMACI         | [kamaci](https://www.linkedin.com/in/furkankamaci/)               | [Alcatel-Lucent](https://www.al-enterprise.com/)       | CP      |
+| Kazuomi Kashii        | [kaz](https://www.linkedin.com/in/kazuomikashii/)                 | [Healthline Networks](https://www.healthline.com/)     | CP      |
+| Keith Turner          | kturner                                                           | [Peterson Technologies](https://www.ptech-llc.com/)    | CP      |
+| Kevin Ratnasekera     | [djkevincr](https://www.linkedin.com/in/djkevincr)                |                                                        | CP + VP |
+| Lewis John McGibbney  | [lewismc](https://uk.linkedin.com/in/lmcgibbney)                  | [NASA JPL](https://jpl.nasa.gov/)                      | CP      |
+| Chris A. Mattmann     | [mattmann](https://www.linkedin.com/in/chrismattmann/)            | [NASA JPL](https://jpl.nasa.gov/)                      | CP + 👑 |
+| Roland von Herget     | rherget                                                           |                                                        | CP      |
+| Renato Marroquin      | [rmarroquin](https://www.linkedin.com/in/renato2099/)             | [Universidad Catolica San Pablo](https://ucsp.edu.pe/) | CP      |
+| Dave Woollard         | [woollard](https://www.linkedin.com/in/david-woollard/)           | [NASA JPL](https://jpl.nasa.gov/)                      | CP      |
+| Alparslan Avcı        | [alparslanavci](https://www.linkedin.com/in/alparslan-avci/)      | [AGMLab](https://www.agmlab.com/)                      | CP      |
+| Apostolos Giannakidis | [apgiannakidis](https://www.linkedin.com/in/giannakidisapostolos) | [Oracle](https://oracle.com)                           | CP      |
+| Damien Raude-Morvan   | [drazzib](https://www.linkedin.com/in/damienraudemorvan)          | [Dictanova](https://www.dictanova.com/)                | CP      |
+| Pierre Sutra          | [otrack](https://sites.google.com/site/0track/)                   | [Telecom SudParis](https://www.telecom-sudparis.eu/)   | CP      |
+| Talat Uyarer          | [talat](https://www.linkedin.com/in/talatuyarer)                  |                                                        | CP      |
+| Ferdy Galema          | [ferdy / ferdy.g](https://www.linkedin.com/pub/ferdy-galema/)     | Kalooga                                                | CP      |
+| Dogacan Guney         | [dogacan](https://www.linkedin.com/in/dogacan/)                   | [Google](https://about.google)                         | CP      |
+| Julien Nioche         | [jnioche](https://www.linkedin.com/in/julien-nioche-4b7b453/)     | [DigitalPebble](https://digitalpebble.com/)            | CP      |
+| Sertan Alkan          | sertan                                                            |                                                        | CP      |
+| Madhawa Gunasekara    | [madhawa](http://www.linkedin.com/in/mgunasekara)                 |                                                        | CP      |
 
-* Andrzej Bialecki (ab) - Getopt  **CP**
-* Andrew Hart (ahart) - NASA JPL **CP**
-* [Alfonso Nishikawa](http://people.apache.org/~alfonsonishikawa) (alfonsonishikawa) - **CP**
-* [Enis Soztutar](http://people.apache.org/~enis) (enis) - [Hortonworks](http://hortonworks.com) **CP**
-* [Henry Saputra](http://www.linkedin.com/in/henrysaputra) (hsaputra) - ? **CP**
-* [Ioannis Canellos](http://iocanel.blogspot.com) (iocanel) - RedHat **CP**
-* [Furkan KAMACI](https://tr.linkedin.com/in/furkankamaci) (kamaci) - Alcatel-Lucent **CP**
-* Kazuomi Kashii (kaz) - Healthline Networks **CP**
-* Keith Turner (kturner) - [Peterson Technologies](http://www.ptech-llc.com/) **CP**
-* [Kevin Ratnasekera](http://www.linkedin.com/in/djkevincr) (djkevincr) - Independent **CPVP**
-* [Lewis John McGibbney](http://uk.linkedin.com/in/lmcgibbney) (lewismc) - [NASA JPL](http://jpl.nasa.gov) **CP**
-* [Chris A. Mattmann](http://sunset.usc.edu/~mattmann/) (mattmann) - NASA JPL **CPCH**
-* Roland von Herget (rherget) - ? **CP**
-* Renato Marroquin (rmarroquin) - Universidad Catolica San Pablo **CP**
-* Dave Woollard (woollard) - NASA JPL **CP**
-* [Alparslan Avcı](http://tr.linkedin.com/pub/alparslan-avci/15/b19/b42/) (alparslanavci) - AGMLab **CP**
-* [Apostolos Giannakidis](http://uk.linkedin.com/in/giannakidisapostolos) (apgiannakidis) - Oracle **CP**
-* [Damien Raude-Morvan](https://www.linkedin.com/in/damienraudemorvan) (drazzib) - [Dictanova](http://www.dictanova.com) **CP**
-* [Pierre Sutra](https://sites.google.com/site/0track/) (otrack) - [Telecom SudParis](http://www.telecom-sudparis.eu/) **CP**
-* [Talat Uyarer](https://tr.linkedin.com/in/talatuyarer) (talat) - **CP**
-
-Gora members can be contacted by appending @apache.org to their usernames. 
-
-### Key
-
-<dl>
-<dt>C</dt>
-<dd>a committer</dd>
-<dt>P</dt>
-<dd>a PMC member</dd>
-<dt>VP</dt>
-<dd>project chair and Apache Foundation Vice-President/Officer for Gora</dd>
-<dt>CH</dt>
-<dd>project champion</dd>
-</dl>
-
-## Emeritus Committers and Friends
-
-* [Ferdy Galema](http://www.linkedin.com/pub/ferdy-galema/4/5ba/b44) (ferdy / ferdy.g (JIRA)) - Kalooga **CP**
-* Dogacan Guney (dogacan) - Google **CP**
-* Julien Nioche (jnioche) - DigitalPebble **CP**
-* Sertan Alkan (sertan) - **CP**
-* [Madhawa Gunasekara](http://www.linkedin.com/in/mgunasekara) (madhawa) - Independent **CP**
-
-## Contributors
-
-Other Gora contributors and their contributions are listed at Apache 
-
-## How to contribute
-There are lots of ways you can contribute to Gora. Make sure you check them all [here](./contribute.html).
+| Role | Description                                                         |
+| ---- | ------------------------------------------------------------------- |
+| C    | a committer                                                         |
+| P    | a PMC member                                                        |
+| VP   | project chair and Apache Foundation Vice-President/Officer for Gora |
+| 👑   | project champion                                                    |
