@@ -18,237 +18,311 @@ specific language governing permissions and limitations
 under the License. 
 -->
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="dev@gora.apache.org" />
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="dev@gora.apache.org" />
 
-  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <META name="Description" content="Apache Gora -- Gora Mailing Lists" />
-  <META name="Keywords" content="Apache Gora NoSQL Framework" />
-  <META name="Owner" content="dev@gora.apache.org" />
-  <META name="Robots" content="index, follow" />
-  <META name="Security" content="Public" />
-  <META name="Source" content="wiki template" />
-  <META name="DC.Rights" content="Copyright 2010-2023, The Apache Software Foundation" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="Description" content="Apache Gora -- Gora Mailing Lists" />
+    <meta name="Keywords" content="Apache Gora NoSQL Framework" />
+    <meta name="Owner" content="dev@gora.apache.org" />
+    <meta name="Robots" content="index, follow" />
+    <meta name="Security" content="Public" />
+    <meta name="Source" content="wiki template" />
+    <meta
+      name="DC.Rights"
+      content="Copyright 2010-2024, The Apache Software Foundation"
+    />
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fav and touch icons -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png"
+    />
+    <link rel="shortcut icon" href="/resources/img/feather-small.png" />
 
-  <!-- The styles -->
-  <link href="/resources/css/bootstrap.css" rel="stylesheet">
-  <style type="text/css">
-    body {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }
-.headerlink {
-  visibility: hidden;
-}
-dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
-  visibility: visible
-}  </style>
-  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="/resources/css/gora.css" rel="stylesheet">
+    <title>Apache Gora&trade; - Gora Mailing Lists</title>
+  </head>
 
-  <style type="text/css">
-    .stpulldown-gradient
-    {
-      background: #E1E1E1;
-      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
-      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
-      color: #636363;
-    }
-    #stpulldown .stpulldown-logo
-    {
-      height: 40px;
-      width: 300px;
-      margin-left: 20px;
-      margin-top: 5px;
-      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
-    }
-  </style>
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="/resources/img/feather-small.png">
-
-  <title>Apache Gora&trade; - Gora Mailing Lists</title>
-</head>
-
-<body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><a href="/downloads.html">Downloads</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
-                <li><a href="/contribute.html">Contribute</a></li>
-                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
-                <li><a href="/credits.html">People</a></li>
-                <li><a href="/related.html">Related Projects</a></li>
+  <body style="padding-top: 100px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html"
+          ><img
+            src="/resources/img/gora-logo.png"
+            alt="Apache Gora"
+            title="Apache Gora"
+            height="50px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/downloads.html">Downloads</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown1"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Community</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://whimsy.apache.org/board/minutes/Gora.html"
+                    >Board Reporting</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/contribute.html"
+                    >Contribute</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/mailing_lists.html"
+                    >Mailing Lists</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/credits.html">People</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/related.html"
+                    >Related Projects</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/current/index.html">Current Documentation</a></li>
-                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
-                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
-                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
-                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Documentation</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <li><a class="dropdown-item" href="/about.html">About</a></li>
+                <li>
+                  <a class="dropdown-item" href="/current/index.html"
+                    >Current Documentation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/current/api/javadoc.html"
+                    >JavaDoc Documentation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/current/tutorial.html"
+                    >Gora Tutorial</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://cwiki.apache.org/confluence/display/GORA/"
+                    >Gora Wiki</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
-                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
-                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
-                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
-                <li><a href="/version_control.html">Version Control</a></li>
-				<li><a href="/roadmap.html">Roadmap</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown3"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Development</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://issues.apache.org/jira/browse/GORA"
+                    >Issue Tracking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/mailing_lists.html"
+                    >Mailing Lists</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/version_control.html"
+                    >Version Control</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/roadmap.html">Roadmap</a>
+                </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
-                <b class="caret"></b>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown4"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="/resources/img/feather-small.png"
+                  alt="Apache"
+                  title="Apache"
+                />
               </a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="http://www.apache.org">Apache Home</a></li>
-                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
-                <li><a href="http://www.apache.org/security/">Security</a></li>
-                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
-                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                <li>
+                  <a class="dropdown-item" href="http://www.apache.org"
+                    >Apache Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/licenses/"
+                    >Apache License</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/security/"
+                    >Security</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/foundation/sponsorship.html"
+                    >Support</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/foundation/thanks.html"
+                    >Thanks</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
-          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
-            <input value="gora.apache.org" name="sitesearch" type="hidden" />
-            <input class="search-query" name="q" id="query" type="text" />
-          </form>
-          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
-        </div> <!--/.nav-collapse -->
-      </div> <!-- /container -->
-    </div> <!-- /navbar-inner -->
-  </div> <!-- /navbar -->
+        </div>
+      </div>
+    </nav>
 
-  <div class="container top-buffer" id="Gora_Gora Mailing Lists">
-
-    <h2 id="users">Users<a class="headerlink" href="#users" title="Permalink">&para;</a></h2>
-<p>If you use Gora, please subscribe to the Gora user mailing list.
-The Gora user mailing list addresses are :</p>
+    <div class="container top-buffer" id="Gora_Gora Mailing Lists">
+    <h1 id="gora-mailing-lists">Gora Mailing Lists<a class="headerlink" href="#gora-mailing-lists" title="Permalink">&para;</a></h1>
+<p>If you use Gora, please subscribe to the Gora user mailing list.</p>
+<p>If you'd like to contribute to Gora, please subscribe to the Gora developer mailing list.</p>
+<p>If you'd like to see changes made in Gora's <a href="https://gora.apache.org/version_control.html">version control system</a> then please subscribe to the Gora commit's mailing list.</p>
 <table class="table">
 <thead>
 <tr>
-<th>Mailing list</th>
+<th>List Type</th>
+<th>Mailing List</th>
 <th>Subscribe</th>
 <th>Unsubscribe</th>
-<th align="center" colspan="2">List Archive</th>
+<th>List Archive (Search/List)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Users</td>
 <td><a href="mailto:user@gora.apache.org">Users list</a></td>
 <td><a href="mailto:user-subscribe@gora.apache.org">Subscribe</a></td>
 <td><a href="mailto:user-unsubscribe@gora.apache.org">Unsubscribe</a></td>
-<td><a href="http://www.mail-archive.com/user%40gora.apache.org/">Search</a></td>
-<td><a href="http://mail-archives.apache.org/mod_mbox/gora-user/">List</a></td>
+<td><a href="http://www.mail-archive.com/user%40gora.apache.org/">Search</a> / <a href="http://mail-archives.apache.org/mod_mbox/gora-user/">List</a></td>
 </tr>
-</tbody>
-</table>
-<p>In order to post to the list, it is necessary to first subscribe to it.</p>
-<h2 id="developers">Developers<a class="headerlink" href="#developers" title="Permalink">&para;</a></h2>
-<p>If you'd like to contribute to Gora, please subscribe to the
-Gora developer mailing list.
-The Gora developer mailing list addresses are :</p>
-<table class="table">
-<thead>
 <tr>
-<th>Mailing list</th>
-<th>Subscribe</th>
-<th>Unsubscribe</th>
-<th align="center" colspan="2">List Archive</th>
-</tr>
-</thead>
-<tbody>
-<tr>
+<td>Developers</td>
 <td><a href="mailto:dev@gora.apache.org">Dev list</a></td>
 <td><a href="mailto:dev-subscribe@gora.apache.org">Subscribe</a></td>
 <td><a href="mailto:dev-unsubscribe@gora.apache.org">Unsubscribe</a></td>
-<td><a href="http://www.mail-archive.com/dev%40gora.apache.org/">Search</a></td>
-<td><a href="http://mail-archives.apache.org/mod_mbox/gora-dev/">List</a></td>
+<td><a href="http://www.mail-archive.com/dev%40gora.apache.org/">Search</a> / <a href="http://mail-archives.apache.org/mod_mbox/gora-dev/">List</a></td>
 </tr>
-</tbody>
-</table>
-<p>In order to post to the list, it is necessary to first subscribe to it.</p>
-<h2 id="developers-and-committers">Developers and Committers<a class="headerlink" href="#developers-and-committers" title="Permalink">&para;</a></h2>
-<p>If you'd like to see changes made in Gora's <a href="/version_control.html">version control system</a>
-then please subscribe to the Gora commit's mailing list.
-The Gora commit's mailing list is :</p>
-<table class="table">
-<thead>
 <tr>
-<th>Mailing list</th>
-<th>Subscribe</th>
-<th>Unsubscribe</th>
-<th align="center" colspan="2">List Archive</th>
-</tr>
-</thead>
-<tbody>
-<tr>
+<td>Developers and Committers</td>
 <td><a href="mailto:commits@gora.apache.org">Commits</a></td>
 <td><a href="mailto:commits-subscribe@gora.apache.org">Subscribe</a></td>
 <td><a href="mailto:commits-unsubscribe@gora.apache.org">Unsubscribe</a></td>
-<td><a href="http://www.mail-archive.com/commits%40gora.apache.org/">Search</a></td>
-<td><a href="http://mail-archives.apache.org/mod_mbox/gora-commits/">List</a></td>
-</tr>
-</tbody>
-</table>
-<p>In order to post to the list, it is necessary to first subscribe to it.</p>
+<td><a href="http://www.mail-archive.com/commits%40gora.apache.org/">Search</a> / <a href="http://mail-archives.apache.org/mod_mbox/gora-commits/">List</a></td>
+</tr></tbody></table>
+<p>In order to post to any of the lists, it is necessary to first subscribe to them.</p>
 
+    </div>
+    <!-- /container (main block) -->
 
-  </div> <!-- /container (main block) -->
+    <hr />
 
-  <hr>
+    <div class="container">
+      <footer>
+        <p>
+          Copyright © 2010-2024 The Apache Software Foundation.
+          Licensed under
+          <a href="http://www.apache.org/licenses/LICENSE-2.0"
+            >Apache License 2.0</a
+          >.
+        </p>
+        <p>
+          Apache Gora, Gora, Apache, the Apache feather logo, and the Apache
+          Gora project logo are trademarks of The Apache Software Foundation.
+        </p>
+      </footer>
+    </div>
+    <!-- /container -->
 
-  <div class="container">
-    <footer>
-      <p>Copyright © 2010-2023 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
-      </p>
-      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
-      </p>
-    </footer>
-
-  </div> <!-- /container -->
-
-  <!-- The javascript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
-  <script src="/resources/js/bootstrap.min.js"></script>
-  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-  <link rel="stylesheet" href="/resources/css/docco.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
+    <script src="/resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      stLight.options({
+        publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false,
+      });
+    </script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

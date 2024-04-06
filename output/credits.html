@@ -18,215 +18,459 @@ specific language governing permissions and limitations
 under the License. 
 -->
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="dev@gora.apache.org" />
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="dev@gora.apache.org" />
 
-  <META http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <META name="Description" content="Apache Gora -- Gora Credits" />
-  <META name="Keywords" content="Apache Gora NoSQL Framework" />
-  <META name="Owner" content="dev@gora.apache.org" />
-  <META name="Robots" content="index, follow" />
-  <META name="Security" content="Public" />
-  <META name="Source" content="wiki template" />
-  <META name="DC.Rights" content="Copyright 2010-2023, The Apache Software Foundation" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="Description" content="Apache Gora -- Gora Credits" />
+    <meta name="Keywords" content="Apache Gora NoSQL Framework" />
+    <meta name="Owner" content="dev@gora.apache.org" />
+    <meta name="Robots" content="index, follow" />
+    <meta name="Security" content="Public" />
+    <meta name="Source" content="wiki template" />
+    <meta
+      name="DC.Rights"
+      content="Copyright 2010-2024, The Apache Software Foundation"
+    />
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fav and touch icons -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png"
+    />
+    <link rel="shortcut icon" href="/resources/img/feather-small.png" />
 
-  <!-- The styles -->
-  <link href="/resources/css/bootstrap.css" rel="stylesheet">
-  <style type="text/css">
-    body {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }
-.headerlink {
-  visibility: hidden;
-}
-dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
-  visibility: visible
-}  </style>
-  <link href="/resources/css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="/resources/css/gora.css" rel="stylesheet">
+    <title>Apache Gora&trade; - Gora Credits</title>
+  </head>
 
-  <style type="text/css">
-    .stpulldown-gradient
-    {
-      background: #E1E1E1;
-      background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
-      background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
-      color: #636363;
-    }
-    #stpulldown .stpulldown-logo
-    {
-      height: 40px;
-      width: 300px;
-      margin-left: 20px;
-      margin-top: 5px;
-      background:url("http://gora.apache.org/resources/img/feather-small.png") no-repeat;
-    }
-  </style>
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="/resources/img/feather-small.png">
-
-  <title>Apache Gora&trade; - Gora Credits</title>
-</head>
-
-<body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/index.html"><img src="/resources/img/gora-logo.png" alt="Apache Gora" title="Apache Gora"/></a>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><a href="/downloads.html">Downloads</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="https://whimsy.apache.org/board/minutes/Gora.html">Board Reporting</a></li>
-                <li><a href="/contribute.html">Contribute</a></li>
-                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
-                <li><a href="/credits.html">People</a></li>
-                <li><a href="/related.html">Related Projects</a></li>
+  <body style="padding-top: 100px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html"
+          ><img
+            src="/resources/img/gora-logo.png"
+            alt="Apache Gora"
+            title="Apache Gora"
+            height="50px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/downloads.html">Downloads</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown1"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Community</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://whimsy.apache.org/board/minutes/Gora.html"
+                    >Board Reporting</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/contribute.html"
+                    >Contribute</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/mailing_lists.html"
+                    >Mailing Lists</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/credits.html">People</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/related.html"
+                    >Related Projects</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/current/index.html">Current Documentation</a></li>
-                <li><a href="/current/api/javadoc.html">JavaDoc Documentation</a></li>
-                <li><a href="/current/tutorial.html">Gora Tutorial</a></li>
-                <li><a href="https://cwiki.apache.org/confluence/display/GORA/">Gora Wiki</a></li>
-                <li><a href="http://en.wikipedia.org/wiki/Apache_Gora">Gora Wikipedia Entry</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown2"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Documentation</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <li><a class="dropdown-item" href="/about.html">About</a></li>
+                <li>
+                  <a class="dropdown-item" href="/current/index.html"
+                    >Current Documentation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/current/api/javadoc.html"
+                    >JavaDoc Documentation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/current/tutorial.html"
+                    >Gora Tutorial</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://cwiki.apache.org/confluence/display/GORA/"
+                    >Gora Wiki</a
+                  >
+                </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="https://issues.apache.org/jira/browse/GORA">Issue Tracking</a></li>
-                <li><a href="/mailing_lists.html">Mailing Lists</a></li>
-                <li><a href="https://builds.apache.org/view/All/job/gora-trunk/">Nightly Builds</a></li>
-                <li><a href="https://analysis.apache.org/dashboard/index/76356">Sonar Analysis</a></li>
-                <li><a href="/version_control.html">Version Control</a></li>
-				<li><a href="/roadmap.html">Roadmap</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown3"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Development</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://issues.apache.org/jira/browse/GORA"
+                    >Issue Tracking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/mailing_lists.html"
+                    >Mailing Lists</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/version_control.html"
+                    >Version Control</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/roadmap.html">Roadmap</a>
+                </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="/resources/img/feather-small.png" alt="Apache" title="Apache" /> 
-                <b class="caret"></b>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown4"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="/resources/img/feather-small.png"
+                  alt="Apache"
+                  title="Apache"
+                />
               </a>
-              <ul class="dropdown-menu pull-right">
-                <li><a href="http://www.apache.org">Apache Home</a></li>
-                <li><a href="http://www.apache.org/licenses/">Apache License</a></li>
-                <li><a href="http://www.apache.org/security/">Security</a></li>
-                <li><a href="http://www.apache.org/foundation/sponsorship.html">Support</a></li>
-                <li><a href="http://www.apache.org/foundation/thanks.html">Thanks</a></li>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                <li>
+                  <a class="dropdown-item" href="http://www.apache.org"
+                    >Apache Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/licenses/"
+                    >Apache License</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/security/"
+                    >Security</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/foundation/sponsorship.html"
+                    >Support</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.apache.org/foundation/thanks.html"
+                    >Thanks</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
-          <form id="search-form" class="navbar-search pull-right" action="http://www.google.com/cse" method="get">
-            <input value="gora.apache.org" name="sitesearch" type="hidden" />
-            <input class="search-query" name="q" id="query" type="text" />
-          </form>
-          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search-form"></script>
-        </div> <!--/.nav-collapse -->
-      </div> <!-- /container -->
-    </div> <!-- /navbar-inner -->
-  </div> <!-- /navbar -->
+        </div>
+      </div>
+    </nav>
 
-  <div class="container top-buffer" id="Gora_Gora Credits">
-
+    <div class="container top-buffer" id="Gora_Gora Credits">
     <h2 id="a-page-dedicated-to-our-community-past-and-present">A page dedicated to our community past and present!<a class="headerlink" href="#a-page-dedicated-to-our-community-past-and-present" title="Permalink">&para;</a></h2>
-<h2 id="committers">Committers<a class="headerlink" href="#committers" title="Permalink">&para;</a></h2>
-<p>Gora active committers include (ordered by username)</p>
-<ul>
-<li>Andrzej Bialecki (ab) - Getopt  <strong>CP</strong></li>
-<li>Andrew Hart (ahart) - NASA JPL <strong>CP</strong></li>
-<li><a href="http://people.apache.org/%7Ealfonsonishikawa">Alfonso Nishikawa</a> (alfonsonishikawa) - <strong>CP</strong></li>
-<li><a href="http://people.apache.org/%7Eenis">Enis Soztutar</a> (enis) - <a href="http://hortonworks.com">Hortonworks</a> <strong>CP</strong></li>
-<li><a href="http://www.linkedin.com/in/henrysaputra">Henry Saputra</a> (hsaputra) - ? <strong>CP</strong></li>
-<li><a href="http://iocanel.blogspot.com">Ioannis Canellos</a> (iocanel) - RedHat <strong>CP</strong></li>
-<li><a href="https://tr.linkedin.com/in/furkankamaci">Furkan KAMACI</a> (kamaci) - Alcatel-Lucent <strong>CP</strong></li>
-<li>Kazuomi Kashii (kaz) - Healthline Networks <strong>CP</strong></li>
-<li>Keith Turner (kturner) - <a href="http://www.ptech-llc.com/">Peterson Technologies</a> <strong>CP</strong></li>
-<li><a href="http://www.linkedin.com/in/djkevincr">Kevin Ratnasekera</a> (djkevincr) - Independent <strong>CPVP</strong></li>
-<li><a href="http://uk.linkedin.com/in/lmcgibbney">Lewis John McGibbney</a> (lewismc) - <a href="http://jpl.nasa.gov">NASA JPL</a> <strong>CP</strong></li>
-<li><a href="http://sunset.usc.edu/%7Emattmann/">Chris A. Mattmann</a> (mattmann) - NASA JPL <strong>CPCH</strong></li>
-<li>Roland von Herget (rherget) - ? <strong>CP</strong></li>
-<li>Renato Marroquin (rmarroquin) - Universidad Catolica San Pablo <strong>CP</strong></li>
-<li>Dave Woollard (woollard) - NASA JPL <strong>CP</strong></li>
-<li><a href="http://tr.linkedin.com/pub/alparslan-avci/15/b19/b42/">Alparslan Avcı</a> (alparslanavci) - AGMLab <strong>CP</strong></li>
-<li><a href="http://uk.linkedin.com/in/giannakidisapostolos">Apostolos Giannakidis</a> (apgiannakidis) - Oracle <strong>CP</strong></li>
-<li><a href="https://www.linkedin.com/in/damienraudemorvan">Damien Raude-Morvan</a> (drazzib) - <a href="http://www.dictanova.com">Dictanova</a> <strong>CP</strong></li>
-<li><a href="https://sites.google.com/site/0track/">Pierre Sutra</a> (otrack) - <a href="http://www.telecom-sudparis.eu/">Telecom SudParis</a> <strong>CP</strong></li>
-<li><a href="https://tr.linkedin.com/in/talatuyarer">Talat Uyarer</a> (talat) - <strong>CP</strong></li>
-</ul>
-<p>Gora members can be contacted by appending @apache.org to their usernames.</p>
-<h3 id="key">Key<a class="headerlink" href="#key" title="Permalink">&para;</a></h3>
-<dl>
-<dt>C</dt>
-<dd>a committer</dd>
-<dt>P</dt>
-<dd>a PMC member</dd>
-<dt>VP</dt>
-<dd>project chair and Apache Foundation Vice-President/Officer for Gora</dd>
-<dt>CH</dt>
-<dd>project champion</dd>
-</dl>
-<h2 id="emeritus-committers-and-friends">Emeritus Committers and Friends<a class="headerlink" href="#emeritus-committers-and-friends" title="Permalink">&para;</a></h2>
-<ul>
-<li><a href="http://www.linkedin.com/pub/ferdy-galema/4/5ba/b44">Ferdy Galema</a> (ferdy / ferdy.g (JIRA)) - Kalooga <strong>CP</strong></li>
-<li>Dogacan Guney (dogacan) - Google <strong>CP</strong></li>
-<li>Julien Nioche (jnioche) - DigitalPebble <strong>CP</strong></li>
-<li>Sertan Alkan (sertan) - <strong>CP</strong></li>
-<li><a href="http://www.linkedin.com/in/mgunasekara">Madhawa Gunasekara</a> (madhawa) - Independent <strong>CP</strong></li>
-</ul>
-<h2 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permalink">&para;</a></h2>
-<p>Other Gora contributors and their contributions are listed at Apache</p>
-<h2 id="how-to-contribute">How to contribute<a class="headerlink" href="#how-to-contribute" title="Permalink">&para;</a></h2>
-<p>There are lots of ways you can contribute to Gora. Make sure you check them all <a href="./contribute.html">here</a>.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Username</th>
+<th>Organization</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Andrzej Bialecki</td>
+<td>ab</td>
+<td><a href="http://www.getopt.org/">Getopt</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Andrew Hart</td>
+<td><a href="https://www.linkedin.com/in/andrewfhart/">ahart</a></td>
+<td><a href="https://jpl.nasa.gov/">NASA JPL</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Alfonso Nishikawa</td>
+<td><a href="https://people.apache.org/%7Ealfonsonishikawa">alfonsonishikawa</a></td>
+<td></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Enis Soztutar</td>
+<td><a href="https://people.apache.org/%7Eenis">enis</a></td>
+<td><a href="https://hortonworks.com/">Hortonworks</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Henry Saputra</td>
+<td><a href="https://www.linkedin.com/in/henrysaputra">hsaputra</a></td>
+<td></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Ioannis Canellos</td>
+<td><a href="https://iocanel.blogspot.com/">iocanel</a></td>
+<td><a href="https://www.redhat.com/">RedHat</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Furkan KAMACI</td>
+<td><a href="https://www.linkedin.com/in/furkankamaci/">kamaci</a></td>
+<td><a href="https://www.al-enterprise.com/">Alcatel-Lucent</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Kazuomi Kashii</td>
+<td><a href="https://www.linkedin.com/in/kazuomikashii/">kaz</a></td>
+<td><a href="https://www.healthline.com/">Healthline Networks</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Keith Turner</td>
+<td>kturner</td>
+<td><a href="https://www.ptech-llc.com/">Peterson Technologies</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Kevin Ratnasekera</td>
+<td><a href="https://www.linkedin.com/in/djkevincr">djkevincr</a></td>
+<td></td>
+<td>CP + VP</td>
+</tr>
+<tr>
+<td>Lewis John McGibbney</td>
+<td><a href="https://uk.linkedin.com/in/lmcgibbney">lewismc</a></td>
+<td><a href="https://jpl.nasa.gov/">NASA JPL</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Chris A. Mattmann</td>
+<td><a href="https://www.linkedin.com/in/chrismattmann/">mattmann</a></td>
+<td><a href="https://jpl.nasa.gov/">NASA JPL</a></td>
+<td>CP + 👑</td>
+</tr>
+<tr>
+<td>Roland von Herget</td>
+<td>rherget</td>
+<td></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Renato Marroquin</td>
+<td><a href="https://www.linkedin.com/in/renato2099/">rmarroquin</a></td>
+<td><a href="https://ucsp.edu.pe/">Universidad Catolica San Pablo</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Dave Woollard</td>
+<td><a href="https://www.linkedin.com/in/david-woollard/">woollard</a></td>
+<td><a href="https://jpl.nasa.gov/">NASA JPL</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Alparslan Avcı</td>
+<td><a href="https://www.linkedin.com/in/alparslan-avci/">alparslanavci</a></td>
+<td><a href="https://www.agmlab.com/">AGMLab</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Apostolos Giannakidis</td>
+<td><a href="https://www.linkedin.com/in/giannakidisapostolos">apgiannakidis</a></td>
+<td><a href="https://oracle.com">Oracle</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Damien Raude-Morvan</td>
+<td><a href="https://www.linkedin.com/in/damienraudemorvan">drazzib</a></td>
+<td><a href="https://www.dictanova.com/">Dictanova</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Pierre Sutra</td>
+<td><a href="https://sites.google.com/site/0track/">otrack</a></td>
+<td><a href="https://www.telecom-sudparis.eu/">Telecom SudParis</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Talat Uyarer</td>
+<td><a href="https://www.linkedin.com/in/talatuyarer">talat</a></td>
+<td></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Ferdy Galema</td>
+<td><a href="https://www.linkedin.com/pub/ferdy-galema/">ferdy / ferdy.g</a></td>
+<td>Kalooga</td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Dogacan Guney</td>
+<td><a href="https://www.linkedin.com/in/dogacan/">dogacan</a></td>
+<td><a href="https://about.google">Google</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Julien Nioche</td>
+<td><a href="https://www.linkedin.com/in/julien-nioche-4b7b453/">jnioche</a></td>
+<td><a href="https://digitalpebble.com/">DigitalPebble</a></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Sertan Alkan</td>
+<td>sertan</td>
+<td></td>
+<td>CP</td>
+</tr>
+<tr>
+<td>Madhawa Gunasekara</td>
+<td><a href="http://www.linkedin.com/in/mgunasekara">madhawa</a></td>
+<td></td>
+<td>CP</td>
+</tr></tbody></table>
+<table class="table">
+<thead>
+<tr>
+<th>Role</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>a committer</td>
+</tr>
+<tr>
+<td>P</td>
+<td>a PMC member</td>
+</tr>
+<tr>
+<td>VP</td>
+<td>project chair and Apache Foundation Vice-President/Officer for Gora</td>
+</tr>
+<tr>
+<td>👑</td>
+<td>project champion</td>
+</tr></tbody></table>
 
+    </div>
+    <!-- /container (main block) -->
 
-  </div> <!-- /container (main block) -->
+    <hr />
 
-  <hr>
+    <div class="container">
+      <footer>
+        <p>
+          Copyright © 2010-2024 The Apache Software Foundation.
+          Licensed under
+          <a href="http://www.apache.org/licenses/LICENSE-2.0"
+            >Apache License 2.0</a
+          >.
+        </p>
+        <p>
+          Apache Gora, Gora, Apache, the Apache feather logo, and the Apache
+          Gora project logo are trademarks of The Apache Software Foundation.
+        </p>
+      </footer>
+    </div>
+    <!-- /container -->
 
-  <div class="container">
-    <footer>
-      <p>Copyright © 2010-2023 The Apache Software Foundation. Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
-      </p>
-      <p>Apache Gora, Gora, Apache, the Apache feather logo, and the Apache Gora project logo are trademarks of The Apache Software Foundation.
-      </p>
-    </footer>
-
-  </div> <!-- /container -->
-
-  <!-- The javascript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"; type="text/javascript"></script>
-  <script src="/resources/js/bootstrap.min.js"></script>
-  <script type="text/javascript">stLight.options({publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-  <link rel="stylesheet" href="/resources/css/docco.css">
-  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
+    <script src="/resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      stLight.options({
+        publisher: "4059fafd-3891-49f9-8c96-e4100290d8e6",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false,
+      });
+    </script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
