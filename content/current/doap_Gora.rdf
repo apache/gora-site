@@ -36,6 +36,7 @@
     <mailing-list rdf:resource="http://gora.apache.org/mailing_lists.html" />
     <download-page rdf:resource="http://gora.apache.org/releases.html" />
     <programming-language>Java</programming-language>
+    <category rdf:resource="http://projects.apache.org/category/nosql" />
     <category rdf:resource="http://projects.apache.org/category/retired" />
     <release>
       <Version>
