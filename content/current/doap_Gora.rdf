@@ -26,7 +26,7 @@
     <license rdf:resource="http://usefulinc.com/doap/licenses/asl20" />
     <name>Apache Gora</name>
     <homepage rdf:resource="http://gora.apache.org" />
-    <asfext:pmc rdf:resource="http://gora.apache.org" />
+    <asfext:pmc rdf:resource="http://attic.apache.org" />
     <shortdesc>The Apache Gora open source framework provides an in-memory data model and 
          persistence for big data. Gora supports persisting to column stores, key value stores, 
          document stores, distributed in-memory key/value stores, in-memory data grids, in-memory caches,
@@ -37,6 +37,7 @@
     <download-page rdf:resource="http://gora.apache.org/releases.html" />
     <programming-language>Java</programming-language>
     <category rdf:resource="http://projects.apache.org/category/nosql" />
+    <category rdf:resource="http://projects.apache.org/category/retired" />
     <release>
       <Version>
         <name>0.9 release</name>
